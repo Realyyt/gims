@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 import CircularNavigation from '../components/CircularNavigation';
+import { scrollToSection } from './utils/scroll';
 
 // Add this before the Home component
 const services = [
@@ -142,7 +143,6 @@ function useAutoSlide(length: number, interval = 3000) {
 }
 
 export default function Home() {
-  // Move the hook call to the component level
   const { currentIndex, next, prev, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
 
   return (
@@ -166,12 +166,12 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-2xl">
           Explore the suspension tech
           </p>
-          <Link 
-            href="/contact"
+          <button 
+            onClick={() => scrollToSection('contact')}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md text-lg font-medium transition"
           >
             Get in Touch
-          </Link>
+          </button>
         </div>
       </section>
 
@@ -407,3 +407,4 @@ export default function Home() {
     </>
   );
 }
+
