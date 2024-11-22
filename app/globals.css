@@ -11,10 +11,8 @@
 }
 
 html, body {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -26,8 +24,7 @@ body {
 }
 
 main {
-  height: calc(100vh - var(--nav-height));
-  overflow-y: auto;
+  min-height: calc(100vh - var(--nav-height));
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   position: relative;

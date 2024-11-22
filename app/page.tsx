@@ -145,7 +145,7 @@ export default function Home() {
   const { currentIndex, next, prev, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
 
   return (
-    <main className="h-[calc(100vh-64px)] overflow-y-auto overflow-x-hidden">
+    <main className="flex-grow overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">

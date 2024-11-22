@@ -4,7 +4,7 @@ import { scrollToSection } from '../utils/scroll';
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-gray-900 text-white" id="contact">
+    <footer className="flex-shrink-0 w-full bg-gray-900 text-white" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
