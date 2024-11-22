@@ -7,19 +7,37 @@
   --secondary: #1e40af;
   --background: #ffffff;
   --foreground: #171717;
+  --nav-height: 64px;
+}
+
+html, body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  padding-top: var(--nav-height);
+}
+
+main {
+  height: calc(100vh - var(--nav-height));
+  overflow-y: auto;
   overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
   -webkit-overflow-scrolling: touch;
-  padding-top: 64px; /* Height of navbar */
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Improve touch scrolling on iOS */
+* {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 @layer components {
