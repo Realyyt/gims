@@ -142,6 +142,9 @@ function useAutoSlide(length: number, interval = 3000) {
 }
 
 export default function Home() {
+  // Move the hook call to the component level
+  const { currentIndex, next, prev, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
+
   return (
     <>
       {/* Hero Section */}
@@ -307,7 +310,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industrial Applications Section */}
+      {/* Industrial Applications Section - Updated Carousel */}
       <section id="applications" className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-4">INDUSTRIAL APPLICATIONS</h2>
@@ -316,10 +319,8 @@ export default function Home() {
           </p>
 
           <div className="relative">
-            {/* Main Carousel */}
             <div className="relative h-[600px] overflow-hidden rounded-2xl">
               {industrialApplications.map((app, index) => {
-                const { currentIndex } = useAutoSlide(industrialApplications.length, 5000);
                 const isActive = index === currentIndex;
                 const isPrev = (index === currentIndex - 1) || (currentIndex === 0 && index === industrialApplications.length - 1);
                 const isNext = (index === currentIndex + 1) || (currentIndex === industrialApplications.length - 1 && index === 0);
@@ -371,14 +372,14 @@ export default function Home() {
 
               {/* Navigation Arrows */}
               <button 
-                onClick={() => useAutoSlide(industrialApplications.length).prev()}
+                onClick={prev}
                 className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 
                   p-2 rounded-full backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
               >
                 <ChevronLeft className="w-6 h-6 text-white" />
               </button>
               <button 
-                onClick={() => useAutoSlide(industrialApplications.length).next()}
+                onClick={next}
                 className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 
                   p-2 rounded-full backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
               >
@@ -387,17 +388,14 @@ export default function Home() {
 
               {/* Progress Indicators */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2">
-                {industrialApplications.map((_, index) => {
-                  const { currentIndex, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
-                  return (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentIndex(index)}
-                      className={`w-12 h-1 rounded-full transition-all duration-300 
-                        ${currentIndex === index ? 'bg-white w-20' : 'bg-white/50'}`}
-                    />
-                  );
-                })}
+                {industrialApplications.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-12 h-1 rounded-full transition-all duration-300 
+                      ${currentIndex === index ? 'bg-white w-20' : 'bg-white/50'}`}
+                  />
+                ))}
               </div>
             </div>
           </div>

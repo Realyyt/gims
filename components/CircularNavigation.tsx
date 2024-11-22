@@ -9,8 +9,6 @@ import {
   Image as ImageIcon,
   Phone,
   BookOpen,
-  ChevronRight,
-  ChevronLeft
 } from 'lucide-react';
 
 const menuItems = [
