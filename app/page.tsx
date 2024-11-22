@@ -148,15 +148,24 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center">
-        <div className="absolute inset-0 z-0">
-          <iframe
-            src="https://www.youtube.com/embed/FboDXlYcsUM?autoplay=1&mute=1&loop=1&playlist=FboDXlYcsUM&controls=0"
-            allow="autoplay; encrypted-media"
-            className="w-full h-full object-cover"
-            style={{ border: 'none' }}
-          />
-          <div className="absolute inset-0 bg-black/50" />
+      <section className="relative h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <div className="relative w-full h-full">
+            <iframe
+              src="https://www.youtube.com/embed/FboDXlYcsUM?autoplay=1&mute=1&loop=1&playlist=FboDXlYcsUM&controls=0"
+              allow="autoplay; encrypted-media"
+              className="absolute w-[300%] h-[300%]"
+              style={{ 
+                border: 'none',
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%) scale(0.34)',
+                pointerEvents: 'none'
+              }}
+            />
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -407,4 +416,3 @@ export default function Home() {
     </>
   );
 }
-
