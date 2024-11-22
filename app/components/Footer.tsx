@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link';
 import { FacebookIcon, Linkedin, Youtube } from 'lucide-react';
 import { scrollToSection } from '../utils/scroll';
 
