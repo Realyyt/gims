@@ -10,16 +10,33 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
   const controls = useAnimation();
 
   useEffect(() => {
+    let isSubscribed = true;
+
     const flipCard = async () => {
-      while (true) {
+      if (!isSubscribed) return;
+      
+      try {
         await controls.start({ rotateY: 180 });
+        if (!isSubscribed) return;
         await new Promise(resolve => setTimeout(resolve, 5000));
+        if (!isSubscribed) return;
         await controls.start({ rotateY: 0 });
+        if (!isSubscribed) return;
         await new Promise(resolve => setTimeout(resolve, 5000));
+        
+        if (isSubscribed) {
+          flipCard();
+        }
+      } catch (error) {
+        console.error('Animation error:', error);
       }
     };
 
     flipCard();
+
+    return () => {
+      isSubscribed = false;
+    };
   }, [controls]);
 
   return (
@@ -29,6 +46,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
           >
@@ -37,6 +55,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-3xl font-semibold mb-8 text-gray-700"
           >
@@ -45,6 +64,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative max-w-3xl mx-auto"
             style={{ perspective: '1000px' }}
@@ -188,6 +208,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={service.title}
               className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl 

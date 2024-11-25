@@ -17,6 +17,7 @@ export default function CustomersSection() {
           </h3>
           <div className="w-full overflow-hidden">
             <motion.div
+              initial={{ x: 0 }}
               animate={{
                 x: [0, -100 * customers.length],
               }}
@@ -25,6 +26,7 @@ export default function CustomersSection() {
                   duration: 20,
                   repeat: Infinity,
                   ease: "linear",
+                  delay: 0.5
                 }
               }}
               className="flex gap-16 items-center"
@@ -33,7 +35,7 @@ export default function CustomersSection() {
               {[...customers, ...customers].map((customer, index) => (
                 <div
                   key={`${customer.name}-${index}`}
-                  className="flex-shrink-0 w-32 h-12 relative opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  className="flex-shrink-0 w-48 h-24 relative opacity-60 hover:opacity-100 transition-opacity duration-300"
                 >
                   <Image
                     src={customer.logo}

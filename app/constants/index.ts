@@ -91,44 +91,7 @@ export const industrialApplications: IndustrialApplication[] = [
   }
 ]; 
 
-export const menuItems = [
-    {
-      title: 'PRODUCT',
-      icon: Settings,
-      color: 'bg-blue-600',
-      items: ['Waterjet Models', 'Injection vs Suspension', 'Waterjet Specification', 'Software', 'Consumables', 'Shop']
-    },
-    {
-      title: 'SERVICES',
-      icon: Wrench,
-      color: 'bg-green-500',
-      items: ['Waterjet Cutting', '3D Printing', 'Lathe', 'Milling', 'Welding']
-    },
-    {
-      title: 'SOLUTIONS',
-      icon: Lightbulb,
-      color: 'bg-purple-500',
-      items: ['3D Design', 'Simulation', 'SPM', 'R&D', 'Manufacturing', 'Shop']
-    },
-    {
-      title: 'MATERIAL GALLERY',
-      icon: ImageIcon,
-      color: 'bg-orange-500',
-      items: ['Material Images', 'Economic Calculator', 'Cutting Calculator', 'Quotation Maker', 'Feed Rate Chart']
-    },
-    {
-      title: 'CONTACT',
-      icon: Phone,
-      color: 'bg-red-500',
-      items: ['Location', 'Technical Support', 'Get Quote', 'Requirements']
-    },
-    {
-      title: 'LEARN',
-      icon: BookOpen,
-      color: 'bg-teal-500',
-      items: ['Technology', 'FAQ', 'Reviews', 'How To', 'Updates', 'Videos', 'Articles', 'About Us']
-    }
-  ];
+
 
   export const specifications: Specification[] = [
     {
@@ -170,15 +133,11 @@ export const menuItems = [
   ];
   
   export const customers = [
-    { name: 'PBS', logo: '/logos/pbs.svg' },
-    { name: 'Bandcamp', logo: '/logos/bandcamp.svg' },
-    { name: 'Wistia', logo: '/logos/wistia.svg' },
-    { name: 'TED', logo: '/logos/ted.svg' },
-    { name: 'Robinhood', logo: '/logos/robinhood.svg' },
-    { name: 'Equinox', logo: '/logos/equinox.svg' },
-    { name: 'Strava', logo: '/logos/strava.svg' },
-    { name: 'Vimeo', logo: '/logos/vimeo.svg' },
-    { name: 'Patreon', logo: '/logos/patreon.svg' }
+    { name: 'BHC', logo: '/BHC.png' },
+    { name: 'IIT', logo: '/IIT.png' },
+    { name: 'IIT1', logo: '/IIT1.png' },
+    { name: 'WhatsApp Image 1', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54__1_-removebg-preview.png' },
+    { name: 'WhatsApp Image 2', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54-removebg-preview.png' }
   ];
 
 
@@ -218,12 +177,14 @@ export const menuItems = [
 
   export const navItems = {
     'Tech Specs': [
-      { title: 'KATANA SJ150', image: '/katana-sj150.jpg', link: '/specs' },
-      { title: 'KATANA SJ200', image: '/katana-sj200.jpg', link: '/specs/katana-sj200' },
-      { title: 'Compare Models', image: '/compare-models.jpg', link: '/specs/compare' },
+      { title: 'KATANA SJ150', image: '/gims1.png', link: '/specs' },
+      { title: 'KATANA SJ450', image: '/sj450.png', link: '/specs/katana-sj200' },
+      { title: 'KATANA SJ700', image: '/sj700.png', link: '/specs/katana-sj200' },
+      { title: 'Compare Models', image: '/2d7839103e8aed7e9ac618fd7dd66ca2.jpg', link: '/specs/compare' },
     ],
     'Products': [
-      { title: 'Waterjet Cutting', image: '/waterjet.jpg', description: 'High-precision cutting solutions' },
+      { title: 'Waterjet Calculator', image: '/waterjet.jpg', description: 'Calculate pressure, flow rate and cutting parameters' },
+      { title: 'Materials', image: '/waterjet.jpg', description: 'Explore different materials and cutting capabilities' },
       { title: 'CNC Machines', image: '/cnc.jpg', description: 'Advanced manufacturing systems' },
       { title: 'Industrial Tools', image: '/tools.jpg', description: 'Professional-grade equipment' },
     ],
@@ -231,5 +192,11 @@ export const menuItems = [
       { title: 'About Us', image: '/about.jpg', description: 'Our story and mission' },
       { title: 'Technology', image: '/technology.jpg', description: 'Innovation at its core' },
       { title: 'Facilities', image: '/facilities.jpg', description: 'State-of-the-art manufacturing' },
+    ],
+    'Learn': [
+      { title: 'Technology', image: '/technology.jpg', description: 'Innovation at its core' },
+      { title: 'FAQ', image: '/faq.jpg', description: 'Frequently asked questions' },
+      { title: 'Reviews', image: '/reviews.jpg', description: 'What our customers say' },
+      { title: 'Articles', image: '/articles.jpg', description: 'Read our latest articles' },
     ],
   };
