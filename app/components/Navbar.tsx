@@ -5,6 +5,13 @@ import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navItems } from '../constants';
 
+interface NavItem {
+  title: string;
+  image: string;
+  link?: string;
+  description?: string;
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -73,10 +80,10 @@ export default function Navbar() {
                     <div className={`${isMobile ? 'relative' : 'absolute'} left-0 lg:left-1/2 transform lg:-translate-x-1/2 w-full lg:w-screen lg:max-w-7xl bg-stone-200 shadow-lg rounded-b-lg mt-2`}>
                       <div className="px-4 lg:px-8 py-4 lg:py-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-                          {navItems[item as keyof typeof navItems].map((subItem, index) => (
+                          {navItems[item as keyof typeof navItems].map((subItem: NavItem, index) => (
                             <Link 
                               key={index}
-                              href={(subItem as any).link || '#'}
+                              href={subItem.link || '#'}
                               className="group flex lg:flex-col items-center lg:text-center hover:bg-gray-100 rounded-lg p-2"
                               onClick={() => setIsOpen(false)}
                             >
@@ -90,8 +97,8 @@ export default function Navbar() {
                               </div>
                               <div className="ml-4 lg:ml-0">
                                 <h3 className="text-[#171a20] font-medium mb-1">{subItem.title}</h3>
-                                {(subItem as any).description && (
-                                  <p className="text-sm text-gray-500">{(subItem as any).description}</p>
+                                {subItem.description && (
+                                  <p className="text-sm text-gray-500">{subItem.description}</p>
                                 )}
                               </div>
                             </Link>

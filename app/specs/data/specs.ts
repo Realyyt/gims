@@ -1,10 +1,6 @@
 import { 
   Zap, 
-  Gauge, 
-  Maximize,
-  Power,
-  Settings,
-  Shield
+  Gauge,
 } from 'lucide-react';
 import { SpecSection, Feature, ComparisonData } from '../types';
 
@@ -61,4 +57,17 @@ export const comparisonData: ComparisonData[] = [
     competitor: "±0.1 mm"
   },
   // Add more comparison data...
+];
+
+export const specTables = [
+  {
+    title: "Machine Specifications",
+    columns: ["KATANA SJ150"],
+    rows: [
+      { label: "Working Area", values: ["1500 x 3000 mm"] },
+      { label: "Z-Axis Travel", values: ["200 mm"] },
+      { label: "Maximum Speed", values: ["12,000 mm/min"] },
+    ]
+  },
+  // Add more tables as needed
 ]; 

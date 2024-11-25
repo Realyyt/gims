@@ -50,7 +50,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
             transition={{ duration: 0.6 }}
             className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
           >
-            INDIA'S FIRST ABRASIVE SUSPENSION WATERJET
+            INDIA&apos;S FIRST ABRASIVE SUSPENSION WATERJET
           </motion.h2>
           <motion.h3
             initial={{ opacity: 0, y: 20 }}

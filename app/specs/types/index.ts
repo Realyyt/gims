@@ -22,4 +22,13 @@ export interface ComparisonData {
   feature: string;
   katana: string;
   competitor: string;
+}
+
+export interface SpecTable {
+  title: string;
+  columns: string[];
+  rows: {
+    label: string;
+    values: string[];
+  }[];
 } 

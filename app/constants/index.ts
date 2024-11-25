@@ -9,14 +9,6 @@ import {
   Volume2,
   Cog
 } from 'lucide-react';
-import { 
-    Settings, 
-    Wrench,
-    Lightbulb,
-    Image as ImageIcon,
-    Phone,
-    BookOpen,
-  } from 'lucide-react';
 import { Service, IndustrialApplication, Specification } from '../types';
 
 
