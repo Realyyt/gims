@@ -2,53 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Settings, 
-  Wrench,
-  Lightbulb,
-  Image as ImageIcon,
-  Phone,
-  BookOpen,
-} from 'lucide-react';
+import { menuItems } from '../constants';
 
-const menuItems = [
-  {
-    title: 'PRODUCT',
-    icon: Settings,
-    color: 'bg-blue-600',
-    items: ['Waterjet Models', 'Injection vs Suspension', 'Waterjet Specification', 'Software', 'Consumables', 'Shop']
-  },
-  {
-    title: 'SERVICES',
-    icon: Wrench,
-    color: 'bg-green-500',
-    items: ['Waterjet Cutting', '3D Printing', 'Lathe', 'Milling', 'Welding']
-  },
-  {
-    title: 'SOLUTIONS',
-    icon: Lightbulb,
-    color: 'bg-purple-500',
-    items: ['3D Design', 'Simulation', 'SPM', 'R&D', 'Manufacturing', 'Shop']
-  },
-  {
-    title: 'MATERIAL GALLERY',
-    icon: ImageIcon,
-    color: 'bg-orange-500',
-    items: ['Material Images', 'Economic Calculator', 'Cutting Calculator', 'Quotation Maker', 'Feed Rate Chart']
-  },
-  {
-    title: 'CONTACT',
-    icon: Phone,
-    color: 'bg-red-500',
-    items: ['Location', 'Technical Support', 'Get Quote', 'Requirements']
-  },
-  {
-    title: 'LEARN',
-    icon: BookOpen,
-    color: 'bg-teal-500',
-    items: ['Technology', 'FAQ', 'Reviews', 'How To', 'Updates', 'Videos', 'Articles', 'About Us']
-  }
-];
+
 
 export default function CircularNavigation() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,7 +20,7 @@ export default function CircularNavigation() {
   }, [isExpanded]);
 
   return (
-    <div className="w-full bg-white/95 backdrop-blur-md border-t border-gray-100">
+    <div className="w-full bg-stone-200 backdrop-blur-md border-t border-gray-100">
       <div className="max-w-7xl mx-auto py-6 md:py-10 px-4 md:px-8">
         {/* Main Navigation */}
         <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 place-items-center">
@@ -116,14 +72,16 @@ export default function CircularNavigation() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className={`
-                      p-6 md:p-8 rounded-xl hover:bg-gray-50
-                      transition-all duration-300 cursor-pointer
-                      border border-gray-200 hover:border-gray-300
-                      hover:shadow-sm
-                    `}
+                    className="bg-gradient-to-br from-white via-white to-blue-50 p-6 md:p-8 
+                      rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50
+                      transition-all duration-300 cursor-pointer border border-blue-100/20 
+                      hover:shadow-lg group"
                   >
-                    <span className="text-gray-700 text-base md:text-lg font-medium">{subItem}</span>
+                    <span className="text-gray-700 text-base md:text-lg font-medium 
+                      group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 
+                      group-hover:bg-clip-text group-hover:text-transparent">
+                      {subItem}
+                    </span>
                   </motion.div>
                 ))}
               </div>
