@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { navItems } from '../constants';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,23 +18,7 @@ export default function Navbar() {
     setActiveDropdown(null);
   };
 
-  const navItems = {
-    'Tech Specs': [
-      { title: 'KATANA SJ150', image: '/katana-sj150.jpg', link: '/specs/katana-sj150' },
-      { title: 'KATANA SJ200', image: '/katana-sj200.jpg', link: '/specs/katana-sj200' },
-      { title: 'Compare Models', image: '/compare-models.jpg', link: '/specs/compare' },
-    ],
-    'Products': [
-      { title: 'Waterjet Cutting', image: '/waterjet.jpg', description: 'High-precision cutting solutions' },
-      { title: 'CNC Machines', image: '/cnc.jpg', description: 'Advanced manufacturing systems' },
-      { title: 'Industrial Tools', image: '/tools.jpg', description: 'Professional-grade equipment' },
-    ],
-    'Overview': [
-      { title: 'About Us', image: '/about.jpg', description: 'Our story and mission' },
-      { title: 'Technology', image: '/technology.jpg', description: 'Innovation at its core' },
-      { title: 'Facilities', image: '/facilities.jpg', description: 'State-of-the-art manufacturing' },
-    ],
-  };
+  
 
   return (
     <nav className="fixed w-full bg-white/[0.65] backdrop-blur-lg z-50 top-0 left-0">
@@ -109,7 +94,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile/Tablet Menu Button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -120,46 +105,51 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Panel */}
+        {/* Mobile/Tablet Menu Panel */}
         {isOpen && (
           <div className="lg:hidden fixed inset-0 top-16 bg-white overflow-y-auto">
-            <div className="container mx-auto px-4 py-6">
-              {Object.entries(navItems).map(([category, items]) => (
-                <div key={category} className="mb-8">
-                  <h2 className="text-lg font-medium text-[#171a20] mb-4">{category}</h2>
-                  <div className="grid gap-4">
-                    {items.map((item, index) => (
-                      <Link key={index} href={(item as any).link || '#'} className="group">
-                        <div className="p-4 rounded-lg hover:bg-gray-50 transition">
-                          <div className="flex items-center space-x-4">
-                            <div className="flex-1">
-                              <h3 className="text-[#171a20] font-medium mb-1">{item.title}</h3>
-                              {(item as any).description && (
-                                <p className="text-sm text-gray-500">{(item as any).description}</p>
-                              )}
-                            </div>
-                            <div className="w-24 h-16 relative rounded-lg overflow-hidden">
+            <div className="container mx-auto px-4 py-6 md:px-8">
+              <div className="md:grid md:grid-cols-2 md:gap-8">
+                {Object.entries(navItems).map(([category, items]) => (
+                  <div key={category} className="mb-8">
+                    <h2 className="text-lg font-medium text-[#171a20] mb-4">{category}</h2>
+                    <div className="grid grid-cols-1 gap-4">
+                      {items.map((item, index) => (
+                        <Link 
+                          key={index} 
+                          href={(item as any).link || '#'}
+                          onClick={() => setIsOpen(false)}
+                          className="block"
+                        >
+                          <div className="flex items-center space-x-4 p-4 rounded-lg hover:bg-gray-50">
+                            <div className="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0">
                               <Image
                                 src={item.image}
                                 alt={item.title}
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-lg"
                               />
                             </div>
+                            <div>
+                              <h3 className="font-medium text-[#171a20]">{item.title}</h3>
+                              {(item as any).description && (
+                                <p className="text-sm text-gray-500 mt-1">{(item as any).description}</p>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    ))}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
               
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="w-full p-4 rounded-lg hover:bg-gray-50 transition text-left"
+                className="w-full p-4 text-left text-[#171a20] hover:bg-gray-50 rounded-lg"
               >
-                <h3 className="text-[#171a20] font-medium">Contact</h3>
-                <p className="text-sm text-gray-500">Get in touch with us</p>
+                <h3 className="font-medium">Contact</h3>
+                <p className="text-sm text-gray-500 mt-1">Get in touch with us</p>
               </button>
             </div>
           </div>

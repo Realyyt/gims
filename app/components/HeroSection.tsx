@@ -36,7 +36,7 @@ export default function HeroSection() {
         <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">KATANA SERIES</h1>
         <button 
           onClick={() => scrollToSection('overview')}
-          className="w-1/3 mx-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-full
+          className="w-2/3 md:w-1/3 mx-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-full
             text-lg transition-all duration-300 transform hover:scale-105"
         >
           Discover More

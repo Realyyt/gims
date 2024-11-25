@@ -215,3 +215,21 @@ export const menuItems = [
       description: 'Stainless steel catcher tank offers a strong build, effortless maintenance and a 100-liter capacity'
     }
   ];
+
+  export const navItems = {
+    'Tech Specs': [
+      { title: 'KATANA SJ150', image: '/katana-sj150.jpg', link: '/specs' },
+      { title: 'KATANA SJ200', image: '/katana-sj200.jpg', link: '/specs/katana-sj200' },
+      { title: 'Compare Models', image: '/compare-models.jpg', link: '/specs/compare' },
+    ],
+    'Products': [
+      { title: 'Waterjet Cutting', image: '/waterjet.jpg', description: 'High-precision cutting solutions' },
+      { title: 'CNC Machines', image: '/cnc.jpg', description: 'Advanced manufacturing systems' },
+      { title: 'Industrial Tools', image: '/tools.jpg', description: 'Professional-grade equipment' },
+    ],
+    'Overview': [
+      { title: 'About Us', image: '/about.jpg', description: 'Our story and mission' },
+      { title: 'Technology', image: '/technology.jpg', description: 'Innovation at its core' },
+      { title: 'Facilities', image: '/facilities.jpg', description: 'State-of-the-art manufacturing' },
+    ],
+  };

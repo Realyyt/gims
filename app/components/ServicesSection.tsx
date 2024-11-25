@@ -70,7 +70,7 @@ export default function ServicesSection({ services }: ServicesSectionProps) {
                   zIndex: 2
                 }}
               >
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-2xl shadow-2xl border border-blue-100 transition-all duration-300">
+                <div className="bg-blue-600 p-6 rounded-2xl shadow-2xl border border-blue-100 transition-all duration-300">
                   <div className="flex flex-col items-center">
                     <h4 className="text-xl font-medium mb-4 text-black text-center">
                       The Katana Advantage
