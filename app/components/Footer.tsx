@@ -18,10 +18,7 @@ export default function Footer() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-[#98c1d9]">Guhan Industries and Manufacturing Solutions</h3>
-              <p className="text-[#e0fbfc]/70">
-                Leading manufacturer of precision engineering solutions since 1998.
-              </p>
+              <h3 className="text-lg font-semibold text-[#98c1d9]">Guhan Industrial and Manufacturing Solutions Pvt Ltd</h3>
             </div>
           </div>
           
@@ -58,11 +55,12 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-[#98c1d9]">Contact</h4>
             <address className="text-[#e0fbfc]/70 not-italic">
-              123 Industrial Area<br />
-              Chennai, Tamil Nadu<br />
-              India - 600001<br />
-              <a href="tel:+911234567890" className="hover:text-[#ee6c4d] transition">
-                +91 123 456 7890
+              22-25, Sri Sai Nagar Main Rd,<br />
+              Sri Sai Nagar, Pallikaranai,<br />
+              Thoraipakkam, Chennai,<br />
+              Tamil Nadu 600096<br />
+              <a href="mailto:Sales@gimsindia.in" className="hover:text-[#ee6c4d] transition">
+                Sales@gimsindia.in
               </a>
             </address>
           </div>

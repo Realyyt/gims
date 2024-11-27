@@ -33,33 +33,35 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
         </div>
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#3d5a80] h-full flex flex-col justify-end py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[#3d5a80] h-full flex flex-col justify-between py-20">
         <motion.div 
           initial={{ y: 0 }}
-          animate={{ y: [-20, 20, -20] }}
+          animate={{ y: [-10, 10, -10] }}
           transition={{ 
             repeat: Infinity,
-            duration: 6,
+            duration: 4,
             ease: "easeInOut"
           }}
-          className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 
-            shadow-[0_20px_50px_rgba(61,_90,_128,_0.7)]
-            hover:shadow-[0_30px_60px_rgba(61,_90,_128,_0.8)]
-            transform hover:-translate-y-6 transition-all duration-500 mb-8"
+          className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 
+            shadow-[0_10px_30px_rgba(61,_90,_128,_0.7)]
+            hover:shadow-[0_20px_40px_rgba(61,_90,_128,_0.8)]
+            transform hover:-translate-y-4 transition-all duration-500 max-w-lg mx-auto"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-[#e0fbfc]">
-            KATANA WATERJET 
+          <h1 className="text-xl md:text-3xl font-bold text-[#e0fbfc]">
+            KATANA WATERJET SERIES
           </h1>
-          <button 
-            onClick={() => scrollToSection('overview')}
-            className="mt-8 bg-[#293241] hover:bg-[#293241]/[0.85] backdrop-blur-sm text-[#e0fbfc] 
-              px-6 py-3 rounded-full text-lg transition-all duration-300 
-              transform hover:scale-105 hover:-translate-y-2
-              border border-[#98c1d9]/20 shadow-[0_10px_30px_rgba(61,_90,_128,_0.3)]"
-          >
-            Discover More
-          </button>
         </motion.div>
+
+        <button 
+          onClick={() => scrollToSection('overview')}
+          className="mt-8 bg-[#293241] hover:bg-[#293241]/[0.85] backdrop-blur-sm text-[#e0fbfc] 
+            px-5 py-2.5 rounded-full text-base transition-all duration-300 
+            transform hover:scale-105 hover:-translate-y-1
+            border border-[#98c1d9]/20 shadow-[0_5px_20px_rgba(61,_90,_128,_0.3)]
+            max-w-xs mx-auto"
+        >
+          Discover More
+        </button>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const machines = [
   {
-    model: "KATANA SJ150",
+    model: "KATANA SJ150 OVERVIEW",
     image: "/gims1.png",
     specs: {
       "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",
@@ -17,7 +17,7 @@ const machines = [
     }
   },
   {
-    model: "KATANA SJ450",
+    model: "KATANA SJ450 OVERVIEW",
     image: "/sj450.png",
     specs: {
       "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",
@@ -29,7 +29,7 @@ const machines = [
     }
   },
   {
-    model: "KATANA SJ700",
+    model: "KATANA SJ700 OVERVIEW",
     image: "/sj700.png",
     specs: {
       "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",

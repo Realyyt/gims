@@ -47,7 +47,7 @@ export default function Navbar() {
               />
               <div className="hidden sm:block ml-4 border-l border-[#98c1d9]/40 pl-4">
                 <div className="text-[#e0fbfc] text-xs leading-tight">
-                  GUHAN INDUSTRIAL<br />AND MANUFACTURING<br />SOLUTION
+                  GUHAN INDUSTRIAL<br />AND MANUFACTURING<br />SOLUTIONS PVT LTD
                 </div>
               </div>
             </Link>

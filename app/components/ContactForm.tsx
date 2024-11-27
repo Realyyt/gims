@@ -63,8 +63,8 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="text-[#e0fbfc] font-semibold mb-1">Email Us</h3>
-                  <a href="mailto:info@guhanindustries.com" className="text-[#98c1d9] hover:text-[#ee6c4d] transition">
-                    info@guhanindustries.com
+                  <a href="mailto:Sales@gimsindia.in" className="text-[#98c1d9] hover:text-[#ee6c4d] transition">
+                    Sales@gimsindia.in
                   </a>
                 </div>
               </motion.div>
@@ -81,8 +81,8 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="text-[#e0fbfc] font-semibold mb-1">Call Us</h3>
-                  <a href="tel:+911234567890" className="text-[#98c1d9] hover:text-[#ee6c4d] transition">
-                    +91 123 456 7890
+                  <a href="tel:+918925559983" className="text-[#98c1d9] hover:text-[#ee6c4d] transition">
+                    +91 8925559983
                   </a>
                 </div>
               </motion.div>
@@ -100,9 +100,10 @@ export default function ContactForm() {
                 <div>
                   <h3 className="text-[#e0fbfc] font-semibold mb-1">Visit Us</h3>
                   <p className="text-[#98c1d9]">
-                    123 Industrial Area<br />
-                    Chennai, Tamil Nadu<br />
-                    India - 600001
+                    22-25, Sri Sai Nagar Main Rd,<br />
+                    Sri Sai Nagar, Pallikaranai,<br />
+                    Thoraipakkam, Chennai,<br />
+                    Tamil Nadu 600096
                   </p>
                 </div>
               </motion.div>
