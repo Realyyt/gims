@@ -16,11 +16,22 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(false);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="h-screen w-screen flex items-center justify-center bg-[#293241]">
+        <div className="relative w-24 h-24">
+          <div className="absolute inset-0 border-4 border-[#98c1d9]/20 rounded-full"></div>
+          <div className="absolute inset-0 border-4 border-[#ee6c4d] rounded-full animate-spin border-t-transparent"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#ee6c4d] rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

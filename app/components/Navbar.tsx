@@ -39,11 +39,11 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/circle logo1-Photoroom.png"
+                src="/Guhan industrial and manufacturing solution_logo.png"
                 alt="Guhan Industries Logo"
-                width={120}
-                height={64}
-                className="h-16 w-auto"
+                width={80}
+                height={42}
+                className="h-12 w-auto"
               />
               <div className="hidden sm:block ml-4 border-l border-[#98c1d9]/40 pl-4">
                 <div className="text-[#e0fbfc] text-xs leading-tight">
@@ -52,7 +52,6 @@ export default function Navbar() {
               </div>
             </Link>
           </div>
-          
           {/* Navigation Menu */}
           <div className={`${isOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:justify-center lg:flex-1 
             absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-[#293241] lg:bg-transparent`}>

@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import { FacebookIcon, Linkedin, Youtube } from 'lucide-react';
 import { scrollToSection } from '../utils/scroll';
 
@@ -8,10 +9,20 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-[#98c1d9]">Guhan Industries</h3>
-            <p className="text-[#e0fbfc]/70">
-              Leading manufacturer of precision engineering solutions since 1998.
-            </p>
+            <div className="flex flex-col space-y-4">
+              <div className="relative w-48 h-16">
+                <Image
+                  src="/Guhan industrial and manufacturing solution_logo.png"
+                  alt="Guhan Industries Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-[#98c1d9]">Guhan Industries and Manufacturing Solutions</h3>
+              <p className="text-[#e0fbfc]/70">
+                Leading manufacturer of precision engineering solutions since 1998.
+              </p>
+            </div>
           </div>
           
           <div>
