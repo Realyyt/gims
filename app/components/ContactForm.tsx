@@ -18,8 +18,23 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Add your form submission logic here
-    // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) });
+    // Create mailto URL with form data
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Phone: ${formData.phone}
+      Company: ${formData.company}
+
+      Message:
+      ${formData.message}
+    `;
+
+    // Encode the mailto URL
+    const mailtoUrl = `mailto:Sales@gimsindia.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open default email client
+    window.location.href = mailtoUrl;
     
     setTimeout(() => {
       setIsSubmitting(false);
