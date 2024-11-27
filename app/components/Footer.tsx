@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import { FacebookIcon, Linkedin, Youtube } from 'lucide-react';
+import { FacebookIcon, Linkedin, Youtube, Instagram } from 'lucide-react';
 import { scrollToSection } from '../utils/scroll';
 
 export default function Footer() {
@@ -91,6 +91,14 @@ export default function Footer() {
                 className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition"
               >
                 <FacebookIcon className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.instagram.com/gims_india/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition"
+              >
+                <Instagram className="w-6 h-6" />
               </a>
             </div>
           </div>
