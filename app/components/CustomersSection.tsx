@@ -32,8 +32,7 @@ export default function CustomersSection() {
                   src={customer.logo}
                   alt={customer.name}
                   fill
-                  className="object-contain opacity-70 
-                    group-hover:opacity-100 transition-opacity duration-300"
+                  className="object-contain"
                 />
               </div>
             </motion.div>
