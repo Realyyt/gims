@@ -8,6 +8,8 @@ import { services, industrialApplications } from './constants';
 import { useAutoSlide } from './hooks/useAutoSlide';
 import CustomersSection from './components/CustomersSection';
 import KatanaSJ150Overview from './components/KatanaSJ150Overview';
+import CollageSection from './components/CollageSection';
+import ContactForm from './components/ContactForm';
 
 export default function Home() {
   const { currentIndex, next, prev, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
@@ -22,9 +24,10 @@ export default function Home() {
   }
 
   return (
-    <main className="flex-grow overflow-x-hidden bg-blue-50">
+    <main className="flex-grow overflow-x-hidden bg-[#293241]">
       <HeroSection />
       <ServicesSection services={services} />
+      <CollageSection />
       <KatanaSJ150Overview />
       <SpecificationsSection />
       <CustomersSection />
@@ -35,6 +38,7 @@ export default function Home() {
         prev={prev}
         setCurrentIndex={setCurrentIndex}
       />
+      <ContactForm />
     </main>
   );
 }

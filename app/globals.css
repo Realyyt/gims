@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --primary: #1d4ed8;
-  --secondary: #1e40af;
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #3d5a80;
+  --secondary: #98c1d9;
+  --accent: #ee6c4d;
+  --background: #293241;
+  --light: #e0fbfc;
   --nav-height: 64px;
+  --glass-background: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(45, 55, 72, 0.37);
 }
 
 html, body {
@@ -18,9 +22,30 @@ html, body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--light);
   background: var(--background);
   padding-top: var(--nav-height);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top left, rgba(66, 153, 225, 0.1) 0%, transparent 60%),
+              radial-gradient(circle at bottom right, rgba(49, 130, 206, 0.1) 0%, transparent 60%);
+  z-index: -1;
+}
+
+.glass-effect {
+  background: rgba(61, 90, 128, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(152, 193, 217, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 main {

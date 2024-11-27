@@ -4,50 +4,41 @@ import { customers } from '../constants';
 
 export default function CustomersSection() {
   return (
-    <section className="py-16 bg-stone-200 overflow-hidden">
+    <section className="py-20 bg-[#293241]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center gap-8"
+          className="text-4xl font-bold text-center mb-16 text-[#e0fbfc]"
         >
-          <h3 className="text-5xl font-semibold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent">
-            OUR CLIENTS
-          </h3>
-          <div className="w-full overflow-hidden">
+          Our Trusted Clients
+        </motion.h2>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {customers.map((customer, index) => (
             <motion.div
-              initial={{ x: 0 }}
-              animate={{
-                x: [0, -100 * customers.length],
-              }}
-              transition={{
-                x: {
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear",
-                  delay: 0.5
-                }
-              }}
-              className="flex gap-16 items-center"
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-[#3d5a80]/10 p-6 rounded-xl border border-[#98c1d9]/20 
+                hover:border-[#98c1d9]/40 transition-all duration-300 group"
             >
-              {/* Double the customers array to create seamless loop */}
-              {[...customers, ...customers].map((customer, index) => (
-                <div
-                  key={`${customer.name}-${index}`}
-                  className="flex-shrink-0 w-48 h-24 relative opacity-60 hover:opacity-100 transition-opacity duration-300"
-                >
-                  <Image
-                    src={customer.logo}
-                    alt={customer.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              ))}
+              <div className="relative h-24 w-full">
+                <Image
+                  src={customer.logo}
+                  alt={customer.name}
+                  fill
+                  className="object-contain opacity-70 
+                    group-hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
             </motion.div>
-          </div>
-        </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -129,7 +129,10 @@ export const industrialApplications: IndustrialApplication[] = [
     { name: 'IIT', logo: '/IIT.png' },
     { name: 'IIT1', logo: '/IIT1.png' },
     { name: 'WhatsApp Image 1', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54__1_-removebg-preview.png' },
-    { name: 'WhatsApp Image 2', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54-removebg-preview.png' }
+    { name: 'WhatsApp Image 2', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54-removebg-preview.png' },
+    { name: 'IIT1', logo: '/IIT1.png' },
+    { name: 'IIT1', logo: '/IIT1.png' },
+    { name: 'IIT1', logo: '/IIT1.png' },
   ];
 
 
@@ -168,27 +171,28 @@ export const industrialApplications: IndustrialApplication[] = [
   ];
 
   export const navItems = {
-    'Tech Specs': [
+    'Technical Specifications': [
       { title: 'KATANA SJ150', image: '/gims1.png', link: '/specs' },
       { title: 'KATANA SJ450', image: '/sj450.png', link: '/specs/katana-sj200' },
       { title: 'KATANA SJ700', image: '/sj700.png', link: '/specs/katana-sj200' },
       { title: 'Compare Models', image: '/2d7839103e8aed7e9ac618fd7dd66ca2.jpg', link: '/specs/compare' },
+      { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },
     ],
-    'Products': [
-      { title: 'Waterjet Calculator', image: '/waterjet.jpg', description: 'Calculate pressure, flow rate and cutting parameters' },
-      { title: 'Materials', image: '/waterjet.jpg', description: 'Explore different materials and cutting capabilities' },
-      { title: 'CNC Machines', image: '/cnc.jpg', description: 'Advanced manufacturing systems' },
-      { title: 'Industrial Tools', image: '/tools.jpg', description: 'Professional-grade equipment' },
+    'Materials': [
+      { title: 'Gallery', image: '/marble.jpg', description: 'Explore different materials and cutting capabilities' },
+      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', description: 'Calculate pressure, flow rate and cutting parameters' },
+      { title: 'Applications', image: '/application.jpg', description: 'Advanced manufacturing systems' },
     ],
-    'Overview': [
-      { title: 'About Us', image: '/about.jpg', description: 'Our story and mission' },
-      { title: 'Technology', image: '/technology.jpg', description: 'Innovation at its core' },
-      { title: 'Facilities', image: '/facilities.jpg', description: 'State-of-the-art manufacturing' },
+    'Services': [
+      { title: 'New product development ', image: '/new product.jpg', description: 'Our story and mission' },
+      { title: 'Design and simulation', image: '/machine-shops-menu.jpg', description: 'Innovation at its core' },
+      { title: 'Manufacturing and fabrication', image: '/rapid-prototyping-flyout-thumbnail.jpg', description: 'State-of-the-art manufacturing' },
+      { title: 'Machine tool service', image: '/testing-quality-control-flyout-thumbnail.jpg', description: 'State-of-the-art Tooling service' },
     ],
-    'Learn': [
-      { title: 'Technology', image: '/technology.jpg', description: 'Innovation at its core' },
-      { title: 'FAQ', image: '/faq.jpg', description: 'Frequently asked questions' },
-      { title: 'Reviews', image: '/reviews.jpg', description: 'What our customers say' },
-      { title: 'Articles', image: '/articles.jpg', description: 'Read our latest articles' },
+    'Learn more': [
+      { title: 'About Us', image: '/gims1.png', description: 'Innovation at its core' },
+      { title: 'FAQ', image: '/faq-flyout-thumbnail.jpg', description: 'Frequently asked questions' },
+      { title: 'Reviews', image: '/8512fbae976e871e5353cdd64c165fa1.jpg', description: 'What our customers say' },
+      { title: 'Articles', image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', description: 'Read our latest articles' },
     ],
   };
