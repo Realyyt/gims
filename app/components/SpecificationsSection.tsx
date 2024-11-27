@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 export default function SpecificationsSection() {
     return (
-      <section id="specifications" className="py-20 bg-[#3d5a80]">
+      <section id="specifications" className="py-20 bg-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 
-            className="text-5xl font-bold text-center mb-16 text-[#e0fbfc]"
+            className="text-5xl font-bold text-center mb-16 text-[#293241]"
           >
             KATANA MODEL SPECIFICATIONS
           </motion.h2>
@@ -15,7 +15,7 @@ export default function SpecificationsSection() {
             {specifications.map((spec) => (
               <motion.div
                 className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
-                  transition-all duration-300 border border-[#98c1d9] bg-[#293241]"
+                  transition-all duration-300 border border-[#98c1d9] bg-[#1890d5]"
                 key={spec.model}
               >
                 <div className="relative h-56 bg-white">
@@ -38,7 +38,7 @@ export default function SpecificationsSection() {
                         }}
                         key={`${spec.model}-${key}`}
                       >
-                        <span className="text-[#98c1d9] font-medium">{key}</span>
+                        <span className="text-[#293241] font-medium">{key}</span>
                         <span className="font-semibold text-[#ee6c4d]">{value}</span>
                       </motion.div>
                     ))}

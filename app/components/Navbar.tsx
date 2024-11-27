@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full bg-[#293241]/[0.85] backdrop-blur-lg z-50 top-0 left-0 border-b border-[#98c1d9]/20">
+    <nav className="fixed w-full bg-[#0a4165]/70 backdrop-blur-[2px] z-50 top-0 left-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo section */}
@@ -45,7 +45,7 @@ export default function Navbar() {
                 height={42}
                 className="h-12 w-auto"
               />
-              <div className="hidden sm:block ml-4 border-l border-[#98c1d9]/40 pl-4">
+              <div className="hidden sm:block ml-4 border-l border-[#e0fbfc]/20 pl-4">
                 <div className="text-[#e0fbfc] text-xs leading-tight">
                   GUHAN INDUSTRIAL<br />AND MANUFACTURING<br />SOLUTIONS PVT LTD
                 </div>
@@ -54,12 +54,12 @@ export default function Navbar() {
           </div>
           {/* Navigation Menu */}
           <div className={`${isOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:justify-center lg:flex-1 
-            absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-[#293241] lg:bg-transparent`}>
+            absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto`}>
             <div className="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 p-4 lg:p-0">
               <button 
                 onClick={() => window.location.href = '/'} 
                 className="w-full lg:w-auto px-3 py-2 text-sm font-medium text-[#e0fbfc] 
-                  hover:bg-[#3d5a80]/[0.3] rounded-md transition text-center"
+                  hover:bg-[#0a4165]/90 rounded-md transition text-center"
               >
                 Waterjet
               </button>
@@ -74,7 +74,7 @@ export default function Navbar() {
                 > 
                   <button 
                     className="w-full lg:w-auto px-3 py-2 text-sm font-medium text-[#e0fbfc] 
-                      hover:bg-[#3d5a80]/[0.3] rounded-md transition flex items-center justify-between lg:justify-start"
+                      hover:bg-[#0a4165]/90 rounded-md transition flex items-center justify-between lg:justify-start"
                   >
                     {item}
                     <ChevronDown size={16} className={`ml-1 transform transition-transform ${activeDropdown === item ? 'rotate-180' : ''}`} />
@@ -82,14 +82,14 @@ export default function Navbar() {
                   
                   {activeDropdown === item && (
                     <div className={`${isMobile ? 'relative' : 'absolute'} left-0 lg:left-1/2 transform lg:-translate-x-1/2 
-                      w-full lg:w-screen lg:max-w-7xl bg-[#3d5a80] shadow-lg rounded-b-lg mt-2`}>
+                      w-full lg:w-screen lg:max-w-7xl bg-[#0a4165]/70 backdrop-blur-[2px] shadow-lg rounded-b-lg mt-2`}>
                       <div className="px-4 lg:px-8 py-4 lg:py-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
                           {navItems[item as keyof typeof navItems].map((subItem, index) => (
                             <Link 
                               key={index}
                               href={'link' in subItem ? subItem.link : '#'}
-                              className="group flex lg:flex-col items-center lg:text-center hover:bg-[#293241] rounded-lg p-2"
+                              className="group flex lg:flex-col items-center lg:text-center rounded-lg p-2"
                               onClick={() => setIsOpen(false)}
                             >
                               <div className="relative w-20 h-20 lg:w-full lg:h-40 mb-0 lg:mb-3 overflow-hidden rounded-lg flex-shrink-0">
@@ -103,7 +103,7 @@ export default function Navbar() {
                               <div className="ml-4 lg:ml-0">
                                 <h3 className="text-[#e0fbfc] font-medium mb-1">{subItem.title}</h3>
                                 {'description' in subItem && (
-                                  <p className="text-sm text-[#98c1d9]">{subItem.description}</p>
+                                  <p className="text-sm text-[#e0fbfc]/80">{subItem.description}</p>
                                 )}
                               </div>
                             </Link>
@@ -118,7 +118,7 @@ export default function Navbar() {
               <button 
                 onClick={() => scrollToSection('contact')} 
                 className="w-full lg:w-auto px-3 py-2 text-sm font-medium text-[#e0fbfc] 
-                  hover:bg-[#3d5a80]/[0.3] rounded-md transition text-center"
+                  hover:bg-[#0a4165]/90 rounded-md transition text-center"
               >
                 Contact
               </button>
@@ -128,7 +128,7 @@ export default function Navbar() {
           {/* Menu Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-[#e0fbfc] hover:bg-[#3d5a80]/[0.3] rounded-md transition"
+            className="lg:hidden p-2 text-[#e0fbfc] hover:bg-[#0a4165]/90 rounded-md transition"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

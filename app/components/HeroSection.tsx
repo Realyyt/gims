@@ -47,14 +47,14 @@ export default function HeroSection() {
             hover:shadow-[0_20px_40px_rgba(61,_90,_128,_0.8)]
             transform hover:-translate-y-4 transition-all duration-500 max-w-lg mx-auto"
         >
-          <h1 className="text-xl md:text-3xl font-bold text-[#e0fbfc]">
+          <h1 className="text-xl md:text-3xl font-bold text-[#1890d5]">
             KATANA WATERJET SERIES
           </h1>
         </motion.div>
 
         <button 
           onClick={() => scrollToSection('overview')}
-          className="mt-8 bg-[#293241] hover:bg-[#293241]/[0.85] backdrop-blur-sm text-[#e0fbfc] 
+          className="mt-8 bg-[#293241] hover:bg-[#293241]/[0.85] backdrop-blur-sm text-[#1890d5]
             px-5 py-2.5 rounded-full text-base transition-all duration-300 
             transform hover:scale-105 hover:-translate-y-1
             border border-[#98c1d9]/20 shadow-[0_5px_20px_rgba(61,_90,_128,_0.3)]

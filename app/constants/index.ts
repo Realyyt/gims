@@ -67,21 +67,61 @@ export const industrialApplications: IndustrialApplication[] = [
     description: "Precision cutting for aerospace components and satellite parts"
   },
   {
-    title: "Civil Works",
+    title: "Civil Works", 
     image: "/fa36c1eba5f6ce0325fbc50e0ee748ee.jpg",
     description: "Construction materials and infrastructure applications"
   },
   {
     title: "Automotive",
-    image: "/5993377dd085bb4c52bc7fb94c961175.jpg",
+    image: "/5993377dd085bb4c52bc7fb94c961175.jpg", 
     description: "Automotive parts and precision vehicle components"
   },
   {
     title: "Defense",
     image: "/6af112a0ba19b55f04935bfe15df3b36.jpg",
     description: "Military equipment and defense industry applications"
+  },
+  {
+    title: "Medical",
+    image: "/2e9efcc7e2ec55a1a09e5a1fd59e1e6f.jpg",
+    description: "Precision medical devices and surgical instruments"
+  },
+  {
+    title: "Electronics",
+    image: "/670c15988e6badbc4976ac42f4fa778b.jpg",
+    description: "Circuit boards and electronic component manufacturing"
+  },
+  {
+    title: "Energy",
+    image: "/0307d63360ea9d0cbbe3a0c6a6f80afc.jpg",
+    description: "Components for renewable energy and power generation"
+  },
+  {
+    title: "Marine",
+    image: "/330e7adcd3564a053e3ed39b3d59fb26.jpg",
+    description: "Shipbuilding and marine equipment fabrication"
+  },
+  {
+    title: "Mining",
+    image: "/e703e1b6504ed7ed38efcb3d779487eb.jpg",
+    description: "Heavy equipment and mining machinery components"
+  },
+  {
+    title: "Food Processing",
+    image: "/4583de9ea04ad5488a6fe74e8bd7a6a6.jpg",
+    description: "Food processing equipment and machinery parts"
+  },
+  {
+    title: "Textile",
+    image: "/cc941db18d40dfda9182ad796ee07db0.jpg",
+    description: "Textile machinery and equipment components"
+  },
+  {
+    title: "Research",
+    image: "/dfa35ad401df335d1944ececce90f551.jpg",
+    description: "Scientific research and development applications"
   }
-]; 
+];
 
 
 
@@ -130,9 +170,6 @@ export const industrialApplications: IndustrialApplication[] = [
     { name: 'IIT1', logo: '/IIT1.png' },
     { name: 'WhatsApp Image 1', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54__1_-removebg-preview.png' },
     { name: 'WhatsApp Image 2', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54-removebg-preview.png' },
-    { name: 'IIT1', logo: '/IIT1.png' },
-    { name: 'IIT1', logo: '/IIT1.png' },
-    { name: 'IIT1', logo: '/IIT1.png' },
   ];
 
 

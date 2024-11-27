@@ -42,9 +42,6 @@ body::before {
 }
 
 .glass-effect {
-  background: rgba(61, 90, 128, 0.1);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(152, 193, 217, 0.2);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 

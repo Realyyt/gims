@@ -5,7 +5,7 @@ import { scrollToSection } from '../utils/scroll';
 
 export default function Footer() {
   return (
-    <footer className="flex-shrink-0 w-full bg-[#1a2530] text-[#e0fbfc]" id="contact">
+    <footer className="flex-shrink-0 w-full bg-[#0a4165] text-[#e0fbfc]" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -18,17 +18,17 @@ export default function Footer() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-[#98c1d9]">Guhan Industrial and Manufacturing Solutions Pvt Ltd</h3>
+              <h3 className="text-lg font-semibold text-white">Guhan Industrial and Manufacturing Solutions Pvt Ltd</h3>
             </div>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-[#98c1d9]">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => scrollToSection('services')}
-                  className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition cursor-pointer"
+                  className="text-white/70 hover:text-white transition cursor-pointer"
                 >
                   Services
                 </button>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection('overview')}
-                  className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition cursor-pointer"
+                  className="text-white/70 hover:text-white transition cursor-pointer"
                 >
                   Overview
                 </button>
@@ -44,7 +44,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection('specifications')}
-                  className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition cursor-pointer"
+                  className="text-white/70 hover:text-white transition cursor-pointer"
                 >
                   Products
                 </button>
@@ -53,26 +53,26 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-[#98c1d9]">Contact</h4>
-            <address className="text-[#e0fbfc]/70 not-italic">
+            <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
+            <address className="text-white/70 not-italic">
               22-25, Sri Sai Nagar Main Rd,<br />
               Sri Sai Nagar, Pallikaranai,<br />
               Thoraipakkam, Chennai,<br />
               Tamil Nadu 600096<br />
-              <a href="mailto:Sales@gimsindia.in" className="hover:text-[#ee6c4d] transition">
+              <a href="mailto:Sales@gimsindia.in" className="hover:text-white transition">
                 Sales@gimsindia.in
               </a>
             </address>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-[#98c1d9]">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Follow Us</h4>
             <div className="flex space-x-4">
               <a 
                 href="https://www.youtube.com/@GIMSINDIA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition"
+                className="text-white/70 hover:text-white transition"
               >
                 <Youtube className="w-6 h-6" />
               </a>
@@ -80,7 +80,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/gims-pvt-ltd/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition"
+                className="text-white/70 hover:text-white transition"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -88,7 +88,7 @@ export default function Footer() {
                 href="https://www.facebook.com/nirmaan.iitm/videos/gims-guhan-industrial-manufacturing-solutions-is-a-pre-incubated-startup-under-n/778451072866765/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition"
+                className="text-white/70 hover:text-white transition"
               >
                 <FacebookIcon className="w-6 h-6" />
               </a>
@@ -96,7 +96,7 @@ export default function Footer() {
                 href="https://www.instagram.com/gims_india/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#e0fbfc]/70 hover:text-[#ee6c4d] transition"
+                className="text-white/70 hover:text-white transition"
               >
                 <Instagram className="w-6 h-6" />
               </a>
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-[#3d5a80] mt-12 pt-8 text-center text-[#e0fbfc]/50">
+        <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/50">
           <p>&copy; {new Date().getFullYear()} Guhan Industries. All rights reserved.</p>
         </div>
       </div>

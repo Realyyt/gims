@@ -32,7 +32,7 @@ export default function ServicesSection() {
   }, [controls]);
 
   return (
-    <section id="services" className="py-20 bg-[#293241]">
+    <section id="services" className="py-20 bg-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <motion.h2 
@@ -40,7 +40,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold mb-6 text-[#e0fbfc]"
+            className="text-5xl font-bold mb-6 text-[#293241]"
           >
             INDIA&apos;S FIRST ABRASIVE SUSPENSION WATERJET
           </motion.h2>
@@ -54,7 +54,7 @@ export default function ServicesSection() {
               {[...features, ...features, ...features].map((feature, index) => (
                 <div 
                   key={index}
-                  className="w-48 h-48 flex items-center justify-center bg-gradient-to-b from-[#3d5a80] to-[#293241] 
+                  className="w-48 h-48 flex items-center justify-center bg-[#1890d5]
                     rounded-lg shadow-lg border border-[#98c1d9]/20 flex-shrink-0 hover:border-[#98c1d9]/40 
                     transition-all duration-300 transform hover:-translate-y-1"
                 >

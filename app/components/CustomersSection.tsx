@@ -1,43 +1,74 @@
+'use client'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { customers } from '../constants';
 
 export default function CustomersSection() {
   return (
-    <section className="py-20 bg-[#293241]">
+    <section className="py-20 bg-stone-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center mb-16 text-[#e0fbfc]"
+          className="text-4xl font-bold text-center mb-16 text-[#293241]"
         >
           Our Trusted Clients
         </motion.h2>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {customers.map((customer, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-[#3d5a80]/10 p-6 rounded-xl border border-[#98c1d9]/20 
-                hover:border-[#98c1d9]/40 transition-all duration-300 group"
-            >
-              <div className="relative h-24 w-full">
-                <Image
-                  src={customer.logo}
-                  alt={customer.name}
-                  fill
-                  className="object-contain"
-                />
+
+        <div className="relative w-full">
+          <div className="flex animate-scroll">
+            {/* First set of logos */}
+            {customers.map((customer, index) => (
+              <div
+                key={`first-${index}`}
+                className="flex-shrink-0 w-48 h-48 mx-8 flex items-center justify-center"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={customer.logo}
+                    alt={customer.name}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="scale-150"
+                  />
+                </div>
               </div>
-            </motion.div>
-          ))}
+            ))}
+            {/* Duplicate set of logos for seamless loop */}
+            {customers.map((customer, index) => (
+              <div
+                key={`second-${index}`}
+                className="flex-shrink-0 w-48 h-48 mx-8 flex items-center justify-center"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={customer.logo}
+                    alt={customer.name}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="scale-150"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <style jsx global>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+        `}</style>
       </div>
     </section>
   );

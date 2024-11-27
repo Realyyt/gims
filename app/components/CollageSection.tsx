@@ -17,7 +17,7 @@ export default function CollageSection() {
   }, []);
 
   return (
-    <section className="py-8 bg-[#293241]">
+    <section className="py-8 bg-stone-200">
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
@@ -42,7 +42,7 @@ export default function CollageSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#3d5a80] rounded-lg p-8 flex flex-col justify-center border border-[#3d5a80] min-h-[200px] shadow-lg"
+            className="bg-[#1890d5] rounded-lg p-8 flex flex-col justify-center border border-[#3d5a80] min-h-[200px] shadow-lg"
           >
             {services[currentIndex].icon && (
               <div>

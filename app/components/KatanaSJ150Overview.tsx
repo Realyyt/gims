@@ -5,11 +5,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const machines = [
   {
-    model: "KATANA SJ150 OVERVIEW",
-    image: "/gims1.png",
+    model: "KATANA SJ700 OVERVIEW",
+    image: "/sj700.png",
     specs: {
       "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",
-      "High Performance Motors": "Hybrid servo stepper in the closed-loop control system ensures accurate movement and lower energy consumption", 
+      "High Performance Motors": "Hybrid servo stepper in the closed-loop control system ensures accurate movement and lower energy consumption",
       "Precision Traverse System": "Precision-grade ball screw provides excellent positional accuracy, repeatability, and low backlash",
       "Handheld Teach Pendant": "Compact teach pendant offers a more user-friendly interface and is easy to operate",
       "Tungsten Carbide Nozzle": "High-strength tungsten carbide nozzle ensures a long lifespan and is easy to replace",
@@ -29,8 +29,8 @@ const machines = [
     }
   },
   {
-    model: "KATANA SJ700 OVERVIEW",
-    image: "/sj700.png",
+    model: "KATANA SJ150 OVERVIEW",
+    image: "/gims1.png",
     specs: {
       "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",
       "High Performance Motors": "Hybrid servo stepper in the closed-loop control system ensures accurate movement and lower energy consumption",
@@ -81,9 +81,9 @@ const KatanaSeriesOverview = () => {
   };
 
   return (
-    <div className="bg-[#293241]">
+    <div className="bg-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-5xl font-bold text-[#e0fbfc] text-center mb-12">
+        <h1 className="text-5xl font-bold text-[#293241] text-center mb-12">
           {machines[currentIndex].model}
         </h1>
 
@@ -118,7 +118,7 @@ const KatanaSeriesOverview = () => {
                   duration: 0.3,
                   ease: "easeInOut"
                 }}
-                className="bg-gradient-to-b from-[#3d5a80] to-[#293241] rounded-3xl p-8"
+                className=" bg-[#1890d5] bg-opacity-75 rounded-3xl p-8"
               >
                 <div className="flex flex-col md:flex-row gap-8">
                   {/* Image Section */}
@@ -136,8 +136,7 @@ const KatanaSeriesOverview = () => {
                     {Object.entries(machines[currentIndex].specs).map(([title, description], idx) => (
                       <div
                         key={idx}
-                        className="glass-effect rounded-2xl p-6 bg-gradient-to-br from-[#3d5a80]/40 via-[#98c1d9]/20 to-[#3d5a80]/40 
-                          hover:bg-[#3d5a80]/50 transform hover:-translate-y-2 transition-all duration-500"
+                        className="glass-effect rounded-2xl p-6  transform hover:-translate-y-2 transition-all duration-500"
                       >
                         <div className="flex items-center mb-2">
                           <span className="bg-[#ee6c4d] text-[#e0fbfc] px-2 py-1 rounded-md font-bold text-sm mr-2">
@@ -147,7 +146,7 @@ const KatanaSeriesOverview = () => {
                             {title}
                           </h3>
                         </div>
-                        <p className="text-[#98c1d9] leading-relaxed text-sm">{description}</p>
+                        <p className="text-[#293241] leading-relaxed text-sm">{description}</p>
                       </div>
                     ))}
                   </div>
