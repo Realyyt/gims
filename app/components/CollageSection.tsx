@@ -17,7 +17,7 @@ export default function CollageSection() {
   }, []);
 
   return (
-    <section className="py-12 bg-[#3d5a80]">
+    <section className="py-8 bg-[#293241]">
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div
@@ -42,19 +42,19 @@ export default function CollageSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-[#293241] rounded-lg p-6 flex flex-col justify-center border border-[#3d5a80]"
+            className="bg-[#3d5a80] rounded-lg p-8 flex flex-col justify-center border border-[#3d5a80] min-h-[200px] shadow-lg"
           >
             {services[currentIndex].icon && (
               <div>
                 {React.createElement(services[currentIndex].icon, {
-                  className: "w-8 h-8 text-[#ee6c4d] mb-3"
+                  className: "w-8 h-8 text-[#ee6c4d] mb-4"
                 })}
               </div>
             )}
-            <h3 className="text-xl font-bold mb-2 text-[#e0fbfc]">
+            <h3 className="text-2xl font-bold mb-3 text-[#e0fbfc] font-serif">
               {services[currentIndex].title}
             </h3>
-            <p className="text-[#98c1d9] text-sm">
+            <p className="text-[#98c1d9] text-lg leading-relaxed font-sans">
               {services[currentIndex].description}
             </p>
           </motion.div>
