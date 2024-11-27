@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import SpecificationsSection from './components/SpecificationsSection';
 import IndustrialApplicationsCarousel from './components/IndustrialApplicationsCarousel';
-import { services, industrialApplications } from './constants';
+import {  industrialApplications } from './constants';
 import { useAutoSlide } from './hooks/useAutoSlide';
 import CustomersSection from './components/CustomersSection';
 import KatanaSJ150Overview from './components/KatanaSJ150Overview';
@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="flex-grow overflow-x-hidden bg-[#293241]">
       <HeroSection />
-      <ServicesSection services={services} />
+      <ServicesSection />
       <CollageSection />
       <KatanaSJ150Overview />
       <SpecificationsSection />

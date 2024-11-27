@@ -12,10 +12,11 @@ export default function SpecificationsSection() {
             KATANA MODEL SPECIFICATIONS
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {specifications.map((spec, index) => (
+            {specifications.map((spec) => (
               <motion.div
                 className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
                   transition-all duration-300 border border-[#98c1d9] bg-[#293241]"
+                key={spec.model}
               >
                 <div className="relative h-56 bg-white">
                   <Image
@@ -35,6 +36,7 @@ export default function SpecificationsSection() {
                           backgroundColor: "#3d5a80",
                           transition: { duration: 0.2 }
                         }}
+                        key={`${spec.model}-${key}`}
                       >
                         <span className="text-[#98c1d9] font-medium">{key}</span>
                         <span className="font-semibold text-[#ee6c4d]">{value}</span>

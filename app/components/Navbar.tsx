@@ -5,12 +5,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navItems } from '../constants';
 
-interface NavItem {
-  title: string;
-  image: string;
-  link?: string;
-  description?: string;
-}
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

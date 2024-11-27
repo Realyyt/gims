@@ -1,12 +1,8 @@
-import { Service } from '../types';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 
-interface ServicesSectionProps {
-  services: Service[];
-}
 
-export default function ServicesSection({ services }: ServicesSectionProps) {
+export default function ServicesSection() {
   const controls = useAnimation();
   
   const features = [
