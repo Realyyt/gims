@@ -61,13 +61,45 @@ export const comparisonData: ComparisonData[] = [
 
 export const specTables = [
   {
-    title: "Machine Specifications",
-    columns: ["KATANA SJ150"],
+    title: "Top Specs",
+    columns: ["KATANA SJ700", "KATANA SJ450", "KATANA SJ150"],
     rows: [
-      { label: "Working Area", values: ["1500 x 3000 mm"] },
-      { label: "Z-Axis Travel", values: ["200 mm"] },
-      { label: "Maximum Speed", values: ["12,000 mm/min"] },
+      { 
+        label: "Model", 
+        values: ["KATANA SJ700", "KATANA SJ450", "KATANA SJ150"]
+      },
+      { 
+        label: "Cutting Area (D x W)", 
+        values: [
+          "12 x 18 in\n305 x 460 mm",
+          "12 x 18 in\n305 x 460 mm",
+          "18 x 24 in\n457 x 610 mm"
+        ]
+      },
+      { 
+        label: "Kerf (width of cut)", 
+        values: [
+          "0.044 in\n1.1 mm",
+          "0.044 in\n1.1 mm",
+          "0.044 in\n1.1 mm"
+        ]
+      },
+      { 
+        label: "Abrasive Rate", 
+        values: [
+          "0.33 lb/min\n0.15 kg/min",
+          "0.33 lb/min\n0.15 kg/min",
+          "0.40 lb/min\n0.18 kg/min"
+        ]
+      },
+      { 
+        label: "Power Requirement", 
+        values: [
+          "220V / 60Hz (North America)\n220V / 50Hz (International)",
+          "110V / 60Hz (North America)\n220V / 50Hz (International)",
+          "220V / 60Hz (North America)\n220V / 50Hz (International)"
+        ]
+      }
     ]
-  },
-  // Add more tables as needed
+  }
 ]; 

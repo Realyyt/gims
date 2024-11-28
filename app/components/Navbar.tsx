@@ -1,16 +1,15 @@
 'use client'
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navItems } from '../constants';
-
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,6 +20,23 @@ export default function Navbar() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const handleMouseEnter = (item: string) => {
+    if (!isMobile) {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+      setActiveDropdown(item);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      dropdownTimeoutRef.current = setTimeout(() => {
+        setActiveDropdown(null);
+      }, 150); // Small delay to prevent immediate closing
+    }
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -68,8 +84,8 @@ export default function Navbar() {
                 <div 
                   key={item}
                   className="relative group"
-                  onMouseEnter={() => !isMobile && setActiveDropdown(item)}
-                  onMouseLeave={() => !isMobile && setActiveDropdown(null)}
+                  onMouseEnter={() => handleMouseEnter(item)}
+                  onMouseLeave={handleMouseLeave}
                   onClick={() => isMobile && setActiveDropdown(activeDropdown === item ? null : item)}
                 > 
                   <button 
@@ -81,8 +97,12 @@ export default function Navbar() {
                   </button>
                   
                   {activeDropdown === item && (
-                    <div className={`${isMobile ? 'relative' : 'absolute'} left-0 lg:left-1/2 transform lg:-translate-x-1/2 
-                      w-full lg:w-screen lg:max-w-7xl bg-[#0a4165]/70 backdrop-blur-[2px] shadow-lg rounded-b-lg mt-2`}>
+                    <div 
+                      className={`${isMobile ? 'relative' : 'absolute'} left-0 lg:left-1/2 transform lg:-translate-x-1/2 
+                        w-full lg:w-screen lg:max-w-7xl bg-[#0a4165]/70 backdrop-blur-[2px] shadow-lg rounded-b-lg mt-2`}
+                      onMouseEnter={() => handleMouseEnter(item)}
+                      onMouseLeave={handleMouseLeave}
+                    >
                       <div className="px-4 lg:px-8 py-4 lg:py-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
                           {navItems[item as keyof typeof navItems].map((subItem, index) => (
@@ -90,7 +110,10 @@ export default function Navbar() {
                               key={index}
                               href={'link' in subItem ? subItem.link : '#'}
                               className="group flex lg:flex-col items-center lg:text-center rounded-lg p-2"
-                              onClick={() => setIsOpen(false)}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setActiveDropdown(null);
+                              }}
                             >
                               <div className="relative w-20 h-20 lg:w-full lg:h-40 mb-0 lg:mb-3 overflow-hidden rounded-lg flex-shrink-0">
                                 <Image

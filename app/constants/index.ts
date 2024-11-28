@@ -210,9 +210,9 @@ export const industrialApplications: IndustrialApplication[] = [
   export const navItems = {
     'Technical Specifications': [
       { title: 'KATANA SJ150', image: '/gims1.png', link: '/specs' },
-      { title: 'KATANA SJ450', image: '/sj450.png', link: '/specs/katana-sj200' },
-      { title: 'KATANA SJ700', image: '/sj700.png', link: '/specs/katana-sj200' },
-      { title: 'Compare Models', image: '/2d7839103e8aed7e9ac618fd7dd66ca2.jpg', link: '/specs/compare' },
+      { title: 'KATANA SJ450', image: '/sj450.png', link: '/specs' },
+      { title: 'KATANA SJ700', image: '/sj700.png', link: '/specs' },
+      { title: 'Compare Models', image: '/2d7839103e8aed7e9ac618fd7dd66ca2.jpg', link: '/specs' },
       { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },
     ],
     'Materials': [
