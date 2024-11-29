@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/50">
-          <p>&copy; {new Date().getFullYear()} Guhan Industries. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Guhan Industrial and Manufacturing Solutions Pvt Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
