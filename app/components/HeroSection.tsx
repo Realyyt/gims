@@ -29,7 +29,7 @@ export default function HeroSection() {
             preload="auto"
             className="absolute w-full h-full object-cover"
           >
-            <source src="/india-s-first-abrasive-waterjet-katana-series-720-ytshorts.savetube.me (online-video-cutter.com)-2-2.mp4" type="video/mp4" />
+            <source src="/videos/india-s-first-abrasive-waterjet-katana-series-720-ytshorts.savetube.me (online-video-cutter.com)-3-2.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
         </div>
