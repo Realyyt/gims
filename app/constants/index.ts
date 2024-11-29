@@ -146,7 +146,7 @@ export const industrialApplications: IndustrialApplication[] = [
     },
     {
       model: "KATANA SJ450",
-      image: "/sj450.jpeg",
+      image: "/sj451.png",
       specs: {
         "Operation Pressure": "400 Bar",
         "Pump Specification": "8 HP",
@@ -216,7 +216,7 @@ export const industrialApplications: IndustrialApplication[] = [
   export const navItems = {
     'Technical Specifications': [
       { title: 'KATANA SJ150', image: '/gims1.png', link: '/specs' },
-      { title: 'KATANA SJ450', image: '/sj450.jpeg', link: '/specs' },
+      { title: 'KATANA SJ450', image: '/sj451.png', link: '/specs' },
       { title: 'KATANA SJ700', image: '/sj700.png', link: '/specs' },
       { title: 'Compare Models', image: '/2d7839103e8aed7e9ac618fd7dd66ca2.jpg', link: '/specs' },
       { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },

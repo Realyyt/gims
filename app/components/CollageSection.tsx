@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { services } from '@/app/constants';
 import React from 'react';
 
-const images = ['/gims1.png', '/sj450.png', '/sj700.png'];
+const images = ['/gims1.png', '/sj451.png', '/sj700.png'];
 
 export default function CollageSection() {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -18,7 +18,7 @@ const machines = [
   },
   {
     model: "KATANA SJ450 OVERVIEW",
-    image: "/sj450.jpeg",
+    image: "/sj451.png",
     specs: {
       "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",
       "High Performance Motors": "Hybrid servo stepper in the closed-loop control system ensures accurate movement and lower energy consumption",
