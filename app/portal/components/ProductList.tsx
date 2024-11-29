@@ -1,7 +1,7 @@
 'use client'
 import React, { Component } from "react";
 import { ProductConsumer } from "../context/productContext";
-import { Table, Button } from "react-bootstrap";
+import { Product } from '@/app/portal/data/Appdata';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class ProductList extends Component {
@@ -48,7 +48,7 @@ export default class ProductList extends Component {
                   </tr>
                 </thead> 
                  <tbody>
-                  {value.Alldata.map((product) => (
+                  {value.Alldata.map((product: Product) => (
                     <tr key={product.id}>
                       <td className="px-2">{product.title}</td>
                       <td className="px-2">{product.info}</td>

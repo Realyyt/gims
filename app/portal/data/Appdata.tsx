@@ -1,5 +1,5 @@
 // Define the type for a single product
-interface Product {
+export interface Product {
     id: number;
     title: string;
     price: number;

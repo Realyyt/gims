@@ -1,11 +1,24 @@
 'use client';
 
 import React, { Component, createContext } from 'react';
-import { Product, ProductContextType} from '@/app/port/components/Appdata';
+import { Product } from '@/app/portal/data/Appdata';
 import { rowData } from '../data/Appdata';
 
 // Create the context with default values (or undefined)
 const productContext = createContext<ProductContextType | undefined>(undefined);
+
+interface ProductContextType {
+  Alldata: Product[];
+  title: string;
+  info: string;
+  company: string;
+  price: number;
+  powerRequirement: string;
+  updateEdit: Product[];
+  updateValue: (e: React.ChangeEvent<HTMLInputElement>, field: 'title' | 'info' | 'company' | 'price' | 'powerRequirement') => void;
+  onEdit: (id: number) => void;
+  onDelete: (id: number) => void;
+}
 
 interface ProductProviderState {
   Alldata: Product[];
@@ -13,22 +26,28 @@ interface ProductProviderState {
   info: string;
   company: string;
   price: number;
-  updateEdit: any[];
+  powerRequirement: string;
+  updateEdit: Product[];
 }
 
-class ProductProvider extends Component<{}, ProductProviderState> {
+class ProductProvider extends Component<{ children: React.ReactNode }, ProductProviderState> {
   state = {
     Alldata: rowData,
     title: '',
     info: '',
     company: '',
     price: 0,
+    powerRequirement: '',
     updateEdit: [],
   };
 
-  updateValue = (e: React.ChangeEvent<HTMLInputElement>, field: string) => {
+  updateValue = (e: React.ChangeEvent<HTMLInputElement>, field: 'title' | 'info' | 'company' | 'price' | 'powerRequirement') => {
     const { value } = e.target;
-    this.setState({ [field]: value } as Pick<ProductProviderState, keyof ProductProviderState>);
+    const newValue = field === 'price' ? Number(value) : value;
+    this.setState((prevState) => ({
+      ...prevState,
+      [field]: newValue
+    }));
   };
 
   onEdit = (id: number) => {
@@ -38,9 +57,7 @@ class ProductProvider extends Component<{}, ProductProviderState> {
         title: product.title,
         info: product.info,
         company: product.company,
-        price: product.price,
-        powerRequirement: product.powerRequirement,
-
+        price: product.price
       });
     }
   };
