@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface SpecTableRow {
   label: string;
@@ -30,9 +31,11 @@ export default function SpecTable({ table }: { table: SpecTableData }) {
         
         {table.columns.map((col, i) => (
           <div key={i} className="text-center">
-            <img 
+            <Image 
               src={`/images/katana-${col.toLowerCase().replace(' ', '-')}.png`}
               alt={col}
+              width={256}
+              height={256}
               className="w-64 h-auto mb-4 mx-auto"
             />
             <h3 className="text-xl font-semibold text-[#ee6c4d]">{col}</h3>

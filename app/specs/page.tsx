@@ -1,15 +1,26 @@
 'use client'
-import { useAnimation } from 'framer-motion';
+import { useAnimation, AnimationControls } from 'framer-motion';
 import { useEffect } from 'react';
 import { SpecTable } from './components';
 import { specTables } from './data/specs';
 
-export default function SpecificationsPage() {
-  const controls = useAnimation();
+interface SpecTableData {
+  title: string;
+  columns: string[];
+  rows: {
+    label: string;
+    values: string[];
+  }[];
+}
+
+export default function SpecificationsPage(): JSX.Element {
+  const controls: AnimationControls = useAnimation();
 
   useEffect(() => {
     controls.start({ opacity: 1, y: 0 });
   }, [controls]);
+
+
 
   return (
     <main className="bg-white min-h-screen py-12">
@@ -18,10 +29,10 @@ export default function SpecificationsPage() {
           KATANA Tech Specs
         </h1>
         
-        {specTables.map((table, i) => (
+        {specTables.map((table: SpecTableData, i: number) => (
           <SpecTable key={i} table={table} />
         ))}
       </div>
     </main>
   );
-} 
+}
