@@ -11,6 +11,12 @@ import {
 } from 'lucide-react';
 import { Service, IndustrialApplication, Specification } from '../types';
 
+export interface MediaItem {
+  type: 'image' | 'video';
+  src: string;
+  title: string;
+}
+
 
 export const services: Service[] = [
   {
@@ -233,3 +239,36 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Articles', image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', description: 'Read our latest articles' },
     ],
   };
+  
+  export const mediaItems: MediaItem[] = [
+    {
+      type: 'video',
+      src: '/videos/Composite katana sj 400-2-2 - Compressed with FlexClip (online-video-cutter.com) - Compressed with FlexClip.mp4',
+      title: 'Waterjet Cutting Demo',
+    },
+    {
+      type: 'image', 
+      src: '/image/1718973848141.jpg',
+      title: 'Katana sj150 in display',
+    },
+    {
+      type: 'video',
+      src: '/videos/india-s-first-abrasive-waterjet-katana-series-720-ytshorts.savetube.me (online-video-cutter.com)-3-2.mp4',
+      title: 'India\'s First Abrasive Waterjet - Katana Series',
+    },
+    {
+      type: 'image',
+      src: '/image/IMG-20241024-WA0018.jpg',
+      title: 'Materials cutting',
+    },
+    {
+      type: 'video',
+      src: '/videos/Video from FAYAZ-3-2 (online-video-cutter.com) - Compressed with FlexClip.mp4',
+      title: 'Cutting operation on sj450',
+    },
+    {
+      type: 'image',
+      src: '/image/WhatsApp Image 2024-11-29 at 20.50.51 (1).jpeg',
+      title: 'katana sj450 in display',
+    }
+  ];

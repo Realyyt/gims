@@ -54,13 +54,41 @@ export default function ServicesSection() {
               {[...features, ...features, ...features].map((feature, index) => (
                 <div 
                   key={index}
-                  className="w-48 h-48 flex items-center justify-center bg-[#1890d5]
-                    rounded-lg shadow-lg border border-[#98c1d9]/20 flex-shrink-0 hover:border-[#98c1d9]/40 
-                    transition-all duration-300 transform hover:-translate-y-1"
+                  className="w-48 h-48 flex items-center justify-center
+                    rounded-lg shadow-2xl border border-[#98c1d9]/20 flex-shrink-0 hover:border-[#98c1d9]/40 
+                    transition-all duration-500 transform hover:-translate-y-4
+                    relative [perspective:1000px] hover:[transform:rotateX(10deg)]
+                    group overflow-hidden animate-float"
+                  style={{
+                    animation: `float ${3 + (index % 3)}s ease-in-out infinite`,
+                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)',
+                  }}
                 >
-                  <h4 className="text-xl font-medium text-[#e0fbfc] text-center px-4">
-                    {feature.title}
-                  </h4>
+                  {/* Bottom shadow layer */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#1275b3] to-[#1275b3]/90 rounded-lg transform translate-y-1.5 
+                    shadow-lg"></div>
+                  
+                  {/* Middle layer */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#1583c7] to-[#1583c7]/90 rounded-lg transform translate-y-1 
+                    shadow-md"></div>
+                  
+                  {/* Top content layer */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#1890d5] to-[#1890d5]/90 rounded-lg flex items-center justify-center
+                    transform transition-transform duration-300 group-hover:translate-y-[-2px]
+                    shadow-lg">
+                    {/* Light white overlay */}
+                    <div className="absolute inset-0 bg-white/10 rounded-lg"></div>
+                    <h4 className="relative z-10 text-xl font-bold text-white text-center px-4 drop-shadow-lg
+                      transform transition-all duration-300 group-hover:scale-105">
+                      {feature.title}
+                    </h4>
+                  </div>
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/50 to-transparent 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg
+                    translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000">
+                  </div>
                 </div>
               ))}
             </motion.div>

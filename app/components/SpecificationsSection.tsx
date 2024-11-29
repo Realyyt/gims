@@ -39,7 +39,7 @@ export default function SpecificationsSection() {
                         key={`${spec.model}-${key}`}
                       >
                         <span className="text-[#293241] font-medium">{key}</span>
-                        <span className="font-semibold text-[#ee6c4d]">{value}</span>
+                        <span className="font-semibold text-white">{value}</span>
                       </motion.div>
                     ))}
                   </div>

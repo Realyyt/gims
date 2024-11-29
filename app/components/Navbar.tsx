@@ -48,7 +48,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full bg-[#0a4165]/70 backdrop-blur-[2px] z-50 top-0 left-0">
+    <nav className="fixed w-full bg-stone-200 backdrop-blur-[2px] z-50 top-0 left-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo section */}
@@ -62,7 +62,7 @@ export default function Navbar() {
                 className="h-12 w-auto"
               />
               <div className="hidden sm:block ml-4 border-l border-[#e0fbfc]/20 pl-4">
-                <div className="text-[#e0fbfc] text-xs leading-tight">
+                <div className="text-[#0a4165] text-xs leading-tight font-bold">
                   GUHAN INDUSTRIAL<br />AND MANUFACTURING<br />SOLUTIONS PVT LTD
                 </div>
               </div>
@@ -74,8 +74,9 @@ export default function Navbar() {
             <div className="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 p-4 lg:p-0">
               <button 
                 onClick={() => window.location.href = '/'} 
-                className="w-full lg:w-auto px-3 py-2 text-sm font-medium text-[#e0fbfc] 
-                  hover:bg-[#0a4165]/90 rounded-md transition text-center"
+                className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
+                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
               >
                 Waterjet
               </button>
@@ -89,8 +90,9 @@ export default function Navbar() {
                   onClick={() => isMobile && setActiveDropdown(activeDropdown === item ? null : item)}
                 > 
                   <button 
-                    className="w-full lg:w-auto px-3 py-2 text-sm font-medium text-[#e0fbfc] 
-                      hover:bg-[#0a4165]/90 rounded-md transition flex items-center justify-between lg:justify-start"
+                    className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
+                      hover:bg-[#0a4165]/10 rounded-md transition flex items-center justify-between lg:justify-start shadow-sm"
+                    style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
                   >
                     {item}
                     <ChevronDown size={16} className={`ml-1 transform transition-transform ${activeDropdown === item ? 'rotate-180' : ''}`} />
@@ -99,7 +101,7 @@ export default function Navbar() {
                   {activeDropdown === item && (
                     <div 
                       className={`${isMobile ? 'relative' : 'absolute'} left-0 lg:left-1/2 transform lg:-translate-x-1/2 
-                        w-full lg:w-screen lg:max-w-7xl bg-[#0a4165]/70 backdrop-blur-[2px] shadow-lg rounded-b-lg mt-2`}
+                        w-full lg:w-screen lg:max-w-7xl bg-stone-200 backdrop-blur-[2px] shadow-lg rounded-b-lg mt-2`}
                       onMouseEnter={() => handleMouseEnter(item)}
                       onMouseLeave={handleMouseLeave}
                     >
@@ -124,9 +126,9 @@ export default function Navbar() {
                                 />
                               </div>
                               <div className="ml-4 lg:ml-0">
-                                <h3 className="text-[#e0fbfc] font-medium mb-1">{subItem.title}</h3>
+                                <h3 className="text-[#0a4165] font-bold mb-1">{subItem.title}</h3>
                                 {'description' in subItem && (
-                                  <p className="text-sm text-[#e0fbfc]/80">{subItem.description}</p>
+                                  <p className="text-sm text-[#0a4165] font-semibold">{subItem.description}</p>
                                 )}
                               </div>
                             </Link>
@@ -140,8 +142,9 @@ export default function Navbar() {
               
               <button 
                 onClick={() => scrollToSection('contact')} 
-                className="w-full lg:w-auto px-3 py-2 text-sm font-medium text-[#e0fbfc] 
-                  hover:bg-[#0a4165]/90 rounded-md transition text-center"
+                className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
+                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
               >
                 Contact
               </button>
@@ -151,7 +154,7 @@ export default function Navbar() {
           {/* Menu Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-[#e0fbfc] hover:bg-[#0a4165]/90 rounded-md transition"
+            className="lg:hidden p-2 text-[#0a4165] hover:bg-[#0a4165]/10 rounded-md transition shadow-sm"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

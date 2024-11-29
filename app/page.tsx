@@ -10,6 +10,7 @@ import CustomersSection from './components/CustomersSection';
 import KatanaSJ150Overview from './components/KatanaSJ150Overview';
 import CollageSection from './components/CollageSection';
 import ContactForm from './components/ContactForm';
+import MediaGallery from './components/MediaGallery';
 
 export default function Home() {
   const { currentIndex, next, prev, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
@@ -33,12 +34,14 @@ export default function Home() {
       </div>
     );
   }
+  //to helo recommit
 
   return (
     <main className="flex-grow overflow-x-hidden bg-[#293241]">
       <HeroSection />
       <ServicesSection />
       <CollageSection />
+      <MediaGallery />
       <KatanaSJ150Overview />
       <SpecificationsSection />
       <CustomersSection />
