@@ -55,12 +55,30 @@ export default function ServicesSection() {
                 <div 
                   key={index}
                   className="w-48 h-48 flex items-center justify-center bg-[#1890d5]
-                    rounded-lg shadow-lg border border-[#98c1d9]/20 flex-shrink-0 hover:border-[#98c1d9]/40 
-                    transition-all duration-300 transform hover:-translate-y-1"
+                    rounded-lg shadow-xl border border-[#98c1d9]/20 flex-shrink-0 hover:border-[#98c1d9]/40 
+                    transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl
+                    relative [perspective:1000px] hover:[transform:rotateX(10deg)]
+                    group overflow-hidden"
                 >
-                  <h4 className="text-xl font-medium text-[#e0fbfc] text-center px-4">
-                    {feature.title}
-                  </h4>
+                  {/* Bottom shadow layer */}
+                  <div className="absolute inset-0 bg-[#1275b3] rounded-lg transform translate-y-1"></div>
+                  
+                  {/* Middle layer */}
+                  <div className="absolute inset-0 bg-[#1583c7] rounded-lg transform translate-y-0.5"></div>
+                  
+                  {/* Top content layer */}
+                  <div className="absolute inset-0 bg-[#1890d5] rounded-lg flex items-center justify-center
+                    transform transition-transform duration-300 group-hover:translate-y-[-2px]">
+                    <h4 className="text-xl font-bold text-white text-center px-4 drop-shadow-md
+                      transform transition-all duration-300 group-hover:scale-105">
+                      {feature.title}
+                    </h4>
+                  </div>
+                  
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                  </div>
                 </div>
               ))}
             </motion.div>

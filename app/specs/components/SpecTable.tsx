@@ -27,17 +27,29 @@ export default function SpecTable({ table }: { table: SpecTableData }) {
               </h2>
             </div>
             
-            {table.columns.map((col, i) => (
-              <div key={i} className="text-center border-b-2 border-[#1890d5] pb-2">
-                <Image 
-                  src={`/images/katana-${col.toLowerCase().replace(' ', '-')}.png`}
-                  alt={col}
-                  width={100}
-                  height={100}
-                />
-                <h3 className="text-xl font-semibold text-[#ee6c4d]">{col}</h3>
-              </div>  
-            ))}
+            {table.columns.map((col, i) => {
+              console.log('Column:', col, typeof col); // Debug log to see exact value and type
+              const imagePath = 
+                col === "KATANA SJ150" ? "/gims1.png" :
+                col === "KATANA SJ450" ? "/sj450.png" :
+                col === "KATANA SJ700" ? "/sj700.png" : null;
+              console.log('Image path:', imagePath); // Debug log
+              
+              return (
+                <div key={i} className="text-center border-b-2 border-[#1890d5] pb-2">
+                  {imagePath && (  // Only render Image if we have a path
+                    <Image 
+                      src={imagePath}
+                      alt={col}
+                      width={100}
+                      height={100}
+                      className="mx-auto"
+                    />
+                  )}
+                  <h3 className="text-xl font-semibold text-[#ee6c4d]">{col}</h3>
+                </div>  
+              );
+            })}
           </div>
         </>
       ) : (
