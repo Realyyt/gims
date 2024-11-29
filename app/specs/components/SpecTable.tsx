@@ -31,7 +31,7 @@ export default function SpecTable({ table }: { table: SpecTableData }) {
               console.log('Column:', col, typeof col); // Debug log to see exact value and type
               const imagePath = 
                 col === "KATANA SJ150" ? "/gims1.png" :
-                col === "KATANA SJ450" ? "/sj450.png" :
+                col === "KATANA SJ450" ? "/sj451.png" :
                 col === "KATANA SJ700" ? "/sj700.png" : null;
               console.log('Image path:', imagePath); // Debug log
               
