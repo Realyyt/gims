@@ -140,8 +140,8 @@ export const industrialApplications: IndustrialApplication[] = [
         "Maximum Flow Rate": "8 L/min",
         "Abrasive Rate": "5 g/sec to 15 g/sec",
         "Gantry Max Speed": "3,000 mm/min", 
-        "Bed size": "1250x1250x150mm (customizable)",
-        "For steel": "25 mm - 46 mm/min\n50 mm - 20 mm/min\n10 mm - 118 mm/min"
+        "Bed size": "1250x1250x150mm(customizable)",
+        "For steel": "10 mm - 118 mm/min\n25 mm - 46 mm/min\n50 mm - 20 mm/min"
       }
     },
     {
@@ -152,8 +152,8 @@ export const industrialApplications: IndustrialApplication[] = [
         "Maximum Flow Rate": "4.5 L/min",
         "Abrasive Rate": "5 g/sec to 15 g/sec",
         "Gantry Max Speed": "3,000 mm/min",
-        "Bed size": "600x600x100mm (customizable)",
-        "For steel": "10 mm - 60 mm/min\n25 mm - 13 mm/min\n5 mm - 125 mm/min"
+        "Bed size": "600x600x100mm(customizable)",
+        "For steel": "5 mm - 125 mm/min\n10 mm - 60 mm/min\n25 mm - 13 mm/min"
       }
     },
     {
@@ -164,8 +164,8 @@ export const industrialApplications: IndustrialApplication[] = [
         "Maximum Flow Rate": "3 L/min",
         "Abrasive Rate": "5 g/sec to 15 g/sec",
         "Gantry Max Speed": "3,000 mm/min",
-        "Bed size": "600x300x50mm (customizable)",
-        "For steel": "2 mm - 42 mm/min\n3 mm - 26 mm/min\n1 mm - 62 mm/min"
+        "Bed size": "600x300x50mm(customizable)",
+        "For steel": "1 mm - 62 mm/min\n2 mm - 42 mm/min\n3 mm - 26 mm/min"
       }
     }
   ];

@@ -42,10 +42,9 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <ComparisonSection />
-      <CollageSection />
-      <MediaGallery />
       <KatanaSJ150Overview />
       <SpecificationsSection />
+      <MediaGallery />
       <CustomersSection />
       <IndustrialApplicationsCarousel 
         applications={industrialApplications}

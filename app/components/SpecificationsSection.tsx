@@ -45,7 +45,7 @@ export default function SpecificationsSection() {
                               .filter(Boolean)
                               .map((part, i) => (
                                 <div key={i} className="mb-1">
-                                  {part.trim().split(' ').slice(-2).join(' ') + ' mm/min'}
+                                  {part.trim() + ' mm/min'}
                                 </div>
                               ))
                           ) : (
