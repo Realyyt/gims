@@ -53,13 +53,13 @@ export default function ComparisonSection() {
             className="bg-[#1890d5] rounded-2xl p-8 shadow-xl"
           >
             <h3 className="text-2xl font-bold text-white mb-6">{comparisonData.suspension.title}</h3>
-            <div className="relative aspect-[4/3] mb-6 w-full rounded-lg overflow-hidden">
+            <div className="relative h-[400px] mb-6 w-full rounded-lg overflow-hidden bg-black/10">
               <Image
                 src={comparisonData.suspension.image}
                 alt="Suspension Waterjet"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             </div>
@@ -90,13 +90,13 @@ export default function ComparisonSection() {
             className="bg-stone-700 rounded-2xl p-8 shadow-xl"
           >
             <h3 className="text-2xl font-bold text-white mb-6">{comparisonData.normal.title}</h3>
-            <div className="relative aspect-[4/3] mb-6 w-full rounded-lg overflow-hidden">
+            <div className="relative h-[400px] mb-6 w-full rounded-lg overflow-hidden bg-black/10">
               <Image
                 src={comparisonData.normal.image}
                 alt="Normal Waterjet"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain"
+                className="object-cover"
                 priority
               />
             </div>
