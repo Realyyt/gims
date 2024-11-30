@@ -45,12 +45,10 @@ export default function HeroSection() {
           }}
           className="max-w-lg mx-auto"
         >
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-wider text-white">
-            GIMS
+          <h1 className="text-4xl md:text-4xl font-extrabold tracking-wider text-white">
+          KATANA WATERJET SERIES
           </h1>
-          <p className="text-sm md:text-base text-white/80 tracking-[0.3em] mt-2">
-            KATANA WATERJET SERIES
-          </p>
+          
         </motion.div>
         <div>
           <button 

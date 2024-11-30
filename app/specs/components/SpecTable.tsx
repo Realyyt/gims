@@ -63,7 +63,7 @@ export default function SpecTable({ table }: { table: SpecTableData }) {
       <div className="border-t border-gray-200">
         {/* Column headers for non-Top Specs sections */}
         {table.title !== "Top Specs" && (
-          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr_1fr_1fr] gap-x-8 bg-gray-50">
+          <div className="grid grid-cols-1 md:grid-cols-[300px_1fr_1fr_1fr] gap-x-8">
             <div className="font-semibold text-gray-900 py-4">
               Specification
             </div>
@@ -79,19 +79,17 @@ export default function SpecTable({ table }: { table: SpecTableData }) {
         {table.rows.map((row, rowIndex) => (
           <div 
             key={rowIndex} 
-            className={`
-              grid grid-cols-1 md:grid-cols-[300px_1fr_1fr_1fr] 
-              gap-x-8 border-b border-gray-200
-              ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
-            `}
+            className="grid grid-cols-1 md:grid-cols-[300px_1fr_1fr_1fr] gap-x-8 border-b border-gray-200"
           >
-            <div className="font-medium text-gray-900 py-4">
+            <div className="font-medium text-gray-900 py-4 whitespace-nowrap">
               {row.label}
             </div>
             {row.values.map((value, colIndex) => (
-              <div key={colIndex} className="text-gray-600 py-4">
-                {value.split('\n').map((line, k) => (
-                  <div key={k}>{line}</div>
+              <div key={colIndex} className="text-gray-600 py-4 break-words">
+                {value.split('\n').map((line, i) => (
+                  <div key={i} className="mb-2">
+                    {line.trim()}
+                  </div>
                 ))}
               </div>
             ))}

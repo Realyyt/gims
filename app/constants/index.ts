@@ -133,39 +133,39 @@ export const industrialApplications: IndustrialApplication[] = [
 
   export const specifications: Specification[] = [
     {
-      model: "KATANA SJ150",
-      image: "/gims1.png",
-      specs: {
-        "Operation Pressure": "150 Bar",
-        "Pump Specification": "2 HP", 
-        "Water Consumption": "3 LPM",
-        "Abrasive Consumption": "300 GPM",
-        "Gantry Linear Speed": "1500 mm/min",
-        "Customized For": "Research and Education Institute"
-      }
-    },
-    {
-      model: "KATANA SJ450",
-      image: "/sj451.png",
-      specs: {
-        "Operation Pressure": "400 Bar",
-        "Pump Specification": "8 HP",
-        "Water Consumption": "5.5 LPM", 
-        "Abrasive Consumption": "500 GPM",
-        "Gantry Linear Speed": "1500 mm/min",
-        "Customized For": "Mid-scale Industries & MSME"
-      }
-    },
-    {
       model: "KATANA SJ700",
       image: "/sj700.png",
       specs: {
-        "Operation Pressure": "700 Bar",
-        "Pump Specification": "15 HP",
-        "Water Consumption": "6.3 LPM",
-        "Abrasive Consumption": "600 GPM",
-        "Gantry Linear Speed": "1500 mm/min",
-        "Customized For": "Commercial Industrial"
+        "Pressure": "700 Bar",
+        "Maximum Flow Rate": "8 L/min",
+        "Abrasive Rate": "5 g/sec to 15 g/sec",
+        "Gantry Max Speed": "3,000 mm/min", 
+        "Bed size": "1250x1250x150mm (customizable)",
+        "For steel": "25 mm - 46 mm/min\n50 mm - 20 mm/min\n10 mm - 118 mm/min"
+      }
+    },
+    {
+      model: "KATANA SJ400",
+      image: "/sj451.png",
+      specs: {
+        "Pressure": "400 Bar",
+        "Maximum Flow Rate": "4.5 L/min",
+        "Abrasive Rate": "5 g/sec to 15 g/sec",
+        "Gantry Max Speed": "3,000 mm/min",
+        "Bed size": "600x600x100mm (customizable)",
+        "For steel": "10 mm - 60 mm/min\n25 mm - 13 mm/min\n5 mm - 125 mm/min"
+      }
+    },
+    {
+      model: "KATANA SJ150",
+      image: "/gims1.png",
+      specs: {
+        "Pressure": "150 Bar",
+        "Maximum Flow Rate": "3 L/min",
+        "Abrasive Rate": "5 g/sec to 15 g/sec",
+        "Gantry Max Speed": "3,000 mm/min",
+        "Bed size": "600x300x50mm (customizable)",
+        "For steel": "2 mm - 42 mm/min\n3 mm - 26 mm/min\n1 mm - 62 mm/min"
       }
     }
   ];
@@ -248,7 +248,7 @@ export const industrialApplications: IndustrialApplication[] = [
     },
     {
       type: 'image', 
-      src: '/image/1718973848141.jpg',
+      src: '/image/1718973848141-2.jpg',
       title: 'Katana sj150 in display',
     },
     {
@@ -258,17 +258,17 @@ export const industrialApplications: IndustrialApplication[] = [
     },
     {
       type: 'image',
-      src: '/image/IMG-20241024-WA0018.jpg',
+      src: '/image/PXL_20241115_094322236.jpg',
       title: 'Materials cutting',
     },
     {
       type: 'video',
-      src: '/videos/Video from FAYAZ-3-2 (online-video-cutter.com) - Compressed with FlexClip.mp4',
+      src: '/videos/PXL_20241115_113910820-2-2-2-2.mp4',
       title: 'Cutting operation on sj450',
     },
     {
       type: 'image',
-      src: '/image/WhatsApp Image 2024-11-29 at 20.50.51 (1).jpeg',
+      src: '/image/photo_6_2024-11-25_08-07-53.jpg',
       title: 'katana sj450 in display',
     }
   ];
