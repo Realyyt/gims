@@ -48,6 +48,11 @@ export default function SpecificationsSection() {
                                   {part.trim() + ' mm/min'}
                                 </div>
                               ))
+                          ) : key === "Bed size" ? (
+                            <>
+                              {value.toString().split('(')[0]}
+                              <div>(customizable)</div>
+                            </>
                           ) : (
                             value
                           )}

@@ -176,6 +176,7 @@ export const industrialApplications: IndustrialApplication[] = [
     { name: 'IIT1', logo: '/IIT1.png' },
     { name: 'WhatsApp Image 1', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54__1_-removebg-preview.png' },
     { name: 'WhatsApp Image 2', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54-removebg-preview.png' },
+    { name: 'Logo', logo: '/logo.png' },
   ];
 
 
