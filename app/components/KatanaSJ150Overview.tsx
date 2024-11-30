@@ -8,24 +8,24 @@ const machines = [
     model: "KATANA SJ700 OVERVIEW",
     image: "/sj700.png",
     specs: {
-      "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",
-      "High Performance Motors": "Hybrid servo stepper in the closed-loop control system ensures accurate movement and lower energy consumption",
-      "Precision Traverse System": "Precision-grade ball screw provides excellent positional accuracy, repeatability, and low backlash",
-      "Handheld Teach Pendant": "Compact teach pendant offers a more user-friendly interface and is easy to operate",
-      "Tungsten Carbide Nozzle": "High-strength tungsten carbide nozzle ensures a long lifespan and is easy to replace",
-      "Stainless Steel Catcher Tank": "Stainless steel catcher tank offers a strong build, effortless maintenance and a 100-liter capacity"
+      "Most Reliable CNC Controller": "High-performance CNC controller ensures precise cutting operations, seamless automation, and robust reliability",
+      "Servo Motors and Drives": "Advanced servo motors integrated with closed-loop control systems deliver precise, smooth movements with minimal energy consumption",
+      "Precision Traverse System": "High-grade ball screws ensure exceptional positional accuracy, repeatability, and low backlash for high-precision operations",
+      "HMI Interface": "User-friendly HMI interface provides an intuitive and simplified control experience",
+      "Tungsten Carbide Nozzle": "Durable tungsten carbide nozzle ensures long-lasting performance and is easy to replace, maintaining high operational efficiency",
+      "Stainless Steel Catcher Tank": "A robust stainless steel catcher tank with a higher capacity, tailored for large-scale operations, ensuring easy maintenance and durability"
     }
   },
   {
-    model: "KATANA SJ450 OVERVIEW",
+    model: "KATANA SJ450 OVERVIEW", 
     image: "/sj451.png",
     specs: {
-      "Most Reliable Controller": "High-end microcontroller based control system ensures smooth operation, precise cutting quality, and high reliability",
-      "High Performance Motors": "Hybrid servo stepper in the closed-loop control system ensures accurate movement and lower energy consumption",
-      "Precision Traverse System": "Precision-grade ball screw provides excellent positional accuracy, repeatability, and low backlash",
-      "Handheld Teach Pendant": "Compact teach pendant offers a more user-friendly interface and is easy to operate",
-      "Tungsten Carbide Nozzle": "High-strength tungsten carbide nozzle ensures a long lifespan and is easy to replace",
-      "Stainless Steel Catcher Tank": "Stainless steel catcher tank offers a strong build, effortless maintenance and a 100-liter capacity"
+      "Most Reliable CNC Controller": "High-performance CNC controller ensures precise cutting operations, seamless automation, and robust reliability",
+      "Servo Motors and Drives": "Advanced servo motors integrated with closed-loop control systems deliver precise, smooth movements with minimal energy consumption",
+      "Precision Traverse System": "High-grade ball screws ensure exceptional positional accuracy, repeatability, and low backlash for high-precision operations",
+      "HMI Interface": "User-friendly HMI interface provides an intuitive and simplified control experience",
+      "Tungsten Carbide Nozzle": "Durable tungsten carbide nozzle ensures long-lasting performance and is easy to replace, maintaining high operational efficiency",
+      "Stainless Steel Catcher Tank": "A robust stainless steel catcher tank with a higher capacity, tailored for large-scale operations, ensuring easy maintenance and durability"
     }
   },
   {
