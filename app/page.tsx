@@ -8,7 +8,6 @@ import {  industrialApplications } from './constants';
 import { useAutoSlide } from './hooks/useAutoSlide';
 import CustomersSection from './components/CustomersSection';
 import KatanaSJ150Overview from './components/KatanaSJ150Overview';
-import CollageSection from './components/CollageSection';
 import ContactForm from './components/ContactForm';
 import MediaGallery from './components/MediaGallery';
 import ComparisonSection from './components/ComparisonSection';
