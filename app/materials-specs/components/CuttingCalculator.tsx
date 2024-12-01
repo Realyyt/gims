@@ -108,9 +108,11 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     for (const category of Object.values(materialCategories)) {
       const material = category.materials.find(m => m.name === selectedMaterial);
       if (material) {
+        // Find the exact thickness match
         const thicknessData = material.thicknesses.find(t => {
           const thicknessValue = parseFloat(t.value[localUnit]);
           const inputThickness = parseFloat(thickness);
+          // Use a small epsilon for floating point comparison
           return Math.abs(thicknessValue - inputThickness) < 0.0001;
         });
         return thicknessData;
@@ -119,6 +121,20 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     return null;
   };
 
+  // Get available thicknesses for selected material
+  const getAvailableThicknesses = (): string[] => {
+    if (!selectedMaterial) return [];
+
+    for (const category of Object.values(materialCategories)) {
+      const material = category.materials.find(m => m.name === selectedMaterial);
+      if (material) {
+        return material.thicknesses.map(t => t.value[localUnit]);
+      }
+    }
+    return [];
+  };
+
+  // Update thickness input to show available options
   const handleMaterialChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newMaterial = e.target.value;
     setSelectedMaterial(newMaterial);
@@ -257,8 +273,7 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     return `${minutes}m ${remainingSeconds}s`;
   };
 
-  const thicknessOptions = getThicknessOptions();
-  const cutLengthOptions = getCutLengthOptions();
+  const availableThicknesses = getAvailableThicknesses();
 
   return (
     <div className="bg-white shadow-lg rounded-xl p-8 mb-12">
@@ -326,13 +341,14 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
           </label>
           <select
             value={thickness}
-            onChange={(e) => setThickness(e.target.value.split(' ')[0])}
+            onChange={(e) => setThickness(e.target.value)}
             className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
               text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            disabled={!selectedMaterial}
           >
             <option value="">Select thickness</option>
-            {thicknessOptions.map((t) => (
-              <option key={t} value={t}>
+            {availableThicknesses.map((t) => (
+              <option key={t} value={t.split(' ')[0]}>
                 {t}
               </option>
             ))}
@@ -343,19 +359,20 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
           <label className="block text-sm font-medium text-gray-600 mb-2">
             CUT LENGTH
           </label>
-          <select
-            value={cutLength}
-            onChange={(e) => setCutLength(e.target.value)}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
-              text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-          >
-            <option value="">Select length</option>
-            {cutLengthOptions.map((length) => (
-              <option key={length} value={length}>
-                {length} {localUnit === 'metric' ? 'mm' : 'in'}
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <input
+              type="number"
+              value={cutLength}
+              onChange={(e) => setCutLength(e.target.value)}
+              className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+                text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              min="0"
+              step={localUnit === 'metric' ? '1' : '0.1'}
+            />
+            <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+              {localUnit === 'metric' ? 'mm' : 'in'}
+            </span>
+          </div>
         </div>
 
         <div>
@@ -368,7 +385,7 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
             className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
               text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
           >
-            {Array.from({length: 50}, (_, i) => i + 1).map((num) => (
+            {[1, 2, 3, 4, 5].map((num) => (
               <option key={num} value={num}>
                 {num}
               </option>
