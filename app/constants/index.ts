@@ -7,7 +7,8 @@ import {
   DollarSign,
   Maximize,
   Volume2,
-  Cog
+  Cog,
+  FileText
 } from 'lucide-react';
 import { Service, IndustrialApplication, Specification } from '../types';
 
@@ -239,6 +240,14 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Reviews', image: '/8512fbae976e871e5353cdd64c165fa1.jpg', description: 'What our customers say' },
       { title: 'Articles', image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', description: 'Read our latest articles' },
     ],
+    'Resources': [
+      { 
+        title: 'Materials Specs', 
+        href: '/materials-specs',
+        description: 'Detailed cutting specifications for different materials',
+        icon: FileText
+      }
+    ]
   };
   
   export const mediaItems: MediaItem[] = [

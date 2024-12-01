@@ -110,7 +110,7 @@ export default function Navbar() {
                           {navItems[item as keyof typeof navItems].map((subItem, index) => (
                             <Link 
                               key={index}
-                              href={'link' in subItem ? subItem.link : '#'}
+                              href={item === 'Materials' ? '/materials-specs' : ('link' in subItem ? subItem.link : '#')}
                               className="group flex lg:flex-col items-center lg:text-center rounded-lg p-2"
                               onClick={() => {
                                 setIsOpen(false);
