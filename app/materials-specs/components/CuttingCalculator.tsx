@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 import { materialCategories } from '../data/materials';
 import type { UnitType } from '../types';
+import Image from 'next/image';
 
 interface CuttingCalculatorProps {
   unit: UnitType;
@@ -27,60 +27,6 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
   const allMaterials = Object.values(materialCategories)
     .flatMap(category => category.materials.map(m => m.name))
     .sort();
-
-  // Generate thickness options based on unit
-  const getThicknessOptions = () => {
-    if (localUnit === 'metric') {
-      // Generate thickness options from 0.5mm to 300mm
-      const options = [];
-      // 0.5mm to 5mm in 0.5mm steps
-      for (let i = 0.5; i <= 5; i += 0.5) {
-        options.push(i.toFixed(1) + ' mm');
-      }
-      // 6mm to 30mm in 1mm steps
-      for (let i = 6; i <= 30; i++) {
-        options.push(i.toString() + ' mm');
-      }
-      // 35mm to 100mm in 5mm steps
-      for (let i = 35; i <= 100; i += 5) {
-        options.push(i.toString() + ' mm');
-      }
-      // 110mm to 300mm in 10mm steps
-      for (let i = 110; i <= 300; i += 10) {
-        options.push(i.toString() + ' mm');
-      }
-      return options;
-    } else {
-      // Generate thickness options from 0.02in to 12in
-      const options = [];
-      // 0.02in to 0.25in in 0.02in steps
-      for (let i = 0.02; i <= 0.25; i += 0.02) {
-        options.push(i.toFixed(2) + ' in');
-      }
-      // 0.3in to 1in in 0.1in steps
-      for (let i = 0.3; i <= 1; i += 0.1) {
-        options.push(i.toFixed(1) + ' in');
-      }
-      // 1.25in to 4in in 0.25in steps
-      for (let i = 1.25; i <= 4; i += 0.25) {
-        options.push(i.toFixed(2) + ' in');
-      }
-      // 4.5in to 12in in 0.5in steps
-      for (let i = 4.5; i <= 12; i += 0.5) {
-        options.push(i.toFixed(1) + ' in');
-      }
-      return options;
-    }
-  };
-
-  // Generate cut length options based on unit
-  const getCutLengthOptions = () => {
-    if (localUnit === 'metric') {
-      return Array.from({length: 200}, (_, i) => (i + 1) * 5); // 5mm to 1000mm in 5mm steps
-    } else {
-      return Array.from({length: 80}, (_, i) => (i + 1) * 0.125); // 0.125in to 10in in 0.125in steps
-    }
-  };
 
   const handleUnitToggle = () => {
     setLocalUnit(localUnit === 'metric' ? 'imperial' : 'metric');
@@ -139,11 +85,6 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     const newMaterial = e.target.value;
     setSelectedMaterial(newMaterial);
     setThickness(''); // Reset thickness when material changes
-  };
-
-  const handleThicknessChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setThickness(value);
   };
 
   const calculateResults = () => {
@@ -406,10 +347,12 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
           {Object.entries(results).map(([model, result]) => (
             <div key={model} className="border-t border-gray-200 pt-6">
               <div className="flex items-center gap-4 mb-4">
-                <img 
+                <Image 
                   src={model === 'sj700' ? '/sj700.png' : model === 'sj450' ? '/sj451.png' : '/gims1.png'}
                   alt={model}
-                  className="w-16 h-16 object-contain"
+                  width={64}
+                  height={64}
+                  className="object-contain"
                 />
                 <h3 className="text-lg font-semibold text-gray-900">{model}</h3>
               </div>

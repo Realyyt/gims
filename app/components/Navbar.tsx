@@ -118,12 +118,16 @@ export default function Navbar() {
                               }}
                             >
                               <div className="relative w-20 h-20 lg:w-full lg:h-40 mb-0 lg:mb-3 overflow-hidden rounded-lg flex-shrink-0">
-                                <Image
-                                  src={subItem.image}
-                                  alt={subItem.title}
-                                  fill
-                                  className="object-contain p-4 group-hover:scale-105 transition duration-300"
-                                />
+                                {'image' in subItem ? (
+                                  <Image
+                                    src={subItem.image}
+                                    alt={subItem.title}
+                                    fill
+                                    className="object-contain p-4 group-hover:scale-105 transition duration-300"
+                                  />
+                                ) : (
+                                  subItem.icon && <subItem.icon className="w-full h-full p-4" />
+                                )}
                               </div>
                               <div className="ml-4 lg:ml-0">
                                 <h3 className="text-[#0a4165] font-bold mb-1">{subItem.title}</h3>

@@ -1,39 +1,46 @@
 export type UnitType = 'metric' | 'imperial';
-export type ModelType = 'Sj700' | 'sj450' | 'sj150';
-export type MaxNoteType = ModelType;
 
 export interface Thickness {
   value: {
     imperial: string;
     metric: string;
   };
-  maxNote?: MaxNoteType;
+  maxNote?: 'Sj700' | 'sj450' | 'sj150';
   cutSpeed: {
-    [K in ModelType]: {
+    Sj700: {
+      imperial: string;
+      metric: string;
+    } | null;
+    sj450: {
+      imperial: string;
+      metric: string;
+    } | null;
+    sj150: {
       imperial: string;
       metric: string;
     } | null;
   };
   pierceTime: {
-    [K in ModelType]: string | null;
+    Sj700: string;
+    sj450: string | null;
+    sj150: string | null;
   };
 }
 
 export interface Material {
   name: string;
   thicknesses: Thickness[];
-}
-
-export interface MaterialCategory {
-  name: string;
-  description?: string;
-  materials: Material[];
+  notes?: string;
 }
 
 export interface MaterialsData {
-  [key: string]: MaterialCategory;
+  [key: string]: {
+    name: string;
+    materials: Material[];
+  };
 }
 
+// Props interfaces for components
 export interface MaterialsTableProps {
   category: string;
   materials: Material[];
@@ -52,6 +59,18 @@ export interface SearchBarProps {
   onChange: (value: string) => void;
 }
 
+export interface MaterialCardProps {
+  material: Material;
+}
+
 export interface CuttingCalculatorProps {
   unit: UnitType;
+}
+
+export interface CalculationResult {
+  cutRate: string;
+  pierceTime: string;
+  jobTime: string;
+  abrasiveUsed: string;
+  jobCost: string;
 } 

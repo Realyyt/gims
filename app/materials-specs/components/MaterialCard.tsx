@@ -13,13 +13,19 @@ export default function MaterialCard({ material }: MaterialCardProps) {
       <div className="space-y-2">
         <div className="flex justify-between">
           <span className="text-gray-600">Thickness:</span>
-          <span className="font-medium text-gray-900">{material.thickness.imperial}</span>
+          <span className="font-medium text-gray-900">
+            {material.thicknesses.map(t => t.value).join(', ')}
+          </span>
         </div>
         <div className="flex justify-between">
           <span className="text-gray-600">Cut Speed:</span>
-          <span className="font-medium text-gray-900">{material.cutSpeed.wazerPro.imperial}</span>
+          <span className="font-medium text-gray-900">
+            {material.thicknesses.map(thickness => 
+              thickness.cutSpeed.Sj700?.imperial
+            ).join(', ')}
+          </span>
         </div>
-        {material.notes && (
+        {material?.notes && (
           <div className="mt-4 pt-4 border-t border-gray-200">
             <p className="text-sm text-gray-600">{material.notes}</p>
           </div>

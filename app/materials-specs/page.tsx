@@ -6,7 +6,7 @@ import SearchBar from './components/SearchBar';
 import CuttingCalculator from './components/CuttingCalculator';
 import { materialCategories } from './data/materials';
 import { filterMaterials } from './utils/filters';
-import type { UnitType, Material } from './types';
+import type { UnitType } from './types';
 
 export default function MaterialsSpecsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -17,11 +17,9 @@ export default function MaterialsSpecsPage() {
     if (!materialCategories || !selectedCategory) return [];
 
     try {
-      let materialsToGroup: Material[] = [];
-      
       if (selectedCategory === 'all') {
         // For 'all', create sections for each category
-        return Object.entries(materialCategories).map(([categoryId, category]) => ({
+        return Object.entries(materialCategories).map(([, category]) => ({
           categoryName: category.name,
           materials: filterMaterials(category.materials || [], searchQuery)
         })).filter(group => group.materials.length > 0);

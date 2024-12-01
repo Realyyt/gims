@@ -1,4 +1,5 @@
 import { MaterialsTableProps, Thickness } from '../types';
+import Image from 'next/image';
 
 export default function MaterialsTable({ category, materials, unit }: MaterialsTableProps) {
   if (!materials || materials.length === 0) {
@@ -32,30 +33,36 @@ export default function MaterialsTable({ category, materials, unit }: MaterialsT
               <div className="flex flex-1 justify-between">
                 {/* Sj700 section */}
                 <div className="flex flex-col items-center w-[250px]">
-                  <img 
+                  <Image 
                     src="/Sj700.png" 
                     alt="Sj700" 
-                    className="w-32 mb-3"
+                    width={128}
+                    height={128}
+                    className="mb-3"
                   />
                   <span className="text-xl font-semibold text-gray-900">sj700</span>
                 </div>
 
                 {/* sj450 section */}
                 <div className="flex flex-col items-center w-[250px]">
-                  <img 
+                  <Image 
                     src="/sj451.png" 
                     alt="sj450" 
-                    className="w-32 mb-3"
+                    width={128}
+                    height={128}
+                    className="mb-3"
                   />
                   <span className="text-xl font-semibold text-gray-900">sj450</span>
                 </div>
 
                 {/* sj150 section */}
                 <div className="flex flex-col items-center w-[250px]">
-                  <img 
+                  <Image 
                     src="/gims1.png" 
                     alt="sj150" 
-                    className="w-32 mb-3"
+                    width={128}
+                    height={128}
+                    className="mb-3"
                   />
                   <span className="text-xl font-semibold text-gray-900">sj150</span>
                 </div>
