@@ -323,7 +323,7 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
           <select
             value={selectedMaterial}
             onChange={handleMaterialChange}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+            className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
               text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
           >
             <option value="">Select material</option>
@@ -342,7 +342,7 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
           <select
             value={thickness}
             onChange={(e) => setThickness(e.target.value)}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+            className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
               text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             disabled={!selectedMaterial}
           >
@@ -357,21 +357,19 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
 
         <div>
           <label className="block text-sm font-medium text-gray-600 mb-2">
-            CUT LENGTH
+            CUT LENGTH ({localUnit === 'metric' ? 'mm' : 'in'})
           </label>
           <div className="relative">
             <input
               type="number"
               value={cutLength}
               onChange={(e) => setCutLength(e.target.value)}
-              className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+              className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
                 text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
               min="0"
               step={localUnit === 'metric' ? '1' : '0.1'}
+              placeholder={`Enter length in ${localUnit === 'metric' ? 'mm' : 'inches'}`}
             />
-            <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-              {localUnit === 'metric' ? 'mm' : 'in'}
-            </span>
           </div>
         </div>
 
@@ -382,7 +380,7 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
           <select
             value={pierces}
             onChange={(e) => setPierces(e.target.value)}
-            className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+            className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
               text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
           >
             {[1, 2, 3, 4, 5].map((num) => (
