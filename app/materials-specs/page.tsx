@@ -46,15 +46,13 @@ export default function MaterialsSpecsPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Cutting Calculator Section */}
-      <section className="bg-white shadow-sm border-b">
+      <section id="cutting-calculator" className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <CuttingCalculator unit={unit} />
         </div>
       </section>
 
-      {/* Materials Header Section */}
-      <section className="bg-white shadow-sm border-b mt-6">
+      <section id="materials-table" className="bg-white shadow-sm border-b mt-6">
         <MaterialsHeader 
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}

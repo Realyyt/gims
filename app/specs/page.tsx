@@ -29,8 +29,13 @@ export default function SpecificationsPage(): JSX.Element {
           KATANA Tech Specs
         </h1>
         
-        {specTables.map((table: SpecTableData, i: number) => (
-          <SpecTable key={i} table={table} />
+        {specTables.map((table, i) => (
+          <section 
+            key={i} 
+            id={table.title.toLowerCase().replace(/\s+/g, '-')}
+          >
+            <SpecTable table={table} />
+          </section>
         ))}
       </div>
     </main>

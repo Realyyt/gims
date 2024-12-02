@@ -12,7 +12,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
         value={value}
         onChange={handleChange}
         placeholder="Search materials..."
-        className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm 
+        className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm text-gray-900
           focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
       />
     </div>

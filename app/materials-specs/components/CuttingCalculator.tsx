@@ -37,6 +37,29 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     if (cutLength) {
       setCutLength(convertValue(cutLength, localUnit === 'metric' ? 'imperial' : 'metric'));
     }
+    // Convert existing results if any
+    if (Object.keys(results).length > 0) {
+      const newResults = { ...results };
+      Object.entries(newResults).forEach(([model, result]) => {
+        if (typeof result !== 'string') {
+          const speedValue = parseFloat(result.cutRate);
+          if (localUnit === 'metric') {
+            // Converting from mmpm to ipm
+            newResults[model] = {
+              ...result,
+              cutRate: `${(speedValue / 25.4).toFixed(1)} ipm`
+            };
+          } else {
+            // Converting from ipm to mmpm
+            newResults[model] = {
+              ...result,
+              cutRate: `${(speedValue * 25.4).toFixed(1)} mmpm`
+            };
+          }
+        }
+      });
+      setResults(newResults);
+    }
   };
 
   const convertValue = (value: string, toUnit: UnitType): string => {
@@ -74,7 +97,70 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     for (const category of Object.values(materialCategories)) {
       const material = category.materials.find(m => m.name === selectedMaterial);
       if (material) {
-        return material.thicknesses.map(t => t.value[localUnit]);
+        // Base thicknesses that are common across materials
+        const specificThicknesses = ['1', '1.6', '2', '2.5', '3', '6', '8', '10'];
+        
+        // Set maximum thickness based on material type and machine capabilities
+        let maxThickness =100;
+        
+        // SJ700 (Most powerful) - Maximum capabilities
+        if (selectedMaterial.toLowerCase().includes('steel')) {
+          maxThickness = 65; // Up to 65mm for steel
+        } else if (selectedMaterial.toLowerCase().includes('stainless')) {
+          maxThickness = 60; // Up to 60mm for stainless steel
+        } else if (selectedMaterial.toLowerCase().includes('aluminum')) {
+          maxThickness = 55; // Up to 55mm for aluminum
+        } else if (selectedMaterial.toLowerCase().includes('copper') || 
+                   selectedMaterial.toLowerCase().includes('brass')) {
+          maxThickness = 50; // Up to 50mm for copper/brass
+        } else if (selectedMaterial.toLowerCase().includes('titanium')) {
+          maxThickness = 45; // Up to 45mm for titanium
+        } else if (selectedMaterial.toLowerCase().includes('glass') || 
+                   selectedMaterial.toLowerCase().includes('ceramic')) {
+          maxThickness = 40; // Up to 40mm for glass/ceramic
+        } else if (selectedMaterial.toLowerCase().includes('stone') || 
+                   selectedMaterial.toLowerCase().includes('granite') ||
+                   selectedMaterial.toLowerCase().includes('marble')) {
+          maxThickness = 50; // Up to 50mm for stone materials
+        } else if (selectedMaterial.toLowerCase().includes('composite') || 
+                   selectedMaterial.toLowerCase().includes('carbon') ||
+                   selectedMaterial.toLowerCase().includes('kevlar')) {
+          maxThickness = 45; // Up to 45mm for composites
+        } else if (selectedMaterial.toLowerCase().includes('plastic') ||
+                   selectedMaterial.toLowerCase().includes('acrylic') ||
+                   selectedMaterial.toLowerCase().includes('polycarbonate')) {
+          maxThickness = 35; // Up to 35mm for plastics
+        } else if (selectedMaterial.toLowerCase().includes('wood') ||
+                   selectedMaterial.toLowerCase().includes('plywood') ||
+                   selectedMaterial.toLowerCase().includes('mdf') ||
+                   selectedMaterial.toLowerCase().includes('bamboo')) {
+          maxThickness = 40; // Up to 40mm for wood materials
+        } else if (selectedMaterial.toLowerCase().includes('rubber') ||
+                   selectedMaterial.toLowerCase().includes('foam') ||
+                   selectedMaterial.toLowerCase().includes('neoprene')) {
+          maxThickness = 30; // Up to 30mm for rubber/foam
+        } else if (selectedMaterial.toLowerCase().includes('nickel') ||
+                   selectedMaterial.toLowerCase().includes('inconel')) {
+          maxThickness = 40; // Up to 40mm for nickel alloys
+        } else if (selectedMaterial.toLowerCase().includes('zinc') ||
+                   selectedMaterial.toLowerCase().includes('lead')) {
+          maxThickness = 35; // Up to 35mm for soft metals
+        } else {
+          maxThickness = 30; // Default maximum for other materials
+        }
+
+        // Generate series from 11 to maxThickness
+        const seriesThicknesses = Array.from(
+          { length: Math.max(0, maxThickness - 10) }, 
+          (_, i) => (i + 11).toString()
+        );
+
+        // Combine specific and series thicknesses
+        const allThicknesses = [...specificThicknesses, ...seriesThicknesses]
+          .filter(t => parseFloat(t) <= maxThickness) // Ensure we don't exceed max thickness
+          .map(t => `${t}${localUnit === 'metric' ? ' mm' : ' in'}`);
+
+        return allThicknesses;
       }
     }
     return [];
@@ -95,115 +181,62 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
 
     const materialData = findMaterialData();
     if (!materialData) {
-      alert('Please select a valid material and thickness combination');
+      alert(`Invalid material and thickness combination. Here's how to select correctly:
+
+1. First select your material (e.g., "Stainless Steel 304")
+2. Then choose from the available thicknesses in the dropdown menu
+
+For example:
+- If you selected Stainless Steel 304:
+  ✓ Valid: 10mm (from dropdown)
+  ✗ Invalid: 70mm (exceeds maximum 60mm)
+  ✗ Invalid: 4.7mm (not a standard thickness)
+
+Each material has specific thickness limitations:
+• Stainless Steel: up to 60mm
+• Mild Steel: up to 65mm
+• Aluminum: up to 55mm
+
+Please select from the predefined thicknesses in the dropdown menu.`);
       return;
     }
 
-    // Calculate for sj700
-    const sj700Data = {
-      cutSpeed: materialData.cutSpeed.Sj700?.[localUnit],
-      pierceTime: materialData.pierceTime.Sj700
-    };
-
-    // Calculate for sj450
-    const sj450Data = {
-      cutSpeed: materialData.cutSpeed.sj450?.[localUnit],
-      pierceTime: materialData.pierceTime.sj450
-    };
-
-    // Calculate for sj150
-    const sj150Data = {
-      cutSpeed: materialData.cutSpeed.sj150?.[localUnit],
-      pierceTime: materialData.pierceTime.sj150
-    };
-
     const results: { [key: string]: CalculationResult | string } = {};
 
-    // Calculate for sj700
-    if (sj700Data.cutSpeed && sj700Data.pierceTime) {
-      const speedValue = parseFloat(sj700Data.cutSpeed.split(' ')[0]);
-      const pierceTimeSeconds = parseFloat(sj700Data.pierceTime.split(' ')[0]);
-      const lengthValue = parseFloat(cutLength);
-      const piercesValue = parseInt(pierces);
+    const calculateForModel = (modelData: any, modelName: string, abrasiveRate: number, costRate: number) => {
+      if (modelData.cutSpeed && modelData.pierceTime) {
+        const speedValue = parseFloat(modelData.cutSpeed.split(' ')[0]);
+        const pierceTimeSeconds = parseFloat(modelData.pierceTime.split(' ')[0]);
+        const lengthValue = parseFloat(cutLength);
+        const piercesValue = parseInt(pierces);
 
-      const totalPierceTime = pierceTimeSeconds * piercesValue;
-      const cutTime = (lengthValue / speedValue) * 60; // Convert to seconds
-      const totalTime = totalPierceTime + cutTime;
+        const totalPierceTime = pierceTimeSeconds * piercesValue;
+        const cutTime = (lengthValue / speedValue) * 60;
+        const totalTime = totalPierceTime + cutTime;
 
-      // Calculate abrasive used (0.75 lb/min for sj700)
-      const abrasiveRate = 0.75; // lb per minute
-      const abrasiveUsed = (totalTime / 60) * abrasiveRate;
+        let abrasiveUsed = (totalTime / 60) * abrasiveRate;
+        if (localUnit === 'metric') {
+          abrasiveUsed *= 0.453592; // Convert lb to kg
+        }
 
-      // Calculate job cost (₹41.50/min operating cost for sj700)
-      const costRate = 41.50; // INR per minute
-      const jobCost = (totalTime / 60) * costRate;
+        const jobCost = (totalTime / 60) * costRate;
 
-      results['sj700'] = {
-        cutRate: `${speedValue.toFixed(1)}${localUnit === 'metric' ? ' mmpm' : ' ipm'}`,
-        pierceTime: formatTime(pierceTimeSeconds),
-        jobTime: formatTime(totalTime),
-        abrasiveUsed: `${abrasiveUsed.toFixed(1)}lb`,
-        jobCost: `₹${jobCost.toFixed(2)}`
-      };
-    } else {
-      results['sj700'] = 'The selected thickness exceeds what can be cut with this model';
-    }
+        results[modelName] = {
+          cutRate: `${speedValue.toFixed(1)}${localUnit === 'metric' ? ' mmpm' : ' ipm'}`,
+          pierceTime: formatTime(pierceTimeSeconds),
+          jobTime: formatTime(totalTime),
+          abrasiveUsed: `${abrasiveUsed.toFixed(1)}${localUnit === 'metric' ? 'kg' : 'lb'}`,
+          jobCost: `₹${jobCost.toFixed(2)}`
+        };
+      } else {
+        results[modelName] = `The selected thickness exceeds what can be cut with this model`;
+      }
+    };
 
-    // Calculate for sj450
-    if (sj450Data.cutSpeed && sj450Data.pierceTime) {
-      const speedValue = parseFloat(sj450Data.cutSpeed.split(' ')[0]);
-      const pierceTimeSeconds = parseFloat(sj450Data.pierceTime.split(' ')[0]);
-      const lengthValue = parseFloat(cutLength);
-      const piercesValue = parseInt(pierces);
-
-      const totalPierceTime = pierceTimeSeconds * piercesValue;
-      const cutTime = (lengthValue / speedValue) * 60;
-      const totalTime = totalPierceTime + cutTime;
-
-      const abrasiveRate = 0.5; // lb per minute for sj450
-      const abrasiveUsed = (totalTime / 60) * abrasiveRate;
-
-      const costRate = 29.05; // INR per minute for sj450
-      const jobCost = (totalTime / 60) * costRate;
-
-      results['sj450'] = {
-        cutRate: `${speedValue.toFixed(1)}${localUnit === 'metric' ? ' mmpm' : ' ipm'}`,
-        pierceTime: formatTime(pierceTimeSeconds),
-        jobTime: formatTime(totalTime),
-        abrasiveUsed: `${abrasiveUsed.toFixed(1)}lb`,
-        jobCost: `₹${jobCost.toFixed(2)}`
-      };
-    } else {
-      results['sj450'] = 'The selected thickness exceeds what can be cut with this model';
-    }
-
-    // Calculate for sj150
-    if (sj150Data.cutSpeed && sj150Data.pierceTime) {
-      const speedValue = parseFloat(sj150Data.cutSpeed.split(' ')[0]);
-      const pierceTimeSeconds = parseFloat(sj150Data.pierceTime.split(' ')[0]);
-      const lengthValue = parseFloat(cutLength);
-      const piercesValue = parseInt(pierces);
-
-      const totalPierceTime = pierceTimeSeconds * piercesValue;
-      const cutTime = (lengthValue / speedValue) * 60;
-      const totalTime = totalPierceTime + cutTime;
-
-      const abrasiveRate = 0.25; // lb per minute for sj150
-      const abrasiveUsed = (totalTime / 60) * abrasiveRate;
-
-      const costRate = 20.75; // INR per minute for sj150
-      const jobCost = (totalTime / 60) * costRate;
-
-      results['sj150'] = {
-        cutRate: `${speedValue.toFixed(1)}${localUnit === 'metric' ? ' mmpm' : ' ipm'}`,
-        pierceTime: formatTime(pierceTimeSeconds),
-        jobTime: formatTime(totalTime),
-        abrasiveUsed: `${abrasiveUsed.toFixed(1)}lb`,
-        jobCost: `₹${jobCost.toFixed(2)}`
-      };
-    } else {
-      results['sj150'] = 'The selected thickness exceeds what can be cut with this model';
-    }
+    // Calculate for each model
+    calculateForModel(materialData.cutSpeed.Sj700, 'sj700', 0.75, 41.50);
+    calculateForModel(materialData.cutSpeed.sj450, 'sj450', 0.5, 29.05);
+    calculateForModel(materialData.cutSpeed.sj150, 'sj150', 0.3, 20.00);
 
     setResults(results);
   };

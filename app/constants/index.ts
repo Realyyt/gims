@@ -224,22 +224,23 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },
     ],
     'Materials': [
-      { title: 'Gallery', image: '/marble.jpg', description: 'Explore different materials and cutting capabilities', link: '/material-specs' },
-      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', description: 'Calculate pressure, flow rate and cutting parameters', link: '/material-specs' },
-      { title: 'Applications', image: '/application.jpg', description: 'Advanced manufacturing systems', link: '/material-specs' },
+      { title: 'Gallery', image: '/marble.jpg', link: '/material-specs' , description: 'Explore different materials and cutting capabilities' },
+      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', link: '/material-specs', description: 'Calculate pressure, flow rate and cutting parameters' },
+      { title: 'Applications', image: '/application.jpg', link: '/material-specs', description: 'Advanced manufacturing systems' },
     ],
     'Services': [
-      { title: 'New product development ', image: '/new product.jpg', description: 'Our story and mission' },
-      { title: 'Design and simulation', image: '/machine-shops-menu.jpg', description: 'Innovation at its core' },
-      { title: 'Manufacturing and fabrication', image: '/rapid-prototyping-flyout-thumbnail.jpg', description: 'State-of-the-art manufacturing' },
-      { title: 'Machine tool service', image: '/testing-quality-control-flyout-thumbnail.jpg', description: 'State-of-the-art Tooling service' },
+      { title: 'New product development ', image: '/new product.jpg', link: '/services', description: 'Our story and mission' },
+      { title: 'Design and simulation', image: '/machine-shops-menu.jpg', link: '/services', description: 'Innovation at its core' },
+      { title: 'Manufacturing and fabrication', image: '/rapid-prototyping-flyout-thumbnail.jpg', link: '/services', description: 'State-of-the-art manufacturing' },
+      { title: 'Machine tool service', image: '/testing-quality-control-flyout-thumbnail.jpg', link: '/services', description: 'State-of-the-art Tooling service' },
     ],
     'Learn more': [
       { title: 'About Us', image: '/gims1.png', description: 'Innovation at its core' },
       { title: 'FAQ', image: '/faq-flyout-thumbnail.jpg', description: 'Frequently asked questions' },
       { title: 'Reviews', image: '/8512fbae976e871e5353cdd64c165fa1.jpg', description: 'What our customers say' },
       { title: 'Articles', image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', description: 'Read our latest articles' },
-    ]
+    ],
+
   };
   
   export const mediaItems: MediaItem[] = [
