@@ -224,9 +224,9 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },
     ],
     'Materials': [
-      { title: 'Gallery', image: '/marble.jpg', description: 'Explore different materials and cutting capabilities' },
-      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', description: 'Calculate pressure, flow rate and cutting parameters' },
-      { title: 'Applications', image: '/application.jpg', description: 'Advanced manufacturing systems' },
+      { title: 'Gallery', image: '/marble.jpg', description: 'Explore different materials and cutting capabilities', link: '/material-specs' },
+      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', description: 'Calculate pressure, flow rate and cutting parameters', link: '/material-specs' },
+      { title: 'Applications', image: '/application.jpg', description: 'Advanced manufacturing systems', link: '/material-specs' },
     ],
     'Services': [
       { title: 'New product development ', image: '/new product.jpg', description: 'Our story and mission' },
@@ -239,14 +239,6 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'FAQ', image: '/faq-flyout-thumbnail.jpg', description: 'Frequently asked questions' },
       { title: 'Reviews', image: '/8512fbae976e871e5353cdd64c165fa1.jpg', description: 'What our customers say' },
       { title: 'Articles', image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', description: 'Read our latest articles' },
-    ],
-    'Resources': [
-      { 
-        title: 'Materials Specs', 
-        href: '/materials-specs',
-        description: 'Detailed cutting specifications for different materials',
-        icon: FileText
-      }
     ]
   };
   
