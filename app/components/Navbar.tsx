@@ -5,6 +5,17 @@ import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navItems } from '../constants';
 
+
+interface NavItem {
+  title: string;
+  description?: string;
+  image?: string;
+  icon?: React.ComponentType<{ className?: string }>;
+  link?: string;
+}
+
+
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -107,10 +118,10 @@ export default function Navbar() {
                     >
                       <div className="px-4 lg:px-8 py-4 lg:py-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-                          {navItems[item as keyof typeof navItems].map((subItem, index) => (
+                          {navItems[item as keyof typeof navItems].map((subItem: NavItem, index) => (
                             <Link 
                               key={index}
-                              href={item === 'Materials' ? '/materials-specs' : ('link' in subItem ? subItem.link : '#')}
+                              href={item === 'Materials' ? '/materials-specs' : (subItem.link || '#')}
                               className="group flex lg:flex-col items-center lg:text-center rounded-lg p-2"
                               onClick={() => {
                                 setIsOpen(false);
@@ -120,7 +131,7 @@ export default function Navbar() {
                               <div className="relative w-20 h-20 lg:w-full lg:h-40 mb-0 lg:mb-3 overflow-hidden rounded-lg flex-shrink-0">
                                 {'image' in subItem ? (
                                   <Image
-                                    src={subItem.image}
+                                    src={subItem.image!}
                                     alt={subItem.title}
                                     fill
                                     className="object-contain p-4 group-hover:scale-105 transition duration-300"

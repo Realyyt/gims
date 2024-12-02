@@ -16,6 +16,11 @@ interface CalculationResult {
   jobCost: string;    // in INR
 }
 
+interface ModelData {
+  cutSpeed?: string;
+  pierceTime?: string;
+}
+
 export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculatorProps) {
   const [selectedMaterial, setSelectedMaterial] = useState('');
   const [thickness, setThickness] = useState('');
@@ -203,7 +208,12 @@ Please select from the predefined thicknesses in the dropdown menu.`);
 
     const results: { [key: string]: CalculationResult | string } = {};
 
-    const calculateForModel = (modelData: any, modelName: string, abrasiveRate: number, costRate: number) => {
+    const calculateForModel = (
+      modelData: ModelData, 
+      modelName: string, 
+      abrasiveRate: number, 
+      costRate: number
+    ) => {
       if (modelData.cutSpeed && modelData.pierceTime) {
         const speedValue = parseFloat(modelData.cutSpeed.split(' ')[0]);
         const pierceTimeSeconds = parseFloat(modelData.pierceTime.split(' ')[0]);
@@ -234,9 +244,33 @@ Please select from the predefined thicknesses in the dropdown menu.`);
     };
 
     // Calculate for each model
-    calculateForModel(materialData.cutSpeed.Sj700, 'sj700', 0.75, 41.50);
-    calculateForModel(materialData.cutSpeed.sj450, 'sj450', 0.5, 29.05);
-    calculateForModel(materialData.cutSpeed.sj150, 'sj150', 0.3, 20.00);
+    calculateForModel(
+      {
+        cutSpeed: materialData.cutSpeed.Sj700?.metric || materialData.cutSpeed.Sj700?.imperial,
+        pierceTime: materialData.pierceTime.Sj700
+      }, 
+      'sj700', 
+      0.75, 
+      41.50
+    );
+    calculateForModel(
+      {
+        cutSpeed: materialData.cutSpeed.sj450?.metric ?? materialData.cutSpeed.sj450?.imperial,
+        pierceTime: materialData.pierceTime.sj450 ?? ''
+      }, 
+      'sj450', 
+      0.5, 
+      29.05
+    );
+    calculateForModel(
+      {
+        cutSpeed: materialData.cutSpeed.sj150?.metric || materialData.cutSpeed.sj150?.imperial,
+        pierceTime: materialData.pierceTime.sj150 ?? ''
+      }, 
+      'sj150', 
+      0.3, 
+      20.00
+    );
 
     setResults(results);
   };

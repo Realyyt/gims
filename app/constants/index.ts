@@ -8,7 +8,6 @@ import {
   Maximize,
   Volume2,
   Cog,
-  FileText
 } from 'lucide-react';
 import { Service, IndustrialApplication, Specification } from '../types';
 

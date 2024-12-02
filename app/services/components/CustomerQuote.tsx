@@ -13,7 +13,7 @@ export default function CustomerQuote({ quote, author, position, company }: Cust
     >
       <Quote className="w-12 h-12 text-[#ee6c4d] mb-4" />
       <p className="text-lg text-[#293241]/80 mb-6 italic">
-        "{quote}"
+        &ldquo;{quote}&rdquo;
       </p>
       <div>
         <p className="font-semibold text-[#293241]">{author}</p>

@@ -4,14 +4,6 @@ import { useEffect } from 'react';
 import { SpecTable } from './components';
 import { specTables } from './data/specs';
 
-interface SpecTableData {
-  title: string;
-  columns: string[];
-  rows: {
-    label: string;
-    values: string[];
-  }[];
-}
 
 export default function SpecificationsPage(): JSX.Element {
   const controls: AnimationControls = useAnimation();
