@@ -9,12 +9,12 @@ export default function ComparisonTable({ data }: { data: ComparisonData[] }) {
         animate={{ opacity: 1 }}
         className="min-w-full rounded-2xl bg-[#293241] shadow-lg border border-[#3d5a80]"
       >
-        <table className="min-w-full">
+        <table className="min-w-full text-sm md:text-base">
           <thead>
             <tr className="bg-gradient-to-r from-[#3d5a80] to-[#293241]">
-              <th className="px-6 py-4 text-left text-[#e0fbfc]">Feature</th>
-              <th className="px-6 py-4 text-left text-[#e0fbfc]">KATANA SJ150</th>
-              <th className="px-6 py-4 text-left text-[#e0fbfc]">Competitors</th>
+              <th className="px-4 py-2 md:px-6 md:py-4 text-left text-[#e0fbfc]">Feature</th>
+              <th className="px-4 py-2 md:px-6 md:py-4 text-left text-[#e0fbfc]">KATANA SJ150</th>
+              <th className="px-4 py-2 md:px-6 md:py-4 text-left text-[#e0fbfc]">Competitors</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#3d5a80]">
@@ -26,9 +26,9 @@ export default function ComparisonTable({ data }: { data: ComparisonData[] }) {
                 transition={{ delay: index * 0.1 }}
                 className="hover:bg-[#3d5a80]/20"
               >
-                <td className="px-6 py-4 text-[#98c1d9]">{row.feature}</td>
-                <td className="px-6 py-4 font-medium text-[#ee6c4d]">{row.katana}</td>
-                <td className="px-6 py-4 text-[#e0fbfc]/70">{row.competitor}</td>
+                <td className="px-4 py-2 md:px-6 md:py-4 text-[#98c1d9]">{row.feature}</td>
+                <td className="px-4 py-2 md:px-6 md:py-4 font-medium text-[#ee6c4d]">{row.katana}</td>
+                <td className="px-4 py-2 md:px-6 md:py-4 text-[#e0fbfc]/70">{row.competitor}</td>
               </motion.tr>
             ))}
           </tbody>

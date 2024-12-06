@@ -8,9 +8,9 @@ import {  industrialApplications } from './constants';
 import { useAutoSlide } from './hooks/useAutoSlide';
 import CustomersSection from './components/CustomersSection';
 import KatanaSJ150Overview from './components/KatanaSJ150Overview';
-import CollageSection from './components/CollageSection';
 import ContactForm from './components/ContactForm';
 import MediaGallery from './components/MediaGallery';
+import ComparisonSection from './components/ComparisonSection';
 
 export default function Home() {
   const { currentIndex, next, prev, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
@@ -40,10 +40,10 @@ export default function Home() {
     <main className="flex-grow overflow-x-hidden bg-[#293241]">
       <HeroSection />
       <ServicesSection />
-      <CollageSection />
-      <MediaGallery />
+      <ComparisonSection />
       <KatanaSJ150Overview />
       <SpecificationsSection />
+      <MediaGallery />
       <CustomersSection />
       <IndustrialApplicationsCarousel 
         applications={industrialApplications}

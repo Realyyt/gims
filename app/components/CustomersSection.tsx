@@ -23,7 +23,7 @@ export default function CustomersSection() {
             {customers.map((customer, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 w-48 h-48 mx-8 flex items-center justify-center"
+                className="flex-shrink-0 w-48 h-48 mx-20 flex items-center justify-center"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -31,7 +31,7 @@ export default function CustomersSection() {
                     alt={customer.name}
                     fill
                     style={{ objectFit: 'contain' }}
-                    className="scale-150"
+                    className={customer.logo === '/logo.png' ? 'scale-[2.5]' : 'scale-150'}
                   />
                 </div>
               </div>
@@ -40,7 +40,7 @@ export default function CustomersSection() {
             {customers.map((customer, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 w-48 h-48 mx-8 flex items-center justify-center"
+                className="flex-shrink-0 w-48 h-48 mx-20 flex items-center justify-center"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -48,7 +48,7 @@ export default function CustomersSection() {
                     alt={customer.name}
                     fill
                     style={{ objectFit: 'contain' }}
-                    className="scale-150"
+                    className={customer.logo === '/logo.png' ? 'scale-[2.5]' : 'scale-150'}
                   />
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function CustomersSection() {
             }
           }
           .animate-scroll {
-            animation: scroll 30s linear infinite;
+            animation: scroll 20s linear infinite;
           }
         `}</style>
       </div>

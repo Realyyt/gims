@@ -74,6 +74,7 @@ export default function IndustrialApplicationsCarousel({
                           <p className="text-sm text-stone-200 mb-4 line-clamp-2">
                             {app.description}
                           </p>
+                          {/* 
                           <div className="flex gap-2">
                             <button className="bg-[#20B1FB] hover:bg-[#ee6c4d] 
                               text-white px-4 py-1 text-sm rounded-full transition-all duration-300 transform hover:scale-105">
@@ -84,6 +85,7 @@ export default function IndustrialApplicationsCarousel({
                               View Cases
                             </button>
                           </div>
+                          */}
                         </div>
                       </div>
                     </div>

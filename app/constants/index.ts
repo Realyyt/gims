@@ -7,7 +7,7 @@ import {
   DollarSign,
   Maximize,
   Volume2,
-  Cog
+  Cog,
 } from 'lucide-react';
 import { Service, IndustrialApplication, Specification } from '../types';
 
@@ -133,39 +133,39 @@ export const industrialApplications: IndustrialApplication[] = [
 
   export const specifications: Specification[] = [
     {
-      model: "KATANA SJ150",
-      image: "/gims1.png",
-      specs: {
-        "Operation Pressure": "150 Bar",
-        "Pump Specification": "2 HP", 
-        "Water Consumption": "3 LPM",
-        "Abrasive Consumption": "300 GPM",
-        "Gantry Linear Speed": "1500 mm/min",
-        "Customized For": "Research and Education Institute"
-      }
-    },
-    {
-      model: "KATANA SJ450",
-      image: "/sj451.png",
-      specs: {
-        "Operation Pressure": "400 Bar",
-        "Pump Specification": "8 HP",
-        "Water Consumption": "5.5 LPM", 
-        "Abrasive Consumption": "500 GPM",
-        "Gantry Linear Speed": "1500 mm/min",
-        "Customized For": "Mid-scale Industries & MSME"
-      }
-    },
-    {
       model: "KATANA SJ700",
       image: "/sj700.png",
       specs: {
-        "Operation Pressure": "700 Bar",
-        "Pump Specification": "15 HP",
-        "Water Consumption": "6.3 LPM",
-        "Abrasive Consumption": "600 GPM",
-        "Gantry Linear Speed": "1500 mm/min",
-        "Customized For": "Commercial Industrial"
+        "Pressure": "700 Bar",
+        "Maximum Flow Rate": "8 L/min",
+        "Abrasive Rate": "5 g/sec to 15 g/sec",
+        "Gantry Max Speed": "3,000 mm/min", 
+        "Bed size": "1250x1250x150mm(customizable)",
+        "For steel": "10 mm - 118 mm/min\n25 mm - 46 mm/min\n50 mm - 20 mm/min"
+      }
+    },
+    {
+      model: "KATANA SJ400",
+      image: "/sj451.png",
+      specs: {
+        "Pressure": "400 Bar",
+        "Maximum Flow Rate": "4.5 L/min",
+        "Abrasive Rate": "5 g/sec to 15 g/sec",
+        "Gantry Max Speed": "3,000 mm/min",
+        "Bed size": "600x600x100mm(customizable)",
+        "For steel": "5 mm - 125 mm/min\n10 mm - 60 mm/min\n25 mm - 13 mm/min"
+      }
+    },
+    {
+      model: "KATANA SJ150",
+      image: "/gims1.png",
+      specs: {
+        "Pressure": "150 Bar",
+        "Maximum Flow Rate": "3 L/min",
+        "Abrasive Rate": "5 g/sec to 15 g/sec",
+        "Gantry Max Speed": "3,000 mm/min",
+        "Bed size": "600x300x50mm(customizable)",
+        "For steel": "1 mm - 62 mm/min\n2 mm - 42 mm/min\n3 mm - 26 mm/min"
       }
     }
   ];
@@ -176,6 +176,7 @@ export const industrialApplications: IndustrialApplication[] = [
     { name: 'IIT1', logo: '/IIT1.png' },
     { name: 'WhatsApp Image 1', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54__1_-removebg-preview.png' },
     { name: 'WhatsApp Image 2', logo: '/WhatsApp_Image_2024-11-25_at_19.49.54-removebg-preview.png' },
+    { name: 'Logo', logo: '/logo.png' },
   ];
 
 
@@ -222,15 +223,15 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },
     ],
     'Materials': [
-      { title: 'Gallery', image: '/marble.jpg', description: 'Explore different materials and cutting capabilities' },
-      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', description: 'Calculate pressure, flow rate and cutting parameters' },
-      { title: 'Applications', image: '/application.jpg', description: 'Advanced manufacturing systems' },
+      { title: 'Gallery', image: '/marble.jpg', link: '/material-specs' , description: 'Explore different materials and cutting capabilities' },
+      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', link: '/material-specs', description: 'Calculate pressure, flow rate and cutting parameters' },
+      { title: 'Applications', image: '/application.jpg', link: '/material-specs', description: 'Advanced manufacturing systems' },
     ],
     'Services': [
-      { title: 'New product development ', image: '/new product.jpg', description: 'Our story and mission' },
-      { title: 'Design and simulation', image: '/machine-shops-menu.jpg', description: 'Innovation at its core' },
-      { title: 'Manufacturing and fabrication', image: '/rapid-prototyping-flyout-thumbnail.jpg', description: 'State-of-the-art manufacturing' },
-      { title: 'Machine tool service', image: '/testing-quality-control-flyout-thumbnail.jpg', description: 'State-of-the-art Tooling service' },
+      { title: 'New product development ', image: '/new product.jpg', link: '/services', description: 'Our story and mission' },
+      { title: 'Design and simulation', image: '/machine-shops-menu.jpg', link: '/services', description: 'Innovation at its core' },
+      { title: 'Manufacturing and fabrication', image: '/rapid-prototyping-flyout-thumbnail.jpg', link: '/services', description: 'State-of-the-art manufacturing' },
+      { title: 'Machine tool service', image: '/testing-quality-control-flyout-thumbnail.jpg', link: '/services', description: 'State-of-the-art Tooling service' },
     ],
     'Learn more': [
       { title: 'About Us', image: '/gims1.png', description: 'Innovation at its core' },
@@ -238,6 +239,7 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Reviews', image: '/8512fbae976e871e5353cdd64c165fa1.jpg', description: 'What our customers say' },
       { title: 'Articles', image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', description: 'Read our latest articles' },
     ],
+
   };
   
   export const mediaItems: MediaItem[] = [
@@ -248,7 +250,7 @@ export const industrialApplications: IndustrialApplication[] = [
     },
     {
       type: 'image', 
-      src: '/image/1718973848141.jpg',
+      src: '/image/1718973848141-2.jpg',
       title: 'Katana sj150 in display',
     },
     {
@@ -258,17 +260,17 @@ export const industrialApplications: IndustrialApplication[] = [
     },
     {
       type: 'image',
-      src: '/image/IMG-20241024-WA0018.jpg',
+      src: '/image/PXL_20241115_094322236.jpg',
       title: 'Materials cutting',
     },
     {
       type: 'video',
-      src: '/videos/Video from FAYAZ-3-2 (online-video-cutter.com) - Compressed with FlexClip.mp4',
+      src: '/videos/PXL_20241115_113910820-2-2-2-2.mp4',
       title: 'Cutting operation on sj450',
     },
     {
       type: 'image',
-      src: '/image/WhatsApp Image 2024-11-29 at 20.50.51 (1).jpeg',
+      src: '/image/photo_6_2024-11-25_08-07-53.jpg',
       title: 'katana sj450 in display',
     }
   ];

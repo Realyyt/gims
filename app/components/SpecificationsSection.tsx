@@ -31,15 +31,32 @@ export default function SpecificationsSection() {
                   <div className="space-y-3">
                     {Object.entries(spec.specs).map(([key, value]) => (
                       <motion.div 
-                        className="flex justify-between items-center py-1 border-b border-[#98c1d9]/30"
+                        className="flex justify-between items-start py-1 border-b border-[#98c1d9]/30"
                         whileHover={{ 
                           backgroundColor: "#3d5a80",
                           transition: { duration: 0.2 }
                         }}
                         key={`${spec.model}-${key}`}
                       >
-                        <span className="text-[#293241] font-medium">{key}</span>
-                        <span className="font-semibold text-white">{value}</span>
+                        <span className="text-[#293241] font-medium whitespace-nowrap">{key}</span>
+                        <span className="font-semibold text-white text-right break-words max-w-[60%]">
+                          {key === "For steel" ? (
+                            value.split('mm/min')
+                              .filter(Boolean)
+                              .map((part, i) => (
+                                <div key={i} className="mb-1">
+                                  {part.trim() + ' mm/min'}
+                                </div>
+                              ))
+                          ) : key === "Bed size" ? (
+                            <>
+                              {value.toString().split('(')[0]}
+                              <div>(customizable)</div>
+                            </>
+                          ) : (
+                            value
+                          )}
+                        </span>
                       </motion.div>
                     ))}
                   </div>

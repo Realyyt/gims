@@ -71,33 +71,33 @@ export const specTables = [
       { 
         label: "Cutting Area (D x W)", 
         values: [
-          "12 x 18 in\n305 x 460 mm",
-          "12 x 18 in\n305 x 460 mm",
-          "18 x 24 in\n457 x 610 mm"
+          "1250x1250x150 (Customisable)",
+          "600x600x100 (Customisable)",
+          "600x300x50 (Customisable)"
         ]
       },
       { 
         label: "Kerf (width of cut)", 
         values: [
-          "0.044 in\n1.1 mm",
-          "0.044 in\n1.1 mm",
-          "0.044 in\n1.1 mm"
+          "0.6 - 1.5 mm",
+          "0.6 - 1.5 mm",
+          "0.6 - 1.5 mm"
         ]
       },
       { 
         label: "Abrasive Rate", 
         values: [
-          "0.33 lb/min\n0.15 kg/min",
-          "0.33 lb/min\n0.15 kg/min",
-          "0.40 lb/min\n0.18 kg/min"
+          "5 to 15 gram/min (Adjustable)",
+          "5 to 15 gram/min (Adjustable)",
+          "5 to 15 gram/min (Adjustable)"
         ]
       },
       { 
         label: "Power Requirement", 
         values: [
-          "220V / 60Hz (North America)\n220V / 50Hz (International)",
-          "110V / 60Hz (North America)\n220V / 50Hz (International)",
-          "220V / 60Hz (North America)\n220V / 50Hz (International)"
+          "380V~450v/50Hz,Three phase",
+          "380V~450v /50Hz,Three phase",
+          "380V~450v/50Hz, Three phase"
         ]
       }
     ]
@@ -109,65 +109,57 @@ export const specTables = [
       {
         label: "Cutting Area (D x W)",
         values: [
-          "12 x 18 in\n305 x 460 mm",
-          "12 x 18 in\n305 x 460 mm",
-          "12 x 18 in\n305 x 460 mm"
+          "1250x1250mm (Customisable)",
+          "600x600mm (Customisable)",
+          "600x300mm (Customisable)"
         ]
       },
       {
         label: "Cut Bed Size (D x W)",
         values: [
-          "13 x 19 in\n330 x 485 mm",
-          "13 x 19 in\n330 x 485 mm",
-          "13 x 19 in\n330 x 485 mm"
+          "1300x1300mm(Customisable)",
+          "630x630mm (Customisable)",
+          "630x330mm (Customisable)"
         ]
       },
       {
         label: "Z-Axis Travel",
         values: [
-          "4 in\n102 mm",
-          "4 in\n102 mm",
-          "4 in\n102 mm"
+          "150mm (Customisable)",
+          "100mm (Customisable)",
+          "50mm (Customisable)"
         ]
       },
       {
         label: "Kerf (width of cut)",
         values: [
-          "0.044 in\n1.1 mm",
-          "0.044 in\n1.1 mm",
-          "0.044 in\n1.1 mm"
-        ]
-      },
-      {
-        label: "Cutting Materials",
-        values: [
-          "Metal, glass, stone, tile, composites, plastic, rubber, foam",
-          "Metal, glass, stone, tile, composites, plastic, rubber, foam",
-          "Metal, glass, stone, tile, composites, plastic, rubber, foam"
+          "0.6 - 1.5mm",
+          "0.6 - 1.5mm",
+          "0.6 - 1.5mm"
         ]
       },
       {
         label: "Maximum Material Thickness",
         values: [
-          "1 in\n25.4 mm",
-          "0.75 in\n19 mm",
-          "0.5 in\n12.7 mm"
+          "100mm",
+          "50mm",
+          "25mm"
         ]
       },
       {
         label: "Positioning Accuracy",
         values: [
-          "±0.003 in\n±0.075 mm",
-          "±0.003 in\n±0.075 mm",
-          "±0.003 in\n±0.075 mm"
+          "0.03mm (Customisable)",
+          "0.03mm (Customisable)",
+          "0.03mm (Customisable)"
         ]
       },
       {
         label: "Repeatability",
         values: [
-          "±0.002 in\n±0.05 mm",
-          "±0.002 in\n±0.05 mm",
-          "±0.002 in\n±0.05 mm"
+          "0.02mm (Customisable)",
+          "0.02mm (Customisable)",
+          "0.02mm (Customisable)"
         ]
       }
     ]
@@ -179,51 +171,29 @@ export const specTables = [
       {
         label: "Abrasive Type",
         values: [
-          "80 mesh garnet",
-          "80 mesh garnet",
-          "80 mesh garnet"
+          "80 Mesh garnet",
+          "80 Mesh garnet",
+          "120 Mesh garnet"
         ]
       },
       {
         label: "Abrasive Rate",
         values: [
-          "0.33 lb/min\n0.15 kg/min",
-          "0.33 lb/min\n0.15 kg/min",
-          "0.33 lb/min\n0.15 kg/min"
+          "5 to 15 gram/min (Adjustable)",
+          "5 to 15 gram/min (Adjustable)",
+          "5 to 15 gram/min (Adjustable)"
         ]
       },
       {
-        label: "Abrasive Hopper Capacity",
+        label: "Recommanded abrasive",
         values: [
-          "42 lb\n19.1 kg",
-          "30 lb\n13.5 kg",
-          "30 lb\n13.5 kg"
+          "Our standard absarive\nfor max performance",
+          "Our standard absarive\nfor max performance",
+          "Our standard absarive\nfor max performance"
         ]
       },
-      {
-        label: "Abrasive Feed System",
-        values: [
-          "Automatic feed with level sensing",
-          "Automatic feed with level sensing",
-          "Automatic feed with level sensing"
-        ]
-      },
-      {
-        label: "Abrasive Consumption Rate",
-        values: [
-          "20 lb/hr\n9.1 kg/hr",
-          "20 lb/hr\n9.1 kg/hr",
-          "20 lb/hr\n9.1 kg/hr"
-        ]
-      },
-      {
-        label: "Abrasive Storage",
-        values: [
-          "Integrated hopper with moisture protection",
-          "Integrated hopper with moisture protection",
-          "Integrated hopper with moisture protection"
-        ]
-      }
+      
+      
     ]
   },
   {
@@ -233,43 +203,19 @@ export const specTables = [
       {
         label: "Power Requirement",
         values: [
-          "220V / 60Hz (North America)\n220V / 50Hz (International)",
-          "110V / 60Hz (North America)\n220V / 50Hz (International)",
-          "110V / 60Hz (North America)\n220V / 50Hz (International)"
-        ]
-      },
-      {
-        label: "Circuit Requirement",
-        values: [
-          "30A dedicated circuit",
-          "20A dedicated circuit",
-          "20A dedicated circuit"
+          "380V~450v/50Hz, Three phase",
+          "380V~450v/50Hz, Three phase",
+          "380V~450v/50Hz, Three phase"
         ]
       },
       {
         label: "Power Consumption",
         values: [
-          "3.5 kW maximum",
-          "2.2 kW maximum",
-          "2.2 kW maximum"
+          "15 HP maximum",
+          "6 HP maximum",
+          "3 HP maximum"
         ]
       },
-      {
-        label: "Standby Power",
-        values: [
-          "200W",
-          "150W",
-          "150W"
-        ]
-      },
-      {
-        label: "Emergency Stop",
-        values: [
-          "Dual redundant system",
-          "Dual redundant system",
-          "Dual redundant system"
-        ]
-      }
     ]
   },
   {
@@ -279,57 +225,33 @@ export const specTables = [
       {
         label: "Operating Pressure",
         values: [
-          "55,000 PSI\n3,800 bar",
-          "45,000 PSI\n3,100 bar",
-          "45,000 PSI\n3,100 bar"
-        ]
-      },
-      {
-        label: "Hydraulic Power",
-        values: [
-          "2,088 W\n2.8 HP",
-          "820 W\n1.1 HP",
-          "820 W\n1.1 HP"
+          "700 bar",
+          "400   bar",
+          "150 bar"
         ]
       },
       {
         label: "Orifice Size",
         values: [
-          "0.014 in\n0.35 mm",
-          "0.012 in\n0.30 mm",
-          "0.012 in\n0.30 mm"
+          "0.5 - 1.2 mm",
+          "0.5 - 1.2 mm",
+          "0.5 - 1.2 mm"
         ]
       },
       {
         label: "Water Flow Rate",
         values: [
-          "0.4 GPM\n1.5 L/min",
-          "0.3 GPM\n1.1 L/min",
-          "0.3 GPM\n1.1 L/min"
+          "8 L/min Depends on nozzle size",
+          "4.5 L/min Depends on nozzle size",
+          "3 L/min Depends on nozzle size"
         ]
       },
       {
-        label: "Intensifier Type",
+        label: "Nozzle y",
         values: [
-          "Direct drive intensifier",
-          "Direct drive intensifier",
-          "Direct drive intensifier"
-        ]
-      },
-      {
-        label: "Pressure Control",
-        values: [
-          "Electronic pressure control system",
-          "Electronic pressure control system",
-          "Electronic pressure control system"
-        ]
-      },
-      {
-        label: "Nozzle Assembly",
-        values: [
-          "Diamond orifice with carbide mixing tube",
-          "Diamond orifice with carbide mixing tube",
-          "Diamond orifice with carbide mixing tube"
+          "Tungsten Carbide",
+          "Tungsten Carbide",
+          "Tungsten Carbide"
         ]
       }
     ]
@@ -350,18 +272,6 @@ export const specTables = [
         label: "Input Water Pressure (minimum)",
         values: ["35 psi\n2.4 bar", "35 psi\n2.4 bar", "35 psi\n2.4 bar"]
       },
-      {
-        label: "Input Water Flow Rate (minimum)",
-        values: ["1.5 GPM\n5.7 L/min", "1 GPM\n3.8 L/min", "1 GPM\n3.8 L/min"]
-      },
-      {
-        label: "Input Water Hardness (maximum TDS)",
-        values: ["180 ppm\n180 mg/L", "180 ppm\n180 mg/L", "180 ppm\n180 mg/L"]
-      },
-      {
-        label: "Input Water Temperature (maximum)",
-        values: ["130 °F\n54 °C", "130 °F\n54 °C", "130 °F\n54 °C"]
-      }
     ]
   },
   {
@@ -369,16 +279,8 @@ export const specTables = [
     columns: ["KATANA SJ700", "KATANA SJ450", "KATANA SJ150"],
     rows: [
       {
-        label: "Water Drain Distance from Waterjet (maximum)",
-        values: ["30 ft\n9 m", "30 ft\n9 m", "30 ft\n9 m"]
-      },
-      {
-        label: "Water Drain Height above Waterjet (maximum)",
-        values: ["4 ft\n1.2 m", "4 ft\n1.2 m", "4 ft\n1.2 m"]
-      },
-      {
-        label: "Water Drainage Flow Rate (maximum)",
-        values: ["1.5 GPM\n5.7 L/min", "1.5 GPM\n5.7 L/min", "1.5 GPM\n5.7 L/min"]
+        label: "Drain Distance from Waterjet (maximum)",
+        values: ["5 m", "5 m", "5 m"]
       },
       {
         label: "Water Recirculation",
@@ -414,142 +316,31 @@ export const specTables = [
         label: "Output Cut File Type",
         values: [".gcode", ".gcode", ".gcode"]
       },
-      {
-        label: "Connectivity to KATANA Waterjet",
-        values: ["SD Card", "SD Card", "SD Card"]
-      },
-      {
-        label: "Cost",
-        values: ["Free", "Free", "Free"]
-      }
     ]
   },
-  {
-    title: "Certifications",
-    columns: ["KATANA SJ700", "KATANA SJ450", "KATANA SJ150"],
-    rows: [
-      {
-        label: "North America (60Hz)",
-        values: ["UL, cUL, FCC", "UL, cUL, FCC", "UL, cUL, FCC"]
-      },
-      {
-        label: "International (50Hz)",
-        values: ["CE", "CE", "CE"]
-      }
-    ]
-  },
-  {
-    title: "Misc Specs",
-    columns: ["KATANA SJ700", "KATANA SJ450", "KATANA SJ150"],
-    rows: [
-      {
-        label: "Waterjet Size",
-        values: [
-          "34 x 26 x 55 in\n856 x 648 x 1400 mm",
-          "34 x 26 x 48 in\n856 x 648 x 1220 mm",
-          "34 x 26 x 22 in\n856 x 648 x 551 mm"
-        ]
-      },
-      {
-        label: "Waterjet Main Unit Weight (empty tank)",
-        values: ["375 lb\n170 kg", "110 lb\n50 kg", "110 lb\n50 kg"]
-      },
-      {
-        label: "Waterjet Main Unit Weight (filled tank)",
-        values: ["800 lb\n360 kg", "400 lb\n180 kg", "400 lb\n180 kg"]
-      },
-      {
-        label: "Connectivity",
-        values: [
-          "Offline. No internet required to run the Waterjet.",
-          "Offline. No internet required to run the Waterjet.",
-          "Offline. No internet required to run the Waterjet."
-        ]
-      },
-      {
-        label: "Sound Pressure Level",
-        values: ["77.6 dB", "72.3 dB", "72.3 dB"]
-      },
-      {
-        label: "Sound Power Level",
-        values: ["85.4 dB", "87 dB", "87 dB"]
-      },
-      {
-        label: "Room Temperature (operating)",
-        values: [
-          "32 – 160 °F\n0 – 70 °C",
-          "32 – 160 °F\n0 – 70 °C",
-          "32 – 160 °F\n0 – 70 °C"
-        ]
-      },
-      {
-        label: "Room Temperature (storage)",
-        values: [
-          "32 – 104 °F\n0 – 40 °C",
-          "32 – 104 °F\n0 – 40 °C",
-          "32 – 104 °F\n0 – 40 °C"
-        ]
-      }
-    ]
-  },
+ 
+  
+     
   {
     title: "Spatial Requirements",
     columns: ["KATANA SJ700", "KATANA SJ450", "KATANA SJ150"],
     rows: [
       {
-        label: "Minimum weight supporting surface must withstand",
+        label: "Minimum weight supporting surface ",
         values: [
-          "Floor only\n1,300 lb\n600 kg",
-          "Floor or table\n400 lb\n180 kg",
-          "Floor or table\n400 lb\n180 kg"
+          "Floor \n700 kg",
+          "Floor \n250 kg",
+          "Table\n150 kg"
         ]
       },
       {
         label: "Spatial Footprint",
         values: [
-          "Floor only\n46 x 27 in\n1.2 x 0.7 m",
-          "Floor or table\n46 x 27 in\n1.2 x 0.7 m",
-          "Floor or table\n46 x 27 in\n1.2 x 0.7 m"
+          "3000mm x 2800mm",
+          "1200mm x 1400mm",
+          "1200mm x 800mm"
         ]
       },
-      {
-        label: "Height Clearance",
-        values: [
-          "80 in\n2 m\nabove the floor",
-          "25 in\n0.6 m\nabove the top of the machine",
-          "25 in\n0.6 m\nabove the top of the machine"
-        ]
-      }
     ]
   },
-  {
-    title: "Maintenance Procedures",
-    columns: ["KATANA SJ700", "KATANA SJ450", "KATANA SJ150"],
-    rows: [
-      {
-        label: "Short-Term Maintenance",
-        values: [
-          "Interval: 20–50 hrs of cutting",
-          "Interval: 20–50 hrs of cutting",
-          "Interval: 20–50 hrs of cutting"
-        ]
-      },
-      {
-        label: "Medium-Term Maintenance",
-        values: [
-          "Interval: 300 hrs of cutting",
-          "Interval: 300 hrs of cutting",
-          "Interval: 300 hrs of cutting"
-        ]
-      },
-      {
-        label: "Long-Term Maintenance",
-        values: [
-          "Interval: 600 hrs of cutting",
-          "Interval: 600 hrs of cutting",
-          "Interval: 600 hrs of cutting"
-        ]
-      }
-    ]
-  }
 ]; 
