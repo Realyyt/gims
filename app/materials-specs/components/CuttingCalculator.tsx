@@ -284,14 +284,14 @@ Please select from the predefined thicknesses in the dropdown menu.`);
   const availableThicknesses = getAvailableThicknesses();
 
   return (
-    <div className="bg-white shadow-lg rounded-xl p-8 mb-12">
+    <div className="bg-white shadow-lg rounded-xl p-4 sm:p-8 mb-12">
       <div className="max-w-3xl">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Cutting Calculator
             </h2>
-            <p className="text-xl text-[#FF6B00] font-medium">
+            <p className="text-lg sm:text-xl text-[#FF6B00] font-medium">
               Explore cutting performance in your material
             </p>
           </div>
@@ -323,7 +323,7 @@ Please select from the predefined thicknesses in the dropdown menu.`);
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-6 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <div>
           <label className="block text-sm font-medium text-gray-600 mb-2">
             SELECT MATERIAL
@@ -427,26 +427,26 @@ Please select from the predefined thicknesses in the dropdown menu.`);
               {typeof result === 'string' ? (
                 <p className="text-red-500">{result}</p>
               ) : (
-                <div className="grid grid-cols-5 gap-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
                   <div>
                     <p className="text-sm text-gray-600 mb-1">CUT RATE</p>
-                    <p className="text-lg font-bold text-gray-900">{result.cutRate}</p>
+                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.cutRate}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">TIME/PIERCE</p>
-                    <p className="text-lg font-bold text-gray-900">{result.pierceTime}</p>
+                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.pierceTime}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">JOB TIME</p>
-                    <p className="text-lg font-bold text-gray-900">{result.jobTime}</p>
+                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.jobTime}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">ABRASIVE USED</p>
-                    <p className="text-lg font-bold text-gray-900">{result.abrasiveUsed}</p>
+                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.abrasiveUsed}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-600 mb-1">JOB COST</p>
-                    <p className="text-lg font-bold text-gray-900">{result.jobCost}</p>
+                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.jobCost}</p>
                   </div>
                 </div>
               )}
