@@ -234,10 +234,30 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Machine tool service', image: '/testing-quality-control-flyout-thumbnail.jpg', link: '/services', description: 'State-of-the-art Tooling service' },
     ],
     'Learn more': [
-      { title: 'About Us', image: '/gims1.png', description: 'Innovation at its core' },
-      { title: 'FAQ', image: '/faq-flyout-thumbnail.jpg', description: 'Frequently asked questions' },
-      { title: 'Reviews', image: '/8512fbae976e871e5353cdd64c165fa1.jpg', description: 'What our customers say' },
-      { title: 'Articles', image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', description: 'Read our latest articles' },
+      { 
+        title: 'About Us', 
+        image: '/gims1.png', 
+        description: 'Innovation at its core',
+        link: '/learn-more/about'
+      },
+      { 
+        title: 'FAQ', 
+        image: '/0811700b989a20da3f4ac1f594710373.jpg', 
+        description: 'Frequently asked questions',
+        link: '/learn-more/faq'
+      },
+      { 
+        title: 'Reviews', 
+        image: '/8512fbae976e871e5353cdd64c165fa1.jpg', 
+        description: 'What our customers say',
+        link: '/learn-more/reviews'
+      },
+      { 
+        title: 'Articles', 
+        image: '/9fdabfb0a24c51234f146b33d48d003d.jpg', 
+        description: 'Read our latest articles',
+        link: '/learn-more/articles'
+      },
     ],
 
   };
