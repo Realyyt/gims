@@ -11,9 +11,44 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Guhan Industries | Manufacturing Solutions",
-  description: "Leading manufacturer of industrial solutions and precision engineering services",
-  keywords: "manufacturing, industrial solutions, engineering, precision manufacturing",
+  title: "Best Waterjet Cutting Machine In India | GimsIndia",
+  description: "Efficient Waterjet Cutting Machine for precise cutting of metal, stone, glass, and more. Eco-friendly, high-performance, and cost-effective.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
+  verification: {
+    google: "EZa194ZvDVZ2tCgP9UMVlSVXR7HGNyoxI3Xs4kT1RM8",
+  },
+  alternates: {
+    canonical: 'http://gimsindia.in/',
+  },
+  openGraph: {
+    title: "Best Waterjet Cutting Machine In India | GimsIndia",
+    description: "Efficient Waterjet Cutting Machine for precise cutting of metal, stone, glass, and more. Eco-friendly, high-performance, and cost-effective.",
+    url: 'http://gimsindia.in/',
+    siteName: 'GimsIndia',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    site: '@GimsIndia',
+    creator: '@GimsIndia',
+    title: "Best Waterjet Cutting Machine In India | GimsIndia",
+    description: "Efficient Waterjet Cutting Machine for precise cutting of metal, stone, glass, and more. Eco-friendly, high-performance, and cost-effective.",
+  },
+  keywords: "waterjet cutting machine, waterjet cutter india, abrasive waterjet, metal cutting machine, GIMS india, industrial cutting solutions, precision cutting machine, water jet price in india",
+  authors: [{ name: "Guhan Industrial and Manufacturing Solutions India" }],
+  category: "Industrial Manufacturing",
+  metadataBase: new URL('https://gimsindia.in'),
 };
 
 export default function RootLayout({
