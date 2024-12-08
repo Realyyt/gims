@@ -284,29 +284,29 @@ Please select from the predefined thicknesses in the dropdown menu.`);
   const availableThicknesses = getAvailableThicknesses();
 
   return (
-    <div className="bg-white shadow-lg rounded-xl p-4 sm:p-8 mb-12">
+    <div className="bg-slate-100 shadow-lg rounded-xl p-4 sm:p-8 mb-12">
       <div className="max-w-3xl">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Cutting Calculator
             </h2>
-            <p className="text-lg sm:text-xl text-[#FF6B00] font-medium">
-              Explore cutting performance in your material
+            <p className="text-lg sm:text-xl text-blue-600 font-medium">
+              Calculate cutting parameters for your material
             </p>
           </div>
 
-          <div className="flex items-center space-x-3">
-            <span className={`text-sm font-bold ${localUnit === 'metric' ? 'text-gray-900' : 'text-gray-600'}`}>
-              METRIC
+          <div className="flex items-center space-x-3 bg-white p-2 rounded-lg">
+            <span className={`text-sm font-bold ${localUnit === 'metric' ? 'text-blue-600' : 'text-gray-600'}`}>
+              MM
             </span>
             <button
               type="button"
               onClick={handleUnitToggle}
               className={`relative inline-flex h-7 w-12 flex-shrink-0 cursor-pointer rounded-full 
                 border-2 border-transparent transition-colors duration-200 ease-in-out 
-                focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2
-                ${localUnit === 'metric' ? 'bg-orange-500' : 'bg-gray-200'}`}
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+                ${localUnit === 'metric' ? 'bg-blue-600' : 'bg-gray-200'}`}
               aria-pressed={localUnit === 'metric'}
             >
               <span className="sr-only">Toggle units</span>
@@ -316,104 +316,108 @@ Please select from the predefined thicknesses in the dropdown menu.`);
                   ${localUnit === 'metric' ? 'translate-x-5' : 'translate-x-0'}`}
               />
             </button>
-            <span className={`text-sm font-bold ${localUnit === 'imperial' ? 'text-gray-900' : 'text-gray-600'}`}>
-              IMPERIAL
+            <span className={`text-sm font-bold ${localUnit === 'imperial' ? 'text-blue-600' : 'text-gray-600'}`}>
+              IN
             </span>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <div>
-          <label className="block text-sm font-medium text-gray-600 mb-2">
-            SELECT MATERIAL
-          </label>
-          <select
-            value={selectedMaterial}
-            onChange={handleMaterialChange}
-            className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
-              text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-          >
-            <option value="">Select material</option>
-            {allMaterials.map((material) => (
-              <option key={material} value={material}>
-                {material}
-              </option>
-            ))}
-          </select>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+        <div className="bg-white p-6 rounded-lg shadow">
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-600 mb-2">
+              Material Selection
+            </label>
+            <select
+              value={selectedMaterial}
+              onChange={handleMaterialChange}
+              className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+                text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="">Select material</option>
+              {allMaterials.map((material) => (
+                <option key={material} value={material}>
+                  {material}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-600 mb-2">
+              Material Thickness
+            </label>
+            <select
+              value={thickness}
+              onChange={(e) => setThickness(e.target.value)}
+              className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+                text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              disabled={!selectedMaterial}
+            >
+              <option value="">Select thickness</option>
+              {availableThicknesses.map((t) => (
+                <option key={t} value={t.split(' ')[0]}>
+                  {t}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-600 mb-2">
-            THICKNESS
-          </label>
-          <select
-            value={thickness}
-            onChange={(e) => setThickness(e.target.value)}
-            className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
-              text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-            disabled={!selectedMaterial}
-          >
-            <option value="">Select thickness</option>
-            {availableThicknesses.map((t) => (
-              <option key={t} value={t.split(' ')[0]}>
-                {t}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-600 mb-2">
-            CUT LENGTH ({localUnit === 'metric' ? 'mm' : 'in'})
-          </label>
-          <div className="relative">
+        <div className="bg-white p-6 rounded-lg shadow">
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-600 mb-2">
+              Cut Length ({localUnit === 'metric' ? 'mm' : 'in'})
+            </label>
             <input
               type="number"
               value={cutLength}
               onChange={(e) => setCutLength(e.target.value)}
               className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
-                text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               min="0"
               step={localUnit === 'metric' ? '1' : '0.1'}
               placeholder={`Enter length in ${localUnit === 'metric' ? 'mm' : 'inches'}`}
             />
           </div>
-        </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-600 mb-2">
-            NO. OF PIERCES
-          </label>
-          <select
-            value={pierces}
-            onChange={(e) => setPierces(e.target.value)}
-            className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
-              text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-          >
-            {[1, 2, 3, 4, 5].map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
+          <div>
+            <label className="block text-sm font-medium text-gray-600 mb-2">
+              Number of Pierces
+            </label>
+            <select
+              value={pierces}
+              onChange={(e) => setPierces(e.target.value)}
+              className="w-full h-[42px] px-4 py-2.5 bg-white border border-gray-300 rounded-lg
+                text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              {[1, 2, 3, 4, 5].map((num) => (
+                <option key={num} value={num}>
+                  {num}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 
-      <button
-        onClick={calculateResults}
-        className="px-8 py-2.5 bg-[#FF6B00] text-white font-medium rounded-lg
-          hover:bg-[#e65000] focus:outline-none focus:ring-2 focus:ring-[#FF6B00] focus:ring-offset-2
-          transition-colors"
-      >
-        CALCULATE
-      </button>
+      <div className="text-center">
+        <button
+          onClick={calculateResults}
+          className="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg
+            hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+            transition-colors"
+        >
+          Calculate Results
+        </button>
+      </div>
 
       {Object.entries(results).length > 0 && (
-        <div className="mt-8 space-y-6">
+        <div className="mt-8 grid grid-cols-1 gap-6">
           {Object.entries(results).map(([model, result]) => (
-            <div key={model} className="border-t border-gray-200 pt-6">
-              <div className="flex items-center gap-4 mb-4">
+            <div key={model} className="bg-white rounded-lg shadow p-6">
+              <div className="flex items-center gap-4 mb-6 border-b pb-4">
                 <Image 
                   src={model === 'sj700' ? '/sj700.png' : model === 'sj450' ? '/sj451.png' : '/gims1.png'}
                   alt={model}
@@ -421,32 +425,32 @@ Please select from the predefined thicknesses in the dropdown menu.`);
                   height={64}
                   className="object-contain"
                 />
-                <h3 className="text-lg font-semibold text-gray-900">{model}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 uppercase">{model}</h3>
               </div>
 
               {typeof result === 'string' ? (
-                <p className="text-red-500">{result}</p>
+                <p className="text-red-500 text-center py-4">{result}</p>
               ) : (
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">CUT RATE</p>
-                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.cutRate}</p>
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-600 mb-1">Cut Rate</p>
+                    <p className="text-lg font-bold text-blue-600">{result.cutRate}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">TIME/PIERCE</p>
-                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.pierceTime}</p>
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-600 mb-1">Pierce Time</p>
+                    <p className="text-lg font-bold text-blue-600">{result.pierceTime}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">JOB TIME</p>
-                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.jobTime}</p>
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-600 mb-1">Total Time</p>
+                    <p className="text-lg font-bold text-blue-600">{result.jobTime}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">ABRASIVE USED</p>
-                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.abrasiveUsed}</p>
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-600 mb-1">Abrasive Used</p>
+                    <p className="text-lg font-bold text-blue-600">{result.abrasiveUsed}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">JOB COST</p>
-                    <p className="text-base sm:text-lg font-bold text-gray-900">{result.jobCost}</p>
+                  <div className="bg-slate-50 p-4 rounded-lg">
+                    <p className="text-sm text-gray-600 mb-1">Total Cost</p>
+                    <p className="text-lg font-bold text-blue-600">{result.jobCost}</p>
                   </div>
                 </div>
               )}
