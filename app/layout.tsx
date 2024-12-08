@@ -45,6 +45,10 @@ export const metadata: Metadata = {
     title: "Best Waterjet Cutting Machine In India | GimsIndia",
     description: "Efficient Waterjet Cutting Machine for precise cutting of metal, stone, glass, and more. Eco-friendly, high-performance, and cost-effective.",
   },
+  keywords: "waterjet cutting machine, waterjet cutter india, abrasive waterjet, metal cutting machine, GIMS india, industrial cutting solutions, precision cutting machine, water jet price in india",
+  authors: [{ name: "Guhan Industrial and Manufacturing Solutions India" }],
+  category: "Industrial Manufacturing",
+  metadataBase: new URL('https://gimsindia.in'),
 };
 
 export default function RootLayout({
