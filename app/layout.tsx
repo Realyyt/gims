@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { headers } from 'next/headers';
+import SchemaOrg from './components/Schemaorg';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,44 +13,69 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Best Waterjet Cutting Machine In India | GimsIndia",
-  description: "Efficient Waterjet Cutting Machine for precise cutting of metal, stone, glass, and more. Eco-friendly, high-performance, and cost-effective.",
+  metadataBase: new URL('https://gimsindia.in'),
+  title: "Best Waterjet Cutting Machine Manufacturer in India | GIMS | Abrasive Suspension Technology",
+  description: "India's #1 waterjet cutting machine manufacturer. Leading supplier of abrasive suspension waterjet technology. Specializing in metal, stone, glass cutting with superior precision. Best price guaranteed with nationwide service & support.",
+  keywords: [
+    "waterjet cutting machine india",
+    "waterjet manufacturer india",
+    "abrasive suspension waterjet",
+    "best waterjet machine price india",
+    "industrial waterjet cutting",
+    "metal cutting machine india",
+    "stone cutting waterjet",
+    "glass cutting waterjet",
+    "waterjet cutting service india",
+    "precision cutting machine",
+    "GIMS waterjet india",
+    "katana waterjet series",
+    "waterjet technology india",
+    "industrial cutting solutions",
+    "manufacturing equipment india"
+  ].join(', '),
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-snippet': -1,
-      'max-image-preview': 'large',
       'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   verification: {
-    google: "EZa194ZvDVZ2tCgP9UMVlSVXR7HGNyoxI3Xs4kT1RM8",
+    google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'http://gimsindia.in/',
+    canonical: 'https://gimsindia.in',
   },
   openGraph: {
     title: "Best Waterjet Cutting Machine In India | GimsIndia",
     description: "Efficient Waterjet Cutting Machine for precise cutting of metal, stone, glass, and more. Eco-friendly, high-performance, and cost-effective.",
-    url: 'http://gimsindia.in/',
+    url: 'https://gimsindia.in',
     siteName: 'GimsIndia',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'GIMS India Waterjet Cutting Machines',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     site: '@GimsIndia',
     creator: '@GimsIndia',
     title: "Best Waterjet Cutting Machine In India | GimsIndia",
     description: "Efficient Waterjet Cutting Machine for precise cutting of metal, stone, glass, and more. Eco-friendly, high-performance, and cost-effective.",
+    images: ['/twitter-image.jpg'],
   },
-  keywords: "waterjet cutting machine, waterjet cutter india, abrasive waterjet, metal cutting machine, GIMS india, industrial cutting solutions, precision cutting machine, water jet price in india",
   authors: [{ name: "Guhan Industrial and Manufacturing Solutions India" }],
   category: "Industrial Manufacturing",
-  metadataBase: new URL('https://gimsindia.in'),
 };
 
 export default function RootLayout({
@@ -58,6 +85,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={geistSans.className}>
+      <head>
+        <SchemaOrg />
+      </head>
       <body>
         <div className="min-h-screen flex flex-col">
           <Navbar />
