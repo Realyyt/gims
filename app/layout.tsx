@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'EZa194ZvDVZ2tCgP9UMVlSVXR7HGNyoxI3Xs4kT1RM8',
   },
   alternates: {
     canonical: 'https://gimsindia.in',
