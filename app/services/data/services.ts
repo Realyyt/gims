@@ -1,78 +1,79 @@
+
 export const services = [
   {
-    title: 'New product development',
-    image: '/new product.jpg',
-    description: 'From concept to reality, we help bring your innovative ideas to life with our comprehensive product development services.',
+    title: 'Ship Decommissioning',
+    image: '/ship-decommissioning.jpg',
+    description: 'Precision-driven, sustainable ship dismantling using advanced waterjet technology.',
     features: [
       {
-        title: 'Concept Development',
-        description: 'Transform ideas into detailed product specifications and designs.'
+        title: 'Precision Metal Cutting',
+        description: 'Advanced waterjet cutting for complex structures'
       },
       {
-        title: 'Prototyping',
-        description: 'Rapid prototyping services to validate designs and functionality.'
+        title: 'Environmental Safety',
+        description: 'Eco-friendly dismantling processes'
       },
       {
-        title: 'Testing & Validation',
-        description: 'Comprehensive testing to ensure product quality and performance.'
+        title: 'Material Recycling',
+        description: 'Efficient material recovery and recycling'
       }
     ]
   },
   {
-    title: 'Design and simulation',
-    image: '/machine-shops-menu.jpg',
-    description: 'Utilizing cutting-edge CAD/CAM software and simulation tools to optimize designs before production.',
+    title: 'Hydroblasting',
+    image: '/hydroblasting.jpg',
+    description: 'Superior cleaning power with eco-friendly waterjet technology.',
     features: [
       {
-        title: '3D CAD Design',
-        description: 'Professional 3D modeling and design optimization.'
+        title: 'Surface Preparation',
+        description: 'Thorough cleaning for optimal results'
       },
       {
-        title: 'FEA Analysis',
-        description: 'Structural analysis and optimization for performance.'
+        title: 'Coating Removal',
+        description: 'Efficient removal of old coatings'
       },
       {
-        title: 'Virtual Testing',
-        description: 'Simulate real-world conditions before production.'
+        title: 'Environmental Compliance',
+        description: 'Meeting all environmental standards'
       }
     ]
   },
   {
-    title: 'Manufacturing and fabrication',
-    image: '/rapid-prototyping-flyout-thumbnail.jpg',
-    description: 'State-of-the-art manufacturing facilities equipped with the latest technology for precision fabrication.',
+    title: 'Vessel Derusting',
+    image: '/vessel-derusting.jpg',
+    description: 'Revolutionary corrosion control for enhanced vessel longevity.',
     features: [
       {
-        title: 'CNC Machining',
-        description: 'Precision machining for complex parts and components.'
+        title: 'Advanced Technology',
+        description: 'State-of-the-art derusting solutions'
       },
       {
-        title: 'Waterjet Cutting',
-        description: 'Advanced waterjet technology for diverse materials.'
+        title: 'Surface Protection',
+        description: 'Long-lasting rust prevention'
       },
       {
-        title: 'Quality Control',
-        description: 'Rigorous quality checks throughout production.'
+        title: 'Quality Assurance',
+        description: 'Comprehensive quality control'
       }
     ]
   },
   {
-    title: 'Machine tool service',
-    image: '/testing-quality-control-flyout-thumbnail.jpg',
-    description: 'Expert maintenance and repair services to keep your machinery running at peak performance.',
+    title: 'Hull Cleaning',
+    image: '/hull-cleaning.jpg',
+    description: 'Efficient underwater hull maintenance for optimal performance.',
     features: [
-      {
-        title: 'Preventive Maintenance',
-        description: 'Regular maintenance to prevent equipment failures.'
-      },
-      {
-        title: 'Emergency Repairs',
-        description: '24/7 emergency repair services available.'
-      },
       {
         title: 'Performance Optimization',
-        description: 'Machine calibration and optimization services.'
+        description: 'Improved vessel efficiency'
+      },
+      {
+        title: 'Eco-friendly Methods',
+        description: 'Environmentally conscious cleaning'
+      },
+      {
+        title: 'Regular Maintenance',
+        description: 'Preventive care programs'
       }
     ]
   }
-]; 
+];
