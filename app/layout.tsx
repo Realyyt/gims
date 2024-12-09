@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+///comment to teach intern merge of pull request
 import SchemaOrg from './components/Schemaorg';
 
 const geistSans = localFont({
@@ -31,7 +32,10 @@ export const metadata: Metadata = {
     "katana waterjet series",
     "waterjet technology india",
     "industrial cutting solutions",
-    "manufacturing equipment india"
+    "manufacturing equipment india",
+    "cnc machine",
+    " cnc waterjet ",
+    "cnc waterjet in india"
   ].join(', '),
   robots: {
     index: true,
