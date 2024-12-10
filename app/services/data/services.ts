@@ -1,8 +1,8 @@
 export const services = [
   {
-    title: 'New product development',
+    title: 'Ship Decommissioning',
     image: '/new-product.jpg',
-    description: 'From concept to reality, we help bring your innovative ideas to life with our comprehensive product development services.',
+    description: 'precision-driven, sustainable ship dismantling using advanced waterjet technology.',
     link: 'Learn more',
     features: [],
   },

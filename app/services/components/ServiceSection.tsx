@@ -15,7 +15,7 @@ export default function ServiceSection({ service, index }: ServiceSectionProps) 
     viewport={{ once: true }}
     className="flex flex-col items-center text-center p-4"
   >
-    <h2 className="text-white mb-2 font-bold">{service.title}</h2>
+    <h2 className="text-white mb-2 font-bold text-[20px]">{service.title}</h2>
     <p className="text-white mb-2">{service.description}</p>
     <p className="text-white-500 underline">{service.link}</p>
   </motion.div>
@@ -30,7 +30,7 @@ export default function ServiceSection({ service, index }: ServiceSectionProps) 
     viewport={{ once: true }}
     className="flex flex-col items-center text-center p-4"
   >
-    <h2 className="text-white mb-2 font-bold">{service.title}</h2>
+    <h2 className="text-white mb-2 font-bold text-[20px]">{service.title}</h2>
     <p className="text-white mb-2">{service.description}</p>
     <p className="text-white-500 underline">{service.link}</p>
   </motion.div>
@@ -46,7 +46,7 @@ export default function ServiceSection({ service, index }: ServiceSectionProps) 
     viewport={{ once: true }}
     className="flex flex-col items-center text-center p-4"
   >
-    <h2 className="text-white mb-2 font-bold">{service.title}</h2>
+    <h2 className="text-white mb-2 font-bold text-[20px]">{service.title}</h2>
     <p className="text-white mb-2">{service.description}</p>
     <p className="text-white-500 underline">{service.link}</p>
   </motion.div>
@@ -61,7 +61,7 @@ export default function ServiceSection({ service, index }: ServiceSectionProps) 
     viewport={{ once: true }}
     className="flex flex-col items-center text-center p-4"
   >
-    <h2 className="text-white mb-2 font-bold">{service.title}</h2>
+    <h2 className="text-white mb-2 font-bold text-[20px]">{service.title}</h2>
     <p className="text-white mb-2">{service.description}</p>
     <p className="text-white-500 underline">{service.link}</p>
   </motion.div>
