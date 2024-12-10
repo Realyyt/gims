@@ -17,8 +17,6 @@ export default function CustomerQuote({ quote, author, position, company }: Cust
       </p>
       <div>
         <p className="font-semibold text-[#293241]">{author}</p>
-        <p className="text-[#293241]/60">{position}</p>
-        <p className="text-[#293241]/60">{company}</p>
       </div>
     </motion.div>
   );

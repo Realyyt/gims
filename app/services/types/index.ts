@@ -1,9 +1,12 @@
+import { ReactNode } from "react";
+
 export interface ServiceFeature {
   title: string;
   description: string;
 }
 
 export interface Service {
+  link: ReactNode;
   title: string;
   image: string;
   description: string;
