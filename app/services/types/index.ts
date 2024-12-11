@@ -6,12 +6,13 @@ export interface ServiceFeature {
 }
 
 export interface Service {
-  link: ReactNode;
+  link: string;
   title: string;
   image: string;
   description: string;
   features: ServiceFeature[];
 }
+
 
 export interface ServiceSectionProps {
   service: Service;
