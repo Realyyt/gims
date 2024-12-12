@@ -83,7 +83,7 @@ const KatanaSeriesOverview = () => {
   return (
     <div className="bg-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-5xl font-bold text-[#293241] text-center mb-12">
+        <h1 className="text-5xl font-bold text-[#1a1d23] text-center mb-12">
           {machines[currentIndex].model}
         </h1>
 
@@ -118,7 +118,7 @@ const KatanaSeriesOverview = () => {
                   duration: 0.3,
                   ease: "easeInOut"
                 }}
-                className=" bg-[#1890d5] bg-opacity-75 rounded-3xl p-8"
+                className="bg-white bg-opacity-75 rounded-3xl p-8"
               >
                 <div className="flex flex-col md:flex-row gap-8">
                   {/* Image Section */}
@@ -142,7 +142,7 @@ const KatanaSeriesOverview = () => {
                           <span className="bg-[#ee6c4d] text-[#e0fbfc] px-2 py-1 rounded-md font-bold text-sm mr-2">
                             #{idx + 1}
                           </span>
-                          <h3 className="text-lg font-semibold text-[#e0fbfc]">
+                          <h3 className="text-lg font-semibold text-[#3d5a80]"> {/* Changed text color to dark blue */}
                             {title}
                           </h3>
                         </div>

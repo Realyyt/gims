@@ -52,7 +52,7 @@ export default function Home() {
         prev={prev}
         setCurrentIndex={setCurrentIndex}
       />
-      <ContactForm />
+      <ContactForm  />
     </main>
   );
 }

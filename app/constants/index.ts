@@ -223,7 +223,12 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },
     ],
     'Materials': [
-      { title: 'Gallery', image: '/marble.jpg', link: '/material-specs' , description: 'Explore different materials and cutting capabilities' },
+      { 
+        title: 'Materials Gallery', 
+        image: '/marble.jpg', 
+        link: '/materials-gallery',
+        description: 'Explore different materials and cutting capabilities' 
+      },
       { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', link: '/material-specs', description: 'Calculate pressure, flow rate and cutting parameters' },
       { title: 'Applications', image: '/application.jpg', link: '/material-specs', description: 'Advanced manufacturing systems' },
     ],

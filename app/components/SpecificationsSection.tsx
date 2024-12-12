@@ -15,7 +15,7 @@ export default function SpecificationsSection() {
             {specifications.map((spec) => (
               <motion.div
                 className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
-                  transition-all duration-300 border border-[#98c1d9] bg-[#1890d5]"
+                  transition-all duration-300 border border-[#98c1d9] bg-white"
                 key={spec.model}
               >
                 <div className="relative h-56 bg-white">
@@ -27,19 +27,19 @@ export default function SpecificationsSection() {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-[#e0fbfc]">{spec.model}</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-[#293241]">{spec.model}</h3>
                   <div className="space-y-3">
                     {Object.entries(spec.specs).map(([key, value]) => (
                       <motion.div 
                         className="flex justify-between items-start py-1 border-b border-[#98c1d9]/30"
                         whileHover={{ 
-                          backgroundColor: "#3d5a80",
+                          backgroundColor: "#f0f0f0",
                           transition: { duration: 0.2 }
                         }}
                         key={`${spec.model}-${key}`}
                       >
                         <span className="text-[#293241] font-medium whitespace-nowrap">{key}</span>
-                        <span className="font-semibold text-white text-right break-words max-w-[60%]">
+                        <span className="font-semibold text-[#293241] text-right break-words max-w-[60%]">
                           {key === "For steel" ? (
                             value.split('mm/min')
                               .filter(Boolean)
