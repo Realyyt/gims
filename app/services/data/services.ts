@@ -2,7 +2,7 @@
 export const services = [
   {
     title: 'Ship Decommissioning',
-    image: '/ship-decommissioning.jpg',
+    image: '/image/ship.jpg',
     description: 'Precision-driven, sustainable ship dismantling using advanced waterjet technology.',
     features: [
       {
@@ -21,7 +21,7 @@ export const services = [
   },
   {
     title: 'Hydroblasting',
-    image: '/hydroblasting.jpg',
+    image: '/image/blast.jpeg',
     description: 'Superior cleaning power with eco-friendly waterjet technology.',
     features: [
       {
@@ -40,7 +40,7 @@ export const services = [
   },
   {
     title: 'Vessel Derusting',
-    image: '/vessel-derusting.jpg',
+    image: '/image/284ccf16900287ebcc60d2c3beced007.jpg',
     description: 'Revolutionary corrosion control for enhanced vessel longevity.',
     features: [
       {
@@ -59,7 +59,7 @@ export const services = [
   },
   {
     title: 'Hull Cleaning',
-    image: '/hull-cleaning.jpg',
+    image: '/image/7c666d08646ce761ae07dc296662b00d.jpg',
     description: 'Efficient underwater hull maintenance for optimal performance.',
     features: [
       {
