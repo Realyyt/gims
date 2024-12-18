@@ -233,10 +233,36 @@ export const industrialApplications: IndustrialApplication[] = [
       { title: 'Applications', image: '/application.jpg', link: '/material-specs', description: 'Advanced manufacturing systems' },
     ],
     'Services': [
-      { title: 'New product development ', image: '/new product.jpg', link: '/services', description: 'Our story and mission' },
-      { title: 'Design and simulation', image: '/machine-shops-menu.jpg', link: '/services', description: 'Innovation at its core' },
-      { title: 'Manufacturing and fabrication', image: '/rapid-prototyping-flyout-thumbnail.jpg', link: '/services', description: 'State-of-the-art manufacturing' },
-      { title: 'Machine tool service', image: '/testing-quality-control-flyout-thumbnail.jpg', link: '/services', description: 'State-of-the-art Tooling service' },
+      { 
+        title: 'Services we offer', 
+        image: '/image/631226f2a946a754daa0abdaa8210786.jpg', 
+        link: '/services', 
+        description: ' comprehensive range of services tailored to meet your industrial needs.' 
+      },
+      { 
+        title: 'Core Competencies', 
+        image: '/image/ship.jpg', 
+        link: '/services/core-competencies',
+        description: 'Machine building, automation, and engineering expertise'
+      },
+      { 
+        title: 'Waterjet Services', 
+        image: '/image/blast.jpeg', 
+        link: '/services/waterjet',
+        description: 'Advanced waterjet solutions for various industries'
+      },
+      { 
+        title: 'Industry Applications', 
+        image: '/image/284ccf16900287ebcc60d2c3beced007.jpg', 
+        link: '/services/applications',
+        description: 'Specialized solutions for different sectors'
+      },
+      { 
+        title: 'Wind Turbine Solutions', 
+        image: '/image/7c666d08646ce761ae07dc296662b00d.jpg', 
+        link: '/services/wind-turbine',
+        description: 'Cutting-edge wind turbine maintenance and decommissioning'
+      },
     ],
     'Learn more': [
       { 

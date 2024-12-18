@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { CheckCircle, Leaf, Gauge, Shield, Target, Droplets, Recycle, Clock, Award, HeartHandshake, BadgeCheck, Ship } from 'lucide-react';
 import { services } from './data/services';
 import ContactForm2 from '../components/contactform2';

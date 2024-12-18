@@ -22,10 +22,8 @@ export default function AboutPage() {
           >
             <h2 className="text-3xl font-bold text-[#293241] mb-6">Our Story</h2>
             <p className="text-gray-700">
-              GIMS (Guhan Industrial and Manufacturing Solutions) is a leading provider of advanced 
-              waterjet cutting solutions. With years of expertise in precision manufacturing...
+               Guhan Industrial and Manufacturing Solutions Pvt. Ltd. (GIMS) is an advanced technology startup specializing in the design, development, and production of high-performance machine tools. With our core strength in machine building, our flagship Waterjet Series is a game-changing solution for high-precision, efficient cutting applications across multiple sectors. In addition to our proprietary machines, we offer a spectrum of engineering services, making GIMS an invaluable partner for industries ranging from manufacturing and research institutions to small and medium-sized enterprises (SMEs) and startups.
             </p>
-            {/* Add more content as needed */}
           </motion.div>
 
           <motion.div
