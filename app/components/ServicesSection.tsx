@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-8 bg-stone-200">
+    <section id="services" className="py-8">
       <div className="max-w-5xl mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

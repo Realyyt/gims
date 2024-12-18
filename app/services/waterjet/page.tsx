@@ -1,6 +1,6 @@
 'use client'
 
-import { Droplets, Shield, Leaf, Target, Factory, Diamond, Scissors, Ship } from 'lucide-react';
+import {  Target, Factory, Diamond, Scissors, Ship } from 'lucide-react';
 import ServiceHero from '../components/ServiceHero';
 import ServiceSection from '../components/ServiceSection';
 import ServiceCard from '../components/ServiceCard';

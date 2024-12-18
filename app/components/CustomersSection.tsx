@@ -5,7 +5,7 @@ import { customers } from '../constants';
 
 export default function CustomersSection() {
   return (
-    <section className="py-20 bg-stone-200 overflow-hidden">
+    <section className="py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

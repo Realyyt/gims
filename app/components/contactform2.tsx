@@ -290,7 +290,7 @@ export default function ContactForm2({
 
   // For section variant
   return (
-    <section className="py-20 bg-stone-200">
+    <section className="py-20">
       {/* ... your existing form content ... */}
     </section>
   );

@@ -16,7 +16,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen bg-stone-200">
       {/* Hero Section */}
       <section className="relative h-[400px] bg-[#293241] flex items-center">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -169,7 +169,14 @@ export default function ServicesPage() {
           </p>
         </div>
         {services.map((service, index) => (
-          <ServiceSection key={service.title} service={service} index={index} />
+          <ServiceSection 
+            key={service.title}
+            title={service.title}
+            subtitle={service.description}
+            isDark={index % 2 === 1}
+          >
+            <></>
+          </ServiceSection>
         ))}
       </section>
 

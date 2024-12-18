@@ -95,7 +95,7 @@ export default function MediaGallery() {
   }, [visibleItems.length]);
 
   return (
-    <section className="py-20 bg-stone-200">
+    <section className="py-20 ">
       <style>{gradientStyles}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 

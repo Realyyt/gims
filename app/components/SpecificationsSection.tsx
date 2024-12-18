@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function SpecificationsSection() {
     return (
-      <section id="specifications" className="py-20 bg-stone-200">
+      <section id="specifications" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 
             className="text-5xl font-bold text-center mb-16 text-[#293241]"

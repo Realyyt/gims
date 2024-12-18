@@ -17,7 +17,7 @@ export default function CollageSection() {
   }, []);
 
   return (
-    <section className="py-8 bg-stone-200">
+    <section className="py-8">
       <div className="max-w-5xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <motion.div

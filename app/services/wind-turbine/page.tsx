@@ -1,6 +1,6 @@
 'use client'
 
-import {  Hammer, Flame, Leaf, Gauge, Shield, Target, Droplets, Recycle, Clock, Award, HeartHandshake, BadgeCheck, Ship } from 'lucide-react';
+import {   Flame, Leaf, Gauge, Shield, Clock,  } from 'lucide-react';
 import ServiceHero from '../components/ServiceHero';
 import ServiceSection from '../components/ServiceSection';
 import ServiceCard from '../components/ServiceCard';
