@@ -1,6 +1,6 @@
 'use client'
 
-import { Rocket, Factory, Diamond, Ship, Wind, Beaker,  } from 'lucide-react';
+import { Rocket, Factory, Diamond, Ship, Wind, Beaker, CheckCircle } from 'lucide-react';
 import ServiceHero from '../components/ServiceHero';
 import ServiceSection from '../components/ServiceSection';
 import ServiceCard from '../components/ServiceCard';
@@ -104,6 +104,130 @@ export default function ApplicationsPage() {
               delay={index * 0.1}
             />
           ))}
+        </div>
+      </ServiceSection>
+
+      {/* New Detailed Industry Applications Section */}
+      <ServiceSection
+        title="Detailed Industry Applications"
+        subtitle="In-depth solutions and impact across sectors"
+      >
+        <div className="space-y-16">
+          {/* Aeronautical & Defense */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Rocket className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Aeronautical Industries and Defense</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  The increasing demand for aerospace platforms across Indian Defense Services, civil aviation, and composite manufacturing creates vast opportunities. Our waterjet cutting technology offers cutting-edge solutions for processing carbon fiber composites, integral to aviation, helicopter systems, rocket motors, satellite systems, and turbine engines.
+                </p>
+                
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Defense Applications Impact</h4>
+                  <p className="text-[#293241]/70">
+                    Landmines remain a critical global challenge. Since 2001, over 1,776 Indian soldiers were affected during laying and removal operations. Our waterjet technology integrated with mobile robots provides safe, reliable methods for landmine clearance, protecting both military personnel and civilians.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Aerospace Capabilities</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Heat-sensitive material processing",
+                        "Precision component manufacturing",
+                        "Satellite systems integration",
+                        "Composite material handling",
+                        "Zero thermal damage cutting"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Defense Solutions</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Safe explosive disarmament",
+                        "Remote-controlled operations",
+                        "Landmine clearance systems",
+                        "Precision cutting for armor",
+                        "Environmental safety compliance"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Maritime & Offshore */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Ship className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Maritime and Offshore Operations</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  Ship decommissioning at ports like Alang traditionally relies on manual labor, involving significant safety risks and environmental concerns. Our waterjet technology revolutionizes this process with precision, safety, and environmental sustainability.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Ship Decommissioning</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Enhanced worker safety protocols",
+                        "Environmental compliance",
+                        "Efficient material recovery",
+                        "Reduced hazardous exposure",
+                        "Improved recycling processes"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Offshore Decommissioning</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Platform dismantling",
+                        "Pipeline removal",
+                        "Subsea structure cutting",
+                        "Environmental protection",
+                        "Waste minimization"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-semibold text-[#293241] mb-3">Ship Descaling Innovation</h4>
+                  <p className="text-[#293241]/70">
+                    Our waterjet descaling technology allows for maintenance during transit, addressing biofouling and corrosion without additional downtime. This proactive approach optimizes fuel efficiency and extends hull life while maintaining operational schedules.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Continue with other industries... */}
         </div>
       </ServiceSection>
 
