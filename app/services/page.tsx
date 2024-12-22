@@ -2,9 +2,7 @@
 
 import { useState } from 'react';
 import { CheckCircle, Leaf, Gauge, Shield, Target, Droplets, Recycle, Clock, Award, HeartHandshake, BadgeCheck, Ship, ArrowRight } from 'lucide-react';
-import { services } from './data/services';
 import ContactForm2 from '../components/contactform2';
-import ServiceSection from './components/ServiceSection';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';

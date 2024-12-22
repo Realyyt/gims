@@ -11,7 +11,7 @@ export default function CoreCompetenciesPage() {
     <div className="min-h-screen bg-white">
       <ServiceHero
         title="Our Core Competencies"
-        subtitle="Delivering innovative and industry-leading solutions through advanced engineering expertise"
+        subtitle="Comprehensive Engineering Solutions Beyond Machine Building"
         backgroundImage="/image/ship.jpg"
       />
 
@@ -24,25 +24,25 @@ export default function CoreCompetenciesPage() {
             {
               icon: Cog,
               title: "Machine Building & Waterjet Series",
-              description: "Our flagship Waterjet Series machines cater to diverse cutting needs, offering unparalleled precision and efficiency.",
+              description: "Our flagship Waterjet Series machines deliver unparalleled precision for diverse cutting applications across aerospace, automotive, and manufacturing sectors.",
               features: [
-                "Aerospace applications",
-                "Automotive components",
-                "Semiconductor processing",
-                "Ship decommissioning",
-                "Materials processing"
+                "Precision cutting systems",
+                "Custom machine solutions",
+                "Industry-specific adaptations",
+                "Advanced control systems",
+                "Performance optimization"
               ]
             },
             {
               icon: Cpu,
               title: "Industry Automation & Control",
-              description: "Advanced programming for PLC and SCADA systems, empowering industries with enhanced automation and control.",
+              description: "Advanced PLC and SCADA programming for enhanced automation and control across manufacturing and processing industries.",
               features: [
-                "Process control systems",
-                "Safety implementations",
-                "Manufacturing automation",
-                "Energy sector solutions",
-                "Material processing control"
+                "PLC system integration",
+                "SCADA implementation",
+                "Process automation",
+                "Safety systems",
+                "Real-time monitoring"
               ]
             },
             {

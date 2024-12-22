@@ -10,8 +10,8 @@ export default function WaterjetServicesPage() {
   return (
     <div className="min-h-screen bg-white">
       <ServiceHero
-        title="Waterjet Services"
-        subtitle="Advanced abrasive waterjet machining for precise cutting of hard-to-cut materials"
+        title="Waterjet Technology"
+        subtitle="Advanced abrasive waterjet machining for precise cutting of hard-to-cut, heat-sensitive materials"
         backgroundImage="/image/blast.jpeg"
       />
 
@@ -23,12 +23,12 @@ export default function WaterjetServicesPage() {
           {[
             {
               icon: Factory,
-              title: "Aerospace & Defense",
-              description: "Processing carbon fiber composites for aviation, helicopter systems, rocket motors, and satellite systems.",
+              title: "Aeronautical & Defense",
+              description: "Cutting-edge solutions for processing carbon fiber composites in aviation, helicopter systems, rocket motors, and satellite systems.",
               features: [
                 "Heat-sensitive material processing",
                 "Precision component manufacturing",
-                "Military application support",
+                "Defense applications",
                 "Satellite components",
                 "Aircraft parts"
               ]
@@ -40,7 +40,7 @@ export default function WaterjetServicesPage() {
               features: [
                 "Eco-friendly dismantling",
                 "Enhanced worker safety",
-                "Efficient recycling process",
+                "Efficient recycling",
                 "Maritime compliance",
                 "Waste reduction"
               ]

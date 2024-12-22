@@ -12,7 +12,7 @@ export default function ApplicationsPage() {
     <div className="min-h-screen bg-white">
       <ServiceHero
         title="Industry Applications"
-        subtitle="Specialized Solutions Across Multiple High-Value Industries"
+        subtitle="Advanced Waterjet Solutions for Diverse Industry Needs"
         backgroundImage="/image/284ccf16900287ebcc60d2c3beced007.jpg"
       />
 
@@ -25,73 +25,73 @@ export default function ApplicationsPage() {
             {
               icon: Rocket,
               title: "Aerospace & Defense",
-              description: "Advanced solutions for critical aerospace components and defense applications.",
+              description: "Advanced solutions for aerospace platforms across Indian Defense Services and civil aviation, specializing in carbon fiber composite processing.",
               features: [
-                "Carbon fiber composite processing",
-                "Satellite components",
-                "Aircraft parts manufacturing",
-                "Defense equipment",
-                "Rocket motor components"
+                "Heat-sensitive material processing",
+                "Satellite components manufacturing",
+                "Aircraft parts production",
+                "Rocket motor components",
+                "Defense equipment processing"
               ]
             },
             {
               icon: Ship,
               title: "Maritime & Offshore",
-              description: "Comprehensive solutions for maritime and offshore operations.",
+              description: "Revolutionary solutions for ship decommissioning at ports like Alang, focusing on safety and environmental sustainability.",
               features: [
-                "Ship decommissioning",
-                "Hull maintenance",
-                "Offshore platform dismantling",
-                "Marine equipment servicing",
-                "Underwater cutting operations"
+                "Ship dismantling operations",
+                "Offshore platform decommissioning",
+                "Real-time hull descaling",
+                "Environmental compliance",
+                "Cost-effective solutions"
               ]
             },
             {
               icon: Diamond,
               title: "Diamond & Precious Materials",
-              description: "Precision cutting solutions for high-value materials.",
+              description: "Precision cutting solutions for India's diamond processing industry, supporting 91.67% of global diamond processing.",
               features: [
-                "Diamond processing",
-                "Gemstone cutting",
-                "Precision material shaping",
+                "Precision diamond cutting",
+                "Minimal material waste",
                 "Quality optimization",
-                "Minimal waste processing"
+                "Innovative designs",
+                "Cost-effective processing"
               ]
             },
             {
               icon: Factory,
-              title: "Manufacturing & Processing",
-              description: "Industrial solutions for diverse manufacturing needs.",
+              title: "Sheet Metal & Allied Industries",
+              description: "Advanced cutting solutions for aerospace, automotive, and construction sectors with unmatched performance.",
               features: [
-                "Sheet metal cutting",
-                "Glass processing",
-                "Stone cutting",
-                "Industrial automation",
-                "Quality control systems"
-              ]
-            },
-            {
-              icon: Beaker,
-              title: "Research & Development",
-              description: "Supporting innovation through advanced technology.",
-              features: [
-                "Material testing",
-                "Prototype development",
-                "Process optimization",
-                "Technical collaboration",
-                "Custom solution development"
+                "Low force cutting",
+                "Thick material processing",
+                "No heat affected zones",
+                "Complex shape cutting",
+                "Environmentally friendly"
               ]
             },
             {
               icon: Wind,
-              title: "Renewable Energy",
-              description: "Supporting sustainable energy infrastructure.",
+              title: "Wind Turbine Solutions",
+              description: "Specialized services for wind turbine dismantling and material processing with focus on precision and sustainability.",
               features: [
-                "Wind turbine maintenance",
-                "Solar panel processing",
-                "Energy equipment servicing",
+                "Blade cutting without heat",
+                "Safe dismantling process",
+                "Environmental compliance",
                 "Component recycling",
-                "Green technology support"
+                "Efficient processing"
+              ]
+            },
+            {
+              icon: Beaker,
+              title: "Mining & Research",
+              description: "Revolutionary solutions for mining operations and research applications, enhancing efficiency and safety.",
+              features: [
+                "Mineral extraction",
+                "Process optimization",
+                "Safety enhancement",
+                "Environmental protection",
+                "Cost reduction"
               ]
             }
           ].map((industry, index) => (
@@ -109,7 +109,7 @@ export default function ApplicationsPage() {
 
       {/* New Detailed Industry Applications Section */}
       <ServiceSection
-        title="Detailed Industry Applications"
+        title=" Industry Applications"
         subtitle="In-depth solutions and impact across sectors"
       >
         <div className="space-y-16">
@@ -179,6 +179,12 @@ export default function ApplicationsPage() {
                 <p className="text-[#293241]/70 mb-6">
                   Ship decommissioning at ports like Alang traditionally relies on manual labor, involving significant safety risks and environmental concerns. Our waterjet technology revolutionizes this process with precision, safety, and environmental sustainability.
                 </p>
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Ship Descaling Innovation</h4>
+                  <p className="text-[#293241]/70">
+                    Our waterjet descaling technology allows for maintenance during transit, addressing biofouling and corrosion without additional downtime. This proactive approach optimizes fuel efficiency and extends hull life while maintaining operational schedules.
+                  </p>
+                </div>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div className="space-y-3">
@@ -217,11 +223,351 @@ export default function ApplicationsPage() {
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-[#293241] mb-3">Ship Descaling Innovation</h4>
+                
+              </div>
+            </div>
+          </div>
+
+          {/* Manufacturing & Processing */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Factory className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Manufacturing and Processing Industries</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  Our advanced waterjet technology revolutionizes manufacturing processes across multiple sectors, offering precision cutting solutions for diverse materials while maintaining material integrity and reducing waste.
+                </p>
+
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Industry 4.0 Integration</h4>
                   <p className="text-[#293241]/70">
-                    Our waterjet descaling technology allows for maintenance during transit, addressing biofouling and corrosion without additional downtime. This proactive approach optimizes fuel efficiency and extends hull life while maintaining operational schedules.
+                    Our systems seamlessly integrate with Industry 4.0 frameworks, offering advanced automation, real-time monitoring, and quality control systems for enhanced manufacturing efficiency and productivity.
                   </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Sheet Metal Processing</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Cold cutting technology",
+                        "No heat-affected zones",
+                        "Complex shape capabilities",
+                        "Multi-layer cutting",
+                        "Minimal material waste"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Glass & Stone Processing</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Precision edge quality",
+                        "Intricate design capability",
+                        "Reduced material stress",
+                        "Versatile thickness handling",
+                        "Automated processing"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
+
+          {/* Research & Development */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Beaker className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Research and Development</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  Supporting innovation through advanced waterjet technology, enabling research institutions and industries to push the boundaries of material processing and manufacturing capabilities.
+                </p>
+
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Innovation Impact</h4>
+                  <p className="text-[#293241]/70">
+                    Our R&D partnerships have led to breakthrough developments in material processing, contributing to advancements in aerospace, medical devices, and sustainable manufacturing technologies.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Research Capabilities</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Advanced material testing",
+                        "Process optimization studies",
+                        "Custom solution development",
+                        "Performance analysis",
+                        "Technical documentation"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Collaborative Benefits</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Industry partnerships",
+                        "Academic collaborations",
+                        "Prototype development",
+                        "Technology transfer",
+                        "Innovation support"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Renewable Energy */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Wind className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Renewable Energy Solutions</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  Supporting the transition to sustainable energy through specialized waterjet solutions for maintenance, manufacturing, and end-of-life processing of renewable energy components.
+                </p>
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Sustainability Impact</h4>
+                  <p className="text-[#293241]/70">
+                    Our waterjet technology enables efficient recycling and repurposing of renewable energy components, supporting the circular economy while minimizing environmental impact in the energy sector.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Wind Energy Solutions</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Turbine blade maintenance",
+                        "Component dismantling",
+                        "Precision repair work",
+                        "Surface treatment",
+                        "Life extension services"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Solar Industry Support</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Panel processing",
+                        "Material recycling",
+                        "Component separation",
+                        "Clean technology",
+                        "Sustainable practices"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+             
+              </div>
+            </div>
+          </div>
+
+          {/* Diamond & Precious Materials */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Diamond className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Diamond and Precious Materials</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  India is the major polishing and cutting hub for diamonds, processing about 91.67% of diamonds sold worldwide. The diamond processing industry is concentrated in Gujarat, accounting for 85% of India's diamond processing activities.
+                </p>
+                
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Industry Impact</h4>
+                  <p className="text-[#293241]/70">
+                    As the third largest consumer of polished diamonds, India's diamond processing industry plays a crucial role in the global market. Our waterjet technology bridges the gap between high-end machinery and manual labor, enabling efficient and precise processing.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Processing Capabilities</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Precision diamond cutting",
+                        "Minimal material wastage",
+                        "Complex shape processing",
+                        "Quality optimization",
+                        "Advanced cutting patterns"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Industry Benefits</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Enhanced productivity",
+                        "Cost-effective processing",
+                        "Innovative design capability",
+                        "Global market compliance",
+                        "Sustainable practices"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Glass & Stone Processing */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Factory className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Glass and Stone Processing</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  Our waterjet technology revolutionizes traditional glass and stone processing methods, offering unmatched precision and versatility while reducing labor dependency and improving safety standards.
+                </p>
+                
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Processing Innovation</h4>
+                  <p className="text-[#293241]/70">
+                    By replacing conventional cutting methods, our technology addresses the industry's needs for precision, efficiency, and material optimization while ensuring environmental sustainability.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Glass Processing</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Precision edge finishing",
+                        "Complex design capability",
+                        "Minimal material stress",
+                        "Multi-thickness handling",
+                        "Automated processing"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Stone Processing</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Precise stone cutting",
+                        "Intricate pattern creation",
+                        "Reduced material waste",
+                        "Enhanced productivity",
+                        "Cost-effective solutions"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Sheet Metal & Allied Industries */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Factory className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Sheet Metal and Allied Industries</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  With growing demand across aerospace, automotive, heavy machinery, and construction sectors, our waterjet cutting solutions provide unmatched performance in sheet metal processing.
+                </p>
+                
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Industry Impact</h4>
+                  <p className="text-[#293241]/70">
+                    Our technology enables sustainable manufacturing practices with no hazardous emissions while maintaining the highest standards of precision and efficiency in metal processing.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Processing Capabilities</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Low force cutting",
+                        "Thick material processing",
+                        "No heat affected zones",
+                        "Complex shape cutting",
+                        "Multi-layer processing"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Industry Benefits</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Environmental compliance",
+                        "Material integrity",
+                        "Reduced waste",
+                        "Increased efficiency",
+                        "Cost optimization"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

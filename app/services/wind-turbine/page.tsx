@@ -11,7 +11,7 @@ export default function WindTurbinePage() {
     <div className="min-h-screen bg-white">
       <ServiceHero
         title="Wind Turbine Cutting Solutions"
-        subtitle="Advanced Waterjet Technology by GIMS"
+        subtitle="Advanced Waterjet Technology for Efficient and Sustainable Turbine Decommissioning"
         backgroundImage="/image/7c666d08646ce761ae07dc296662b00d.jpg"
       />
 
@@ -26,52 +26,61 @@ export default function WindTurbinePage() {
               title: "Precision Blade Cutting Without Heat",
               description: "Utilizing non-thermal waterjet technology, GIMS ensures highly accurate cutting of turbine blades without producing heat. This preserves the structural integrity of components, making them suitable for recycling or repurposing.",
               features: [
-                "Ensures clean cuts and maintains material usability.",
-                "Preserves structural integrity of components",
-                "Suitable for recycling or repurposing"
+                "Clean cuts without thermal damage",
+                "Material integrity preservation",
+                "Recycling-ready components",
+                "High precision cutting",
+                "Sustainable processing"
               ]
             },
             {
               icon: Shield,
               title: "Safe, Flameless Dismantling",
-              description: "Safety remains our top priority. Our waterjet systems operate without flames or combustion, significantly reducing risks during the decommissioning process. This approach creates a secure environment for work teams and eliminates ignition hazards.",
+              description: "Safety remains our top priority. Our waterjet systems operate without flames or combustion, significantly reducing risks during the decommissioning process.",
               features: [
-                "Safe operation in all environments, including hazardous zones.",
-                "Eliminates ignition hazards",
-                "Reduces risks during decommissioning process"
+                "No combustion process",
+                "Enhanced worker safety",
+                "Secure environment",
+                "Risk reduction",
+                "Hazard elimination"
               ]
             },
             {
               icon: Leaf,
               title: "Environmentally Responsible Cutting",
-              description: "GIMS integrates eco-conscious practices into its services by using water and natural abrasives instead of harmful chemicals. This approach minimizes environmental harm and aligns with green energy initiatives.",
+              description: "GIMS integrates eco-conscious practices into its services by using water and natural abrasives instead of harmful chemicals.",
               features: [
-                "Reduces environmental impact and supports sustainability goals.",
-                "Minimizes environmental harm",
-                "Aligns with green energy initiatives"
+                "Eco-friendly processes",
+                "Natural abrasives usage",
+                "Minimal environmental impact",
+                "Sustainable practices",
+                "Green technology"
               ]
             },
             {
               icon: Gauge,
               title: "Flexible Tower Structure Dismantling",
-              description: "Our waterjet technology offers unmatched versatility when dismantling wind turbine towers. Whether dealing with steel, composites, or concrete, we deliver precise and efficient cutting tailored to project requirements.",
+              description: "Our waterjet technology offers unmatched versatility when dismantling wind turbine towers, handling steel, composites, and concrete effectively.",
               features: [
-                "Handles a wide range of materials effectively.",
-                "Delivers precise and efficient cutting",
-                "Tailored to project requirements"
+                "Multi-material processing",
+                "Adaptable solutions",
+                "Custom cutting plans",
+                "Structural integrity",
+                "Efficient dismantling"
               ]
             },
             {
               icon: Clock,
               title: "Streamlined Component Processing",
-              description: "We focus on delivering efficient solutions that minimize downtime during decommissioning. GIMS waterjet systems allow for the swift removal and processing of wind turbine components, ensuring they are ready for reuse or recycling.",
+              description: "We focus on delivering efficient solutions that minimize downtime during decommissioning, ensuring swift removal and processing of components.",
               features: [
-                "Enhances productivity while optimizing component repurposing.",
-                "Minimizes downtime during decommissioning",
-                "Swift removal and processing of components"
+                "Minimal downtime",
+                "Quick processing",
+                "Efficient removal",
+                "Component recycling",
+                "Optimized operations"
               ]
-            },
-            // ... other solution cards
+            }
           ].map((solution, index) => (
             <ServiceCard
               key={index}

@@ -1,78 +1,77 @@
-
 export const services = [
   {
     title: 'Ship Decommissioning',
     image: '/image/ship.jpg',
-    description: 'Precision-driven, sustainable ship dismantling using advanced waterjet technology.',
+    description: 'Revolutionary approach to ship dismantling at ports like Alang, focusing on safety and environmental sustainability.',
     features: [
-      {
-        title: 'Precision Metal Cutting',
-        description: 'Advanced waterjet cutting for complex structures'
-      },
       {
         title: 'Environmental Safety',
-        description: 'Eco-friendly dismantling processes'
+        description: 'Eco-friendly dismantling processes with minimal environmental impact'
       },
       {
-        title: 'Material Recycling',
-        description: 'Efficient material recovery and recycling'
+        title: 'Worker Protection',
+        description: 'Enhanced safety standards for dismantling operations'
+      },
+      {
+        title: 'Efficient Recycling',
+        description: 'Optimized material recovery and processing'
       }
     ]
   },
   {
-    title: 'Hydroblasting',
+    title: 'Waterjet Technology',
     image: '/image/blast.jpeg',
-    description: 'Superior cleaning power with eco-friendly waterjet technology.',
+    description: 'Advanced abrasive waterjet machining for precise cutting of hard-to-cut, heat-sensitive materials.',
     features: [
       {
-        title: 'Surface Preparation',
-        description: 'Thorough cleaning for optimal results'
+        title: 'Precision Cutting',
+        description: 'Cutting tolerances as tight as ±0.1 mm'
       },
       {
-        title: 'Coating Removal',
-        description: 'Efficient removal of old coatings'
+        title: 'Material Versatility',
+        description: 'Handles diverse materials without heat damage'
       },
       {
-        title: 'Environmental Compliance',
-        description: 'Meeting all environmental standards'
+        title: 'Environmental Benefits',
+        description: 'No toxic emissions or hazardous waste'
       }
     ]
   },
   {
-    title: 'Vessel Derusting',
+    title: 'Industrial Applications',
     image: '/image/284ccf16900287ebcc60d2c3beced007.jpg',
-    description: 'Revolutionary corrosion control for enhanced vessel longevity.',
+    description: 'Comprehensive solutions for aerospace, defense, mining, and manufacturing sectors.',
     features: [
       {
-        title: 'Advanced Technology',
-        description: 'State-of-the-art derusting solutions'
+        title: 'Aerospace & Defense',
+        description: 'Precision processing for critical components'
       },
       {
-        title: 'Surface Protection',
-        description: 'Long-lasting rust prevention'
+        title: 'Mining Operations',
+        description: 'Enhanced efficiency and safety in mineral extraction'
       },
       {
-        title: 'Quality Assurance',
-        description: 'Comprehensive quality control'
+        title: 'Manufacturing Excellence',
+        description: 'Advanced solutions for diverse industrial needs'
       }
     ]
   },
   {
-    title: 'Hull Cleaning',
+    title: 'Wind Turbine Solutions',
     image: '/image/7c666d08646ce761ae07dc296662b00d.jpg',
-    description: 'Efficient underwater hull maintenance for optimal performance.',
+    description: 'Specialized waterjet cutting services for wind turbine dismantling and material processing.',
     features: [
       {
-        title: 'Performance Optimization',
-        description: 'Improved vessel efficiency'
+        title: 'Precision Dismantling',
+        description: 'Non-thermal blade cutting technology'
       },
       {
-        title: 'Eco-friendly Methods',
-        description: 'Environmentally conscious cleaning'
+        title: 'Environmental Focus',
+        description: 'Sustainable decommissioning practices'
       },
       {
-        title: 'Regular Maintenance',
-        description: 'Preventive care programs'
+        title: 'Efficient Processing',
+        description: 'Streamlined component handling and recycling'
       }
     ]
   }
