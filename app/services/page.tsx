@@ -13,7 +13,7 @@ const serviceCategories = [
     title: "Ship Decommissioning",
     image: "/image/ship.jpg", // Using existing image
     description: "Eco-friendly ship dismantling with advance waterjet tech",
-    link: "/services/waterjet",
+    link: "/services/ship-decommissioning",
     features: [
       "Eco-friendly dismantling",
       "Enhanced worker safety",

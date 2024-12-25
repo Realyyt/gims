@@ -1,6 +1,6 @@
 'use client'
 
-import {  Target, Factory, Diamond, Scissors, Ship } from 'lucide-react';
+import {  Target, Factory, Diamond, Scissors, Ship, Cog, Layers, CheckCircle } from 'lucide-react';
 import ServiceHero from '../components/ServiceHero';
 import ServiceSection from '../components/ServiceSection';
 import ServiceCard from '../components/ServiceCard';
@@ -16,7 +16,7 @@ export default function WaterjetServicesPage() {
       />
 
       <ServiceSection
-        title="Industry Applications"
+        title="Waterjet Technology"
         subtitle="Specialized waterjet solutions across diverse industries"
       >
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -105,6 +105,109 @@ export default function WaterjetServicesPage() {
           ))}
         </div>
       </ServiceSection>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold mb-4 text-[#293241] text-center">Waterjet Technology Solutions</h2>
+        <h3 className="text-2xl font-bold mb-4 text-[#293241] text-center">Precision Manufacturing and Materials Processing</h3>
+        <div className="space-y-8">
+          {/* Precision Manufacturing Section */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Cog className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Precision Manufacturing</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  Our flagship Waterjet Series machines cater to diverse cutting needs, offering unparalleled precision and efficiency for aerospace, automotive, semiconductors, and materials processing.
+                </p>
+
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Technology Impact</h4>
+                  <p className="text-[#293241]/70">
+                    Abrasive waterjet machining provides precise cutting of hard-to-cut, heat-sensitive materials with negligible thermal damage and very low machining force.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Technical Capabilities</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Heat-sensitive material processing",
+                        "High precision cutting (±0.1mm)",
+                        "Multi-material compatibility",
+                        "Zero thermal damage",
+                        "Complex shape cutting"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Industry Benefits</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Reduced material waste",
+                        "Faster processing time",
+                        "Lower operational costs",
+                        "Environmental compliance",
+                        "Improved quality control"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Materials Processing Section with adjusted width */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start gap-6">
+              <Layers className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Materials Processing</h3>
+                <p className="text-[#293241]/70 mb-6">
+                  From metals to composites, our waterjet technology handles diverse materials with precision and efficiency.
+                </p>
+
+                <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
+                  <h4 className="font-semibold text-[#293241] mb-3">Technology Impact</h4>
+                  <p className="text-[#293241]/70">
+                    Our waterjet technology ensures precise cutting of materials with negligible thermal damage and very low machining force, making it an ideal solution for materials processing.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-[#293241]">Material Capabilities</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Metals and alloys",
+                        "Composites and ceramics",
+                        "Glass and stone",
+                        "Plastics and rubber",
+                        "Specialty materials"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-5 w-5 text-[#ee6c4d]" />
+                          <span className="text-[#293241]/70">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <ServiceSection
         title="Defense Applications"

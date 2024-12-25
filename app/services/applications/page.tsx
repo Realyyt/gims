@@ -401,7 +401,6 @@ export default function ApplicationsPage() {
               </div>
             </div>
           </div>
-
           {/* Diamond & Precious Materials */}
           <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="flex items-start gap-6">
@@ -409,13 +408,13 @@ export default function ApplicationsPage() {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-[#293241]">Diamond and Precious Materials</h3>
                 <p className="text-[#293241]/70 mb-6">
-                  India is the major polishing and cutting hub for diamonds, processing about 91.67% of diamonds sold worldwide. The diamond processing industry is concentrated in Gujarat, accounting for 85% of India's diamond processing activities.
+                  India is the major polishing and cutting hub for diamonds, processing about 91.67% of diamonds sold worldwide. The diamond processing industry is concentrated in Gujarat, accounting for 85% of India&apos;s diamond processing activities.
                 </p>
                 
                 <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
                   <h4 className="font-semibold text-[#293241] mb-3">Industry Impact</h4>
                   <p className="text-[#293241]/70">
-                    As the third largest consumer of polished diamonds, India's diamond processing industry plays a crucial role in the global market. Our waterjet technology bridges the gap between high-end machinery and manual labor, enabling efficient and precise processing.
+                    As the third largest consumer of polished diamonds, India&apos;s diamond processing industry plays a crucial role in the global market. Our waterjet technology bridges the gap between high-end machinery and manual labor, enabling efficient and precise processing.
                   </p>
                 </div>
 
@@ -472,7 +471,7 @@ export default function ApplicationsPage() {
                 <div className="bg-[#ee6c4d]/10 p-6 rounded-lg mb-6">
                   <h4 className="font-semibold text-[#293241] mb-3">Processing Innovation</h4>
                   <p className="text-[#293241]/70">
-                    By replacing conventional cutting methods, our technology addresses the industry's needs for precision, efficiency, and material optimization while ensuring environmental sustainability.
+                    By replacing conventional cutting methods, our technology addresses the industry&apos;s needs for precision, efficiency, and material optimization while ensuring environmental sustainability.
                   </p>
                 </div>
 

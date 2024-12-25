@@ -263,6 +263,12 @@ export const industrialApplications: IndustrialApplication[] = [
         link: '/services/wind-turbine',
         description: 'Cutting-edge wind turbine maintenance and decommissioning'
       },
+      { 
+        title: 'Ship Decommissioning', 
+        image: '/image/ship.jpg', 
+        link: '/services/ship-decommissioning',
+        description: 'Eco-friendly ship dismantling with advance waterjet tech'
+      },
     ],
     'Learn more': [
       { 
