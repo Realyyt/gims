@@ -92,6 +92,24 @@ export default function Navbar() {
                 Waterjet
               </button>
 
+              <button 
+                onClick={() => window.location.href = '/specs'} 
+                className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
+                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
+              >
+                Technical Specification
+              </button>
+
+              <button 
+                onClick={() => window.location.href = '/materials-specs'} 
+                className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
+                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
+              >
+                Calculator
+              </button>
+
               {Object.keys(navItems).map((item) => (
                 <div 
                   key={item}

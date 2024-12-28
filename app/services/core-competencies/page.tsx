@@ -111,7 +111,7 @@ icon: Bot,
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold mb-4 text-[#293241] text-center">Core Competencies</h2>
-        <h3 className="text-2xl font-bold mb-4 text-[#293241] text-center">Unlocking Your Project's Full Potential</h3>
+        <h3 className="text-2xl font-bold mb-4 text-[#293241] text-center">Unlocking Your Project&apos;s Full Potential</h3>
         <div className="space-y-8">
           {/* Machine Building Section */}
           <div className="bg-white rounded-xl shadow-lg p-8">

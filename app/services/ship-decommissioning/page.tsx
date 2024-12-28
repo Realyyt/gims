@@ -1,6 +1,6 @@
 'use client'
 
-import { Ship, Anchor, Droplets, Gauge, Shield, Recycle, CheckCircle } from 'lucide-react'
+import { Ship, Anchor, Droplets,  Shield,  CheckCircle } from 'lucide-react'
 import ServiceHero from '../components/ServiceHero';
 import ServiceSection from '../components/ServiceSection';
 
@@ -9,12 +9,12 @@ export default function ShipDecommissioningPage() {
     <div className="min-h-screen bg-white">
       <ServiceHero
         title="Ship Decommissioning Solutions"
-        subtitle="Revolutionary Waterjet Technology for Maritime Industry"
+        subtitle="Revolutionary Waterjet Technology for Industries"
         backgroundImage="/image/ship-decom.jpg"
       />
 
       <ServiceSection
-        title="Maritime Solutions"
+        title="Waterjet Solutions"
         subtitle="Advanced waterjet technology for ship decommissioning"
       >
         <div className="space-y-8">
@@ -23,7 +23,7 @@ export default function ShipDecommissioningPage() {
             <div className="flex items-start gap-6">
               <Ship className="h-12 w-12 text-[#1890d5] flex-shrink-0" />
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Maritime and Offshore Operations</h3>
+                <h3 className="text-2xl font-bold mb-4 text-[#293241]">Waterjet Ship Operations</h3>
                 <p className="text-[#293241]/70 mb-6">
                   Ship decommissioning at ports like Alang traditionally relies on manual labor, involving significant safety risks and environmental concerns. Our waterjet technology revolutionizes this process with precision, safety, and environmental sustainability.
                 </p>

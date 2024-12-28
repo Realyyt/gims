@@ -215,23 +215,7 @@ export const industrialApplications: IndustrialApplication[] = [
   ];
 
   export const navItems = {
-    'Technical Specifications': [
-      { title: 'KATANA SJ150', image: '/gims1.png', link: '/specs' },
-      { title: 'KATANA SJ450', image: '/sj451.png', link: '/specs' },
-      { title: 'KATANA SJ700', image: '/sj700.png', link: '/specs' },
-      { title: 'Compare Models', image: '/2d7839103e8aed7e9ac618fd7dd66ca2.jpg', link: '/specs' },
-      { title: 'Software', image: '/6bb6115d24ebd60c2d84f224c7a9c004.jpg', link: '/specs/' },
-    ],
-    'Materials': [
-      { 
-        title: 'Materials Gallery', 
-        image: '/marble.jpg', 
-        link: '/materials-gallery',
-        description: 'Explore different materials and cutting capabilities' 
-      },
-      { title: 'Waterjet Feedrate Calculator', image: '/calc.jpg', link: '/material-specs', description: 'Calculate pressure, flow rate and cutting parameters' },
-      { title: 'Applications', image: '/application.jpg', link: '/material-specs', description: 'Advanced manufacturing systems' },
-    ],
+   
     'Services': [
       { 
         title: 'Services we offer', 
@@ -246,16 +230,22 @@ export const industrialApplications: IndustrialApplication[] = [
         description: 'Machine building, automation, and engineering expertise'
       },
       { 
+        title: 'Industry Solutions', 
+        image: '/image/284ccf16900287ebcc60d2c3beced007.jpg', 
+        link: '/services/applications',
+        description: 'Specialized solutions for different sectors'
+      },
+      { 
+        title: 'Industry Applications', 
+        image: '/image/0efcba41aeefc83e6f1ebc905352a2ba.jpg', 
+        link: '/services/IA',
+        description: 'Specialized solutions for different sectors'
+      },/*
+      { 
         title: 'Waterjet Services', 
         image: '/image/blast.jpeg', 
         link: '/services/waterjet',
         description: 'Advanced waterjet solutions for various industries'
-      },
-      { 
-        title: 'Industry Applications', 
-        image: '/image/284ccf16900287ebcc60d2c3beced007.jpg', 
-        link: '/services/applications',
-        description: 'Specialized solutions for different sectors'
       },
       { 
         title: 'Wind Turbine Solutions', 
@@ -268,7 +258,7 @@ export const industrialApplications: IndustrialApplication[] = [
         image: '/image/ship.jpg', 
         link: '/services/ship-decommissioning',
         description: 'Eco-friendly ship dismantling with advance waterjet tech'
-      },
+      },*/
     ],
     'Learn more': [
       { 

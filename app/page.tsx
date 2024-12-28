@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
 import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
 import SpecificationsSection from './components/SpecificationsSection';
 import IndustrialApplicationsCarousel from './components/IndustrialApplicationsCarousel';
 import {  industrialApplications } from './constants';
@@ -10,7 +9,7 @@ import CustomersSection from './components/CustomersSection';
 import KatanaSJ150Overview from './components/KatanaSJ150Overview';
 import ContactForm from './components/ContactForm';
 import MediaGallery from './components/MediaGallery';
-import ComparisonSection from './components/ComparisonSection';
+import TradeUpProgram from './components/TradeUpProgram';
 
 export default function Home() {
   const { currentIndex, next, prev, setCurrentIndex } = useAutoSlide(industrialApplications.length, 5000);
@@ -43,14 +42,11 @@ export default function Home() {
       {/* Services section with diagonal stripes */}
       <div className="relative bg-gradient-to-r from-stone-100 to-stone-200">
         <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(0,0,0,0.03)_25%,transparent_25%,transparent_75%,rgba(0,0,0,0.03)_75%)] bg-[length:128px_128px]" />
-        <ServicesSection />
+        <TradeUpProgram />
       </div>
 
       {/* Comparison section with linear stripes */}
-      <div className="relative bg-gradient-to-r from-stone-200 to-stone-300">
-        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.02),rgba(0,0,0,0.02)_1px,transparent_1px,transparent_16px)]" />
-        <ComparisonSection />
-      </div>
+    
 
       {/* Overview section with subtle diagonal pattern */}
       <div className="relative bg-gradient-to-r from-stone-100 to-stone-200">

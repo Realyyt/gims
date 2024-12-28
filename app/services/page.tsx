@@ -42,17 +42,6 @@ const serviceCategories = [
       "Environmental compliance"
     ]
   },
-  {
-    title: "Specialized Cutting Services",
-    image: "/image/284ccf16900287ebcc60d2c3beced007.jpg", // Using existing image
-    description: "Advanced cutting solutions for diverse materials and industries",
-    link: "/services/core-competencies",
-    features: [
-      "Multi-material capabilities",
-      "Precision engineering",
-      "Complex shape processing"
-    ]
-  }
 ];
 
 export default function ServicesPage() {
@@ -69,9 +58,9 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative h-[600px] bg-[#293241] flex items-center">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-          <h1 className="text-6xl font-bold mb-6">Maritime Waterjet Services</h1>
+          <h1 className="text-6xl font-bold mb-6"> Waterjet Services</h1>
           <p className="text-2xl mb-8">
-            <strong>Advanced Waterjet Technology for Maritime Excellence | Professional Solutions for Ship Maintenance and Repair</strong>
+            <strong>Advanced Waterjet Technology for Excellence | Professional Solutions for Ship Maintenance and Repair</strong>
           </p>
           <button 
             onClick={() => openContactModal('quote')}
@@ -90,7 +79,7 @@ export default function ServicesPage() {
               Why Choose Our Waterjet Technology?
             </h2>
             <p className="text-2xl text-[#293241]/70 max-w-3xl mx-auto">
-              <strong>Unlock maritime excellence with our precision, sustainable, and innovative waterjet solutions.</strong>
+              <strong>Unlock  excellence with our precision, sustainable, and innovative waterjet solutions.</strong>
             </p>
           </div>
 

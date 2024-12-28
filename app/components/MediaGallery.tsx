@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, X } from 'lucide-react';
 import { MediaItem, mediaItems ,} from '../constants';
+import DemoRequestForm from './DemoRequestForm';
 
 // Add this CSS to your global styles or as a styled component
 const gradientStyles = `
@@ -51,6 +52,7 @@ export default function MediaGallery() {
   const [page, setPage] = useState(1);
   const [videoStates, setVideoStates] = useState<{[key: string]: 'loading' | 'error' | 'ready'}>({});
   const itemsPerPage = 6;
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   // Implement lazy loading
   useEffect(() => {
@@ -209,6 +211,25 @@ export default function MediaGallery() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Add the centered BOOK NOW button */}
+        <div className="flex justify-center mt-16">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            onClick={() => setIsFormOpen(true)}
+            className="px-12 py-4 bg-[#ee6c4d] text-white text-xl font-semibold rounded-md hover:bg-[#e85d3d] transition-colors shadow-lg hover:shadow-xl"
+          >
+            BOOK NOW
+          </motion.button>
+        </div>
+
+        {/* Add the DemoRequestForm */}
+        <DemoRequestForm 
+          isOpen={isFormOpen} 
+          onClose={() => setIsFormOpen(false)} 
+        />
       </div>
     </section>
   );

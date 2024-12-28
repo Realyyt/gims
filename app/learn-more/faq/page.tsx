@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     question: "How can I order a Katana Series waterjet cutting machine?",
-    answer: "To order, you can:\n• Contact our sales team directly\n• Submit an inquiry through our website\n• Request a customized quote\n• Schedule a consultation\n• Discuss financing options\n• Plan installation requirements"
+    answer: "To order, you can:\n• Contact our sales team directly\n• Submit an inquiry through our website\n• Request a customized quote\n��� Schedule a consultation\n• Discuss financing options\n• Plan installation requirements"
   },
   {
     question: "What is the typical lead time for a Katana Series waterjet?",
@@ -70,52 +70,58 @@ export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-stone-200 py-20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold text-center mb-16 text-[#293241]"
-        >
-          Frequently Asked Questions
-        </motion.h1>
+    <main className="min-h-screen relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-stone-200 to-stone-300">
+        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.02),rgba(0,0,0,0.02)_1px,transparent_1px,transparent_16px)]" />
+      </div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
+      <div className="relative py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl font-bold text-center mb-16 text-[#293241]"
+          >
+            Frequently Asked Questions
+          </motion.h1>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-lg shadow-md overflow-hidden"
               >
-                <span className="text-lg font-semibold text-[#293241]">{faq.question}</span>
-                <ChevronDown 
-                  className={`w-5 h-5 text-[#293241] transition-transform ${
-                    openIndex === index ? 'transform rotate-180' : ''
-                  }`}
-                />
-              </button>
-              
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="border-t border-gray-200"
-                  >
-                    <p className="px-6 py-4 text-gray-600 whitespace-pre-line">{faq.answer}</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
+                >
+                  <span className="text-lg font-semibold text-[#293241]">{faq.question}</span>
+                  <ChevronDown 
+                    className={`w-5 h-5 text-[#293241] transition-transform ${
+                      openIndex === index ? 'transform rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="border-t border-gray-200"
+                    >
+                      <p className="px-6 py-4 text-gray-600 whitespace-pre-line">{faq.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </main>
