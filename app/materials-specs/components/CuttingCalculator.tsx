@@ -16,10 +16,7 @@ interface CalculationResult {
   jobCost: string;    // in INR
 }
 
-interface ModelData {
-  cutSpeed?: string;
-  pierceTime?: string;
-}
+
 
 export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculatorProps) {
   const [selectedMaterial, setSelectedMaterial] = useState('');
@@ -78,22 +75,6 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     }
   };
 
-  const findMaterialData = () => {
-    for (const category of Object.values(materialCategories)) {
-      const material = category.materials.find(m => m.name === selectedMaterial);
-      if (material) {
-        // Find the exact thickness match
-        const thicknessData = material.thicknesses.find(t => {
-          const thicknessValue = parseFloat(t.value[localUnit]);
-          const inputThickness = parseFloat(thickness);
-          // Use a small epsilon for floating point comparison
-          return Math.abs(thicknessValue - inputThickness) < 0.0001;
-        });
-        return thicknessData;
-      }
-    }
-    return null;
-  };
 
   // Get available thicknesses for selected material
   const getAvailableThicknesses = (): string[] => {
