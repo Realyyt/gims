@@ -39,7 +39,7 @@ export default function TradeUpProgram() {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-black">Easy EMI Options</h3>
               <p className="text-lg text-gray-600">
-                Get Katana SJ150 for just 5 lakh down and 19,791/month for 24 months
+                Get Katana SJ150 for <span className="text-[#ee6c4d]">just 5 lakh</span> down and 19,791/month for 24 months
               </p>
             </div>
 
@@ -69,7 +69,7 @@ export default function TradeUpProgram() {
             }}
           >
             <Image
-              src="/sj700.png"
+              src="/gims1.png"
               alt="KATANA SJ150 Waterjet"
               fill
               className="object-contain"
@@ -83,15 +83,15 @@ export default function TradeUpProgram() {
             <div className="space-y-3">
               <h3 className="text-3xl font-bold text-black">Zero Downtime Promise</h3>
               <p className="text-lg text-gray-600">
-                with Katana Series - your Katana Series machine delivered at your space. Experience a smooth transition without halting your productivity.
+              Experience smooth transition and increase your productivity.
               </p>
             </div>
 
-            <div className="space-y-4">
+            {/*<div className="space-y-4">
               <p className="text-lg text-gray-600">
                 Get Katana SJ150 for just 5 lakh down and 19,791/month for 24 months
               </p>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@ export default function TradeUpProgram() {
               viewport={{ once: true }}
               className="text-black text-center"
             >
-              Including your Cost
+              cut anything, Including your cost!
             </motion.h2>
           </div>
 
