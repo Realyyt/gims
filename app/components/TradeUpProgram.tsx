@@ -39,7 +39,7 @@ export default function TradeUpProgram() {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-black">Easy EMI Options</h3>
               <p className="text-lg text-gray-600">
-                Get Katana SJ150 for <span className="text-[#ee6c4d]">just 5 lakh</span> down and 19,791/month for 24 months
+                Get Katana SJ150 for <span className="text-[#ee6c4d] font-bold">JUST 5 LAKH</span> down and 19,791/month for 24 months
               </p>
             </div>
 

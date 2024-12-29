@@ -75,16 +75,6 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     }
   };
 
-
-  // Get available thicknesses for selected material
-  const getAvailableThicknesses = (): string[] => {
-    if (!selectedMaterial) return [];
-
-    // Return an empty array as we'll use direct input instead of predefined thicknesses
-    return [];
-  };
-
-  // Update thickness input to show available options
   const handleMaterialChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newMaterial = e.target.value;
     setSelectedMaterial(newMaterial);
@@ -150,8 +140,6 @@ export default function CuttingCalculator({ unit: globalUnit }: CuttingCalculato
     const remainingSeconds = Math.round(seconds % 60);
     return `${minutes}m ${remainingSeconds}s`;
   };
-
-  const availableThicknesses = getAvailableThicknesses();
 
   return (
     <div className="bg-slate-100 shadow-lg rounded-xl p-4 sm:p-8 mb-12">
