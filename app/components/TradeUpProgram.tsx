@@ -15,10 +15,10 @@ export default function TradeUpProgram() {
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
         >
           <motion.div 
-            className="text-4xl font-bold text-[#ee6c4d] mb-4"
+            className="text-2xl sm:text-4xl font-bold text-[#ee6c4d] mb-4"
             initial={{ opacity: 1, y: 0 }}
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
@@ -26,19 +26,19 @@ export default function TradeUpProgram() {
             35% discount for this NEW YEAR!
           </motion.div>
           
-          <div className="flex justify-center items-center gap-4 text-3xl font-bold">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 text-xl sm:text-3xl font-bold">
             <span className="text-black">KATANA SJ150</span>
             <span className="text-gray-500 line-through">15 Lakhs</span>
             <span className="text-[#ee6c4d]">9.75 Lakhs</span>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start px-4 sm:px-0">
           {/* Left Column */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-black">Easy EMI Options</h3>
-              <p className="text-lg text-gray-600">
+              <h3 className="text-xl sm:text-2xl font-bold text-black">Easy EMI Options</h3>
+              <p className="text-base sm:text-lg text-gray-600">
                 Get Katana SJ150 for <span className="text-[#ee6c4d] font-bold">JUST 5 LAKH</span> down and 19,791/month for 24 months
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function TradeUpProgram() {
             <div className="space-y-4">
               <button 
                 onClick={() => setIsFormOpen(true)}
-                className="inline-block px-8 py-4 bg-[#ee6c4d] text-white text-lg font-semibold rounded-md hover:bg-[#e85d3d] transition-colors"
+                className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 bg-[#ee6c4d] text-white text-base sm:text-lg font-semibold rounded-md hover:bg-[#e85d3d] transition-colors"
               >
                 BOOK NOW
               </button>
@@ -63,7 +63,7 @@ export default function TradeUpProgram() {
               damping: 20,
               duration: 0.8 
             }}
-            className="relative h-[400px] w-full transform hover:scale-105 transition-transform duration-300"
+            className="relative h-[250px] sm:h-[400px] w-full transform hover:scale-105 transition-transform duration-300"
             style={{
               filter: 'drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))',
             }}
@@ -79,86 +79,41 @@ export default function TradeUpProgram() {
           </motion.div>
 
           {/* Right Column */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             <div className="space-y-3">
-              <h3 className="text-3xl font-bold text-black">Zero Downtime Promise</h3>
-              <p className="text-lg text-gray-600">
-              Experience smooth transition and increase your productivity.
+              <h3 className="text-xl sm:text-3xl font-bold text-black">Zero Downtime Promise</h3>
+              <p className="text-base sm:text-lg text-gray-600">
+                Experience smooth transition and increase your productivity.
               </p>
             </div>
-
-            {/*<div className="space-y-4">
-              <p className="text-lg text-gray-600">
-                Get Katana SJ150 for just 5 lakh down and 19,791/month for 24 months
-              </p>
-            </div>*/}
           </div>
         </div>
-      </div>
       
-      <div className="grid grid-cols-3 text-3xl font-bold mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xl sm:text-3xl font-bold mb-8 mt-8 sm:mt-0 px-4 sm:px-0">
+          {['Revolutionize Your Workshop', 'Upgrade the Way You Cut', 'cut anything, Including your cost!'].map((text, index) => (
             <motion.h2 
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              animate={{ 
-                y: [0, -10, 0],
-              }}
-              transition={{
-                y: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  repeatType: "reverse"
-                }
-              }}
-              viewport={{ once: true }}
-              className="text-black text-center"
-            >
-              Revolutionize Your Workshop
-            </motion.h2>
-            
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              animate={{ 
-                y: [0, -10, 0],
-              }}
+              animate={{ y: [0, -10, 0] }}
               transition={{
                 y: {
                   duration: 2,
                   repeat: Infinity,
                   ease: "easeInOut",
                   repeatType: "reverse",
-                  delay: 0.3
+                  delay: index * 0.3
                 }
               }}
               viewport={{ once: true }}
               className="text-black text-center"
             >
-              Upgrade the Way You Cut
+              {text}
             </motion.h2>
-            
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              animate={{ 
-                y: [0, -10, 0],
-              }}
-              transition={{
-                y: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  repeatType: "reverse",
-                  delay: 0.6
-                }
-              }}
-              viewport={{ once: true }}
-              className="text-black text-center"
-            >
-              cut anything, Including your cost!
-            </motion.h2>
-          </div>
+          ))}
+        </div>
+
+      </div>
 
       <DemoRequestForm 
         isOpen={isFormOpen} 

@@ -81,12 +81,12 @@ export default function Navbar() {
           </div>
           {/* Navigation Menu */}
           <div className={`${isOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:justify-center lg:flex-1 
-            absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto`}>
+            absolute lg:relative top-16 lg:top-0 left-0 w-full lg:w-auto bg-stone-200 lg:bg-transparent`}>
             <div className="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 p-4 lg:p-0">
               <button 
                 onClick={() => window.location.href = '/'} 
                 className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
-                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                  hover:bg-[#0a4165]/10 rounded-md transition text-left lg:text-center shadow-sm"
                 style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
               >
                 Waterjet
@@ -95,7 +95,7 @@ export default function Navbar() {
               <button 
                 onClick={() => window.location.href = '/specs'} 
                 className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
-                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                  hover:bg-[#0a4165]/10 rounded-md transition text-left lg:text-center shadow-sm"
                 style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
               >
                 Technical Specification
@@ -104,7 +104,7 @@ export default function Navbar() {
               <button 
                 onClick={() => window.location.href = '/materials-specs'} 
                 className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
-                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                  hover:bg-[#0a4165]/10 rounded-md transition text-left lg:text-center shadow-sm"
                 style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
               >
                 Calculator
@@ -176,7 +176,7 @@ export default function Navbar() {
               <button 
                 onClick={() => scrollToSection('contact')} 
                 className="w-full lg:w-auto px-3 py-2 text-sm font-bold text-[#0a4165] 
-                  hover:bg-[#0a4165]/10 rounded-md transition text-center shadow-sm"
+                  hover:bg-[#0a4165]/10 rounded-md transition text-left lg:text-center shadow-sm"
                 style={{ textShadow: '1px 1px 1px rgba(255,255,255,0.5)' }}
               >
                 Contact
